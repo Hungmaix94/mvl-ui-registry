@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "confirm-modal",
+  "type": "registry:ui",
+  "title": "Confirm Modal",
+  "description": "Modal xác nhận hành động nguy hiểm (xóa, lưu, cảnh báo).",
+  "dependencies": [
+    "clsx",
+    "tailwind-merge",
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/ui/confirm-modal.tsx",
+      "content": "import React from 'react';\nimport { AlertTriangle, Info, Trash2 } from 'lucide-react';\nimport { Modal } from './modal';\nimport { Button } from './button';\n\nexport interface ConfirmModalProps {\n  isOpen: boolean;\n  onClose: () => void;\n  onConfirm: () => void;\n  title: string;\n  description: React.ReactNode;\n  confirmText?: string;\n  cancelText?: string;\n  variant?: 'danger' | 'warning' | 'info';\n  loading?: boolean;\n}\n\nexport const ConfirmModal: React.FC<ConfirmModalProps> = ({\n  isOpen,\n  onClose,\n  onConfirm,\n  title,\n  description,\n  confirmText = 'Xác nhận',\n  cancelText = 'Hủy',\n  variant = 'danger',\n  loading = false,\n}) => {\n  const iconMap = {\n    danger: <Trash2 size={24} className=\"text-rose-600\" />,\n    warning: <AlertTriangle size={24} className=\"text-amber-600\" />,\n    info: <Info size={24} className=\"text-blue-600\" />,\n  };\n\n  const bgMap = {\n    danger: 'bg-rose-50 border-rose-100',\n    warning: 'bg-amber-50 border-amber-100',\n    info: 'bg-blue-50 border-blue-100',\n  };\n\n  return (\n    <Modal isOpen={isOpen} onClose={onClose} title={title} maxWidth=\"md\">\n      <div className=\"space-y-4\">\n        <div className=\"flex items-start gap-3.5\">\n          <div className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl border shadow-2xs ${bgMap[variant]}`}>\n            {iconMap[variant]}\n          </div>\n          <div className=\"text-xs text-slate-600 leading-relaxed pt-1\">{description}</div>\n        </div>\n\n        <div className=\"flex items-center justify-end gap-2.5 border-t border-slate-100 pt-4\">\n          <Button variant=\"secondary\" size=\"sm\" onClick={onClose} disabled={loading}>\n            {cancelText}\n          </Button>\n          <Button\n            variant={variant === 'danger' ? 'danger' : 'primary'}\n            size=\"sm\"\n            onClick={onConfirm}\n            loading={loading}\n          >\n            {confirmText}\n          </Button>\n        </div>\n      </div>\n    </Modal>\n  );\n};\n",
+      "type": "registry:ui"
+    }
+  ]
+}

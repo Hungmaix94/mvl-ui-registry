@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "badge",
+  "type": "registry:ui",
+  "title": "Badge",
+  "description": "Huy hiệu trạng thái và nhãn phân loại.",
+  "dependencies": [
+    "clsx",
+    "tailwind-merge"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/ui/badge.tsx",
+      "content": "import React from 'react';\nimport { cn } from '../lib/utils';\n\nexport interface BadgeProps extends React.HTMLAttributes<HTMLSpanElement> {\n  variant?: 'default' | 'success' | 'warning' | 'danger' | 'info' | 'purple';\n  dot?: boolean;\n}\n\nexport const Badge: React.FC<BadgeProps> = ({\n  className,\n  variant = 'default',\n  dot = false,\n  children,\n  ...props\n}) => {\n  const variantStyles = {\n    default: 'bg-slate-100 text-slate-700 border-slate-200',\n    success: 'bg-emerald-50 text-emerald-700 border-emerald-200/60',\n    warning: 'bg-amber-50 text-amber-800 border-amber-200/60',\n    danger: 'bg-rose-50 text-rose-700 border-rose-200/60',\n    info: 'bg-blue-50 text-blue-700 border-blue-200/60',\n    purple: 'bg-purple-50 text-purple-700 border-purple-200/60',\n  };\n\n  const dotColors = {\n    default: 'bg-slate-400',\n    success: 'bg-emerald-500',\n    warning: 'bg-amber-500',\n    danger: 'bg-rose-500',\n    info: 'bg-blue-500',\n    purple: 'bg-purple-500',\n  };\n\n  return (\n    <span\n      className={cn(\n        'inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-semibold border tracking-wide',\n        variantStyles[variant],\n        className\n      )}\n      {...props}\n    >\n      {dot && <span className={cn('h-1.5 w-1.5 rounded-full shrink-0', dotColors[variant])} />}\n      {children}\n    </span>\n  );\n};\n",
+      "type": "registry:ui"
+    }
+  ]
+}

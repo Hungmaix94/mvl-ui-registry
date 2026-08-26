@@ -1,0 +1,174 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "@mvl/ui-registry",
+  "homepage": "https://maivietland.vn",
+  "items": [
+    {
+      "name": "button",
+      "type": "registry:ui",
+      "title": "Button",
+      "description": "Nút bấm hành động chuẩn MVL Design Tokens (#B32B2F).",
+      "dependencies": ["clsx", "tailwind-merge"],
+      "files": [
+        {
+          "path": "registry/ui/button.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "badge",
+      "type": "registry:ui",
+      "title": "Badge",
+      "description": "Huy hiệu trạng thái và nhãn phân loại.",
+      "dependencies": ["clsx", "tailwind-merge"],
+      "files": [
+        {
+          "path": "registry/ui/badge.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "input",
+      "type": "registry:ui",
+      "title": "TextInput",
+      "description": "Ô nhập liệu văn bản với label, error và hint.",
+      "dependencies": ["clsx", "tailwind-merge"],
+      "files": [
+        {
+          "path": "registry/ui/input.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "textarea",
+      "type": "registry:ui",
+      "title": "TextArea",
+      "description": "Khung nhập văn bản nhiều dòng có auto resize.",
+      "dependencies": ["clsx", "tailwind-merge"],
+      "files": [
+        {
+          "path": "registry/ui/textarea.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "custom-select",
+      "type": "registry:ui",
+      "title": "CustomSelect",
+      "description": "Dropdown lựa chọn tùy biến hỗ trợ subtitle và clearable.",
+      "dependencies": ["clsx", "tailwind-merge", "lucide-react"],
+      "files": [
+        {
+          "path": "registry/ui/custom-select.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "data-table",
+      "type": "registry:ui",
+      "title": "DataTable",
+      "description": "Bảng dữ liệu chuẩn hóa với generic typing và loading state.",
+      "dependencies": ["clsx", "tailwind-merge"],
+      "files": [
+        {
+          "path": "registry/ui/data-table.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "modal",
+      "type": "registry:ui",
+      "title": "Modal Dialog",
+      "description": "Hộp thoại Popup với hiệu ứng backdrop blur và animation mượt mà.",
+      "dependencies": ["clsx", "tailwind-merge", "lucide-react"],
+      "files": [
+        {
+          "path": "registry/ui/modal.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "confirm-modal",
+      "type": "registry:ui",
+      "title": "Confirm Modal",
+      "description": "Modal xác nhận hành động nguy hiểm (xóa, lưu, cảnh báo).",
+      "dependencies": ["clsx", "tailwind-merge", "lucide-react"],
+      "files": [
+        {
+          "path": "registry/ui/confirm-modal.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "rich-text-editor",
+      "type": "registry:ui",
+      "title": "RichTextEditor",
+      "description": "Trình soạn thảo WYSIWYG đa chế độ (Visual / Raw HTML).",
+      "dependencies": ["clsx", "tailwind-merge", "lucide-react"],
+      "files": [
+        {
+          "path": "registry/ui/rich-text-editor.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "dynamic-zone-builder",
+      "type": "registry:ui",
+      "title": "DynamicZoneBuilder",
+      "description": "Bộ dựng trang theo khối Strapi / Wagtail StreamField với Drag and Drop.",
+      "dependencies": ["clsx", "tailwind-merge", "lucide-react"],
+      "files": [
+        {
+          "path": "registry/ui/dynamic-zone-builder.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "use-click-outside",
+      "type": "registry:hook",
+      "title": "useClickOutside",
+      "description": "Hook nhận diện sự kiện click ra ngoài component.",
+      "files": [
+        {
+          "path": "registry/hooks/use-click-outside.ts",
+          "type": "registry:hook"
+        }
+      ]
+    },
+    {
+      "name": "use-debounce",
+      "type": "registry:hook",
+      "title": "useDebounce",
+      "description": "Hook trì hoãn cập nhật giá trị (Debounce).",
+      "files": [
+        {
+          "path": "registry/hooks/use-debounce.ts",
+          "type": "registry:hook"
+        }
+      ]
+    },
+    {
+      "name": "utils",
+      "type": "registry:lib",
+      "title": "Utilities",
+      "description": "Thư viện hàm format tiền tệ, slug tiếng Việt, cn class merging.",
+      "dependencies": ["clsx", "tailwind-merge"],
+      "files": [
+        {
+          "path": "registry/lib/utils.ts",
+          "type": "registry:lib"
+        }
+      ]
+    }
+  ]
+}

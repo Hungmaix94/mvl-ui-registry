@@ -1,0 +1,84 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "@mvl/ui-registry",
+  "items": [
+    {
+      "name": "button",
+      "type": "registry:ui",
+      "title": "Button",
+      "description": "Nút bấm hành động chuẩn MVL Design Tokens (#B32B2F)."
+    },
+    {
+      "name": "badge",
+      "type": "registry:ui",
+      "title": "Badge",
+      "description": "Huy hiệu trạng thái và nhãn phân loại."
+    },
+    {
+      "name": "input",
+      "type": "registry:ui",
+      "title": "TextInput",
+      "description": "Ô nhập liệu văn bản với label, error và hint."
+    },
+    {
+      "name": "textarea",
+      "type": "registry:ui",
+      "title": "TextArea",
+      "description": "Khung nhập văn bản nhiều dòng có auto resize."
+    },
+    {
+      "name": "custom-select",
+      "type": "registry:ui",
+      "title": "CustomSelect",
+      "description": "Dropdown lựa chọn tùy biến hỗ trợ subtitle và clearable."
+    },
+    {
+      "name": "data-table",
+      "type": "registry:ui",
+      "title": "DataTable",
+      "description": "Bảng dữ liệu chuẩn hóa với generic typing và loading state."
+    },
+    {
+      "name": "modal",
+      "type": "registry:ui",
+      "title": "Modal Dialog",
+      "description": "Hộp thoại Popup với hiệu ứng backdrop blur và animation mượt mà."
+    },
+    {
+      "name": "confirm-modal",
+      "type": "registry:ui",
+      "title": "Confirm Modal",
+      "description": "Modal xác nhận hành động nguy hiểm (xóa, lưu, cảnh báo)."
+    },
+    {
+      "name": "rich-text-editor",
+      "type": "registry:ui",
+      "title": "RichTextEditor",
+      "description": "Trình soạn thảo WYSIWYG đa chế độ (Visual / Raw HTML)."
+    },
+    {
+      "name": "dynamic-zone-builder",
+      "type": "registry:ui",
+      "title": "DynamicZoneBuilder",
+      "description": "Bộ dựng trang theo khối Strapi / Wagtail StreamField với Drag and Drop."
+    },
+    {
+      "name": "use-click-outside",
+      "type": "registry:hook",
+      "title": "useClickOutside",
+      "description": "Hook nhận diện sự kiện click ra ngoài component."
+    },
+    {
+      "name": "use-debounce",
+      "type": "registry:hook",
+      "title": "useDebounce",
+      "description": "Hook trì hoãn cập nhật giá trị (Debounce)."
+    },
+    {
+      "name": "utils",
+      "type": "registry:lib",
+      "title": "Utilities",
+      "description": "Thư viện hàm format tiền tệ, slug tiếng Việt, cn class merging."
+    }
+  ]
+}

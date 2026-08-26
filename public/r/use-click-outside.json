@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "use-click-outside",
+  "type": "registry:hook",
+  "title": "useClickOutside",
+  "description": "Hook nhận diện sự kiện click ra ngoài component.",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/hooks/use-click-outside.ts",
+      "content": "import { useEffect, useRef, type RefObject } from 'react';\n\nexport function useClickOutside<T extends HTMLElement = HTMLElement>(\n  handler: (event: MouseEvent | TouchEvent) => void\n): RefObject<T | null> {\n  const ref = useRef<T>(null);\n\n  useEffect(() => {\n    const listener = (event: MouseEvent | TouchEvent) => {\n      const el = ref.current;\n      if (!el || el.contains((event?.target as Node) || null)) {\n        return;\n      }\n      handler(event);\n    };\n\n    document.addEventListener('mousedown', listener);\n    document.addEventListener('touchstart', listener);\n\n    return () => {\n      document.removeEventListener('mousedown', listener);\n      document.removeEventListener('touchstart', listener);\n    };\n  }, [handler]);\n\n  return ref;\n}\n",
+      "type": "registry:hook"
+    }
+  ]
+}
