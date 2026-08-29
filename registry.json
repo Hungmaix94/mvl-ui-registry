@@ -169,6 +169,162 @@
           "type": "registry:lib"
         }
       ]
+    },
+    {
+      "name": "hero-banner-block",
+      "type": "registry:block",
+      "title": "HeroBanner Block",
+      "description": "Khối banner tiêu đề chính, slogan và nút CTA chuyển đổi.",
+      "dependencies": ["clsx", "tailwind-merge", "lucide-react"],
+      "files": [
+        {
+          "path": "registry/blocks/HeroBanner.tsx",
+          "type": "registry:block"
+        }
+      ]
+    },
+    {
+      "name": "amenities-grid-block",
+      "type": "registry:block",
+      "title": "AmenitiesGrid Block",
+      "description": "Khối lưới tiện ích nội khu & ngoại khu 5 sao.",
+      "dependencies": ["clsx", "tailwind-merge"],
+      "files": [
+        {
+          "path": "registry/blocks/AmenitiesGrid.tsx",
+          "type": "registry:block"
+        }
+      ]
+    },
+    {
+      "name": "floor-plans-block",
+      "type": "registry:block",
+      "title": "FloorPlans Block",
+      "description": "Khối mặt bằng căn hộ điển hình (1PN, 2PN, 3PN).",
+      "dependencies": ["clsx", "tailwind-merge"],
+      "files": [
+        {
+          "path": "registry/blocks/FloorPlans.tsx",
+          "type": "registry:block"
+        }
+      ]
+    },
+    {
+      "name": "pricing-table-block",
+      "type": "registry:block",
+      "title": "PricingTable Block",
+      "description": "Bảng tiến độ thanh toán & chính sách chiết khấu.",
+      "dependencies": ["clsx", "tailwind-merge"],
+      "files": [
+        {
+          "path": "registry/blocks/PricingTable.tsx",
+          "type": "registry:block"
+        }
+      ]
+    },
+    {
+      "name": "contact-lead-form-block",
+      "type": "registry:block",
+      "title": "ContactLeadForm Block",
+      "description": "Form đăng ký nhận bảng giá & hotline tư vấn.",
+      "dependencies": ["clsx", "tailwind-merge", "lucide-react"],
+      "files": [
+        {
+          "path": "registry/blocks/ContactLeadForm.tsx",
+          "type": "registry:block"
+        }
+      ]
+    },
+    {
+      "name": "faq-accordion-block",
+      "type": "registry:block",
+      "title": "FAQAccordion Block",
+      "description": "Khối giải đáp câu hỏi thường gặp và pháp lý.",
+      "dependencies": ["clsx", "tailwind-merge", "lucide-react"],
+      "files": [
+        {
+          "path": "registry/blocks/FAQAccordion.tsx",
+          "type": "registry:block"
+        }
+      ]
+    },
+    {
+      "name": "property-gallery-block",
+      "type": "registry:block",
+      "title": "PropertyGallery Block",
+      "description": "Thư viện hình ảnh phối cảnh & thực tế.",
+      "dependencies": ["clsx", "tailwind-merge"],
+      "files": [
+        {
+          "path": "registry/blocks/PropertyGallery.tsx",
+          "type": "registry:block"
+        }
+      ]
+    },
+    {
+      "name": "location-map-block",
+      "type": "registry:block",
+      "title": "LocationMap Block",
+      "description": "Bản đồ vị trí kết nối giao thông và liên kết vùng.",
+      "dependencies": ["clsx", "tailwind-merge", "lucide-react"],
+      "files": [
+        {
+          "path": "registry/blocks/LocationMap.tsx",
+          "type": "registry:block"
+        }
+      ]
+    },
+    {
+      "name": "vr-tour-3d-block",
+      "type": "registry:block",
+      "title": "VRTour3D Block",
+      "description": "Trải nghiệm nhà mẫu thực tế ảo 360 Matterport.",
+      "dependencies": ["clsx", "tailwind-merge", "lucide-react"],
+      "files": [
+        {
+          "path": "registry/blocks/VRTour3D.tsx",
+          "type": "registry:block"
+        }
+      ]
+    },
+    {
+      "name": "video-section-block",
+      "type": "registry:block",
+      "title": "VideoSection Block",
+      "description": "Video giới thiệu toàn cảnh dự án.",
+      "dependencies": ["clsx", "tailwind-merge", "lucide-react"],
+      "files": [
+        {
+          "path": "registry/blocks/VideoSection.tsx",
+          "type": "registry:block"
+        }
+      ]
+    },
+    {
+      "name": "footer-section-block",
+      "type": "registry:block",
+      "title": "FooterSection Block",
+      "description": "Chân trang chuẩn nhận diện thương hiệu Mai Việt Land.",
+      "dependencies": ["clsx", "tailwind-merge", "lucide-react"],
+      "files": [
+        {
+          "path": "registry/blocks/FooterSection.tsx",
+          "type": "registry:block"
+        }
+      ]
+    },
+    {
+      "name": "master-plan-3d-block",
+      "type": "registry:block",
+      "title": "MasterPlan3D Block",
+      "description": "Sa bàn phân lô tổng mặt bằng & trải nghiệm 360.",
+      "dependencies": ["clsx", "tailwind-merge", "lucide-react"],
+      "files": [
+        {
+          "path": "registry/blocks/MasterPlan3D.tsx",
+          "type": "registry:block"
+        }
+      ]
     }
   ]
 }

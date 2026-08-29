@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "vr-tour-3d-block",
+  "type": "registry:block",
+  "title": "VRTour3D Block",
+  "description": "Trải nghiệm nhà mẫu thực tế ảo 360 Matterport.",
+  "dependencies": [
+    "clsx",
+    "tailwind-merge",
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/blocks/VRTour3D.tsx",
+      "content": "import React from 'react';\nimport { Sparkles } from 'lucide-react';\n\nexport interface VRTour3DProps {\n  title: string;\n  subtitle?: string;\n  tourUrl?: string;\n}\n\nexport const VRTour3D: React.FC<VRTour3DProps> = ({\n  title,\n  subtitle,\n  tourUrl,\n}) => {\n  return (\n    <section className=\"bg-slate-900 text-white py-16 px-6 font-sans text-center\">\n      <div className=\"max-w-4xl mx-auto space-y-6\">\n        <h2 className=\"text-2xl md:text-3xl font-black\">{title}</h2>\n        {subtitle && <p className=\"text-xs text-slate-300\">{subtitle}</p>}\n        <div className=\"aspect-video rounded-2xl border border-white/20 bg-black/40 overflow-hidden flex items-center justify-center\">\n          {tourUrl && tourUrl.startsWith('http') && tourUrl.includes('matterport') ? (\n            <iframe src={tourUrl} title={title} className=\"w-full h-full border-0\" allowFullScreen />\n          ) : (\n            <div className=\"text-center space-y-2\">\n              <Sparkles size={32} className=\"mx-auto text-amber-400\" />\n              <span className=\"text-xs text-slate-300 block\">Trình phát thực tế ảo VR 360 Matterport</span>\n            </div>\n          )}\n        </div>\n      </div>\n    </section>\n  );\n};\n\nexport const VRTour3DConfig = {\n  fields: {\n    title: { type: 'text' as const, label: 'Tiêu đề' },\n    subtitle: { type: 'textarea' as const, label: 'Mô tả' },\n    tourUrl: { type: 'text' as const, label: 'URL Matterport / VR Tour' },\n  },\n  defaultProps: {\n    title: 'Trải Nghiệm Nhà Mẫu Thực Tế Ảo VR 360°',\n    subtitle: 'Khám phá từng góc căn hộ mẫu với góc nhìn 360 độ chân thực không cần đến tận nơi.',\n    tourUrl: 'https://my.matterport.com',\n  },\n  render: VRTour3D,\n};\n",
+      "type": "registry:block"
+    }
+  ]
+}

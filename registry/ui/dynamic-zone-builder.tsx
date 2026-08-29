@@ -46,7 +46,7 @@ export interface BlockCatalogItem {
   title: string;
   description: string;
   category: 'shared' | 'marketing' | 'interactive';
-  icon: React.ComponentType<{ size?: number; className?: string }>;
+  icon: React.ComponentType<any>;
   defaultValues: Record<string, any>;
 }
 
@@ -179,7 +179,7 @@ export function DynamicZoneBuilder({
   const [openMenuIndex, setOpenMenuIndex] = useState<number | null>(null);
 
   const [draggedIndex, setDraggedIndex] = useState<number | null>(null);
-  const [dragOverIndex, setDragOverIndex] = useState<number | null>(null);
+  const [dropTargetIndex, setDropTargetIndex] = useState<number | null>(null);
   const dragNodeRef = useRef<HTMLDivElement | null>(null);
 
   const handleSelectComponent = (catalogItem: BlockCatalogItem) => {
@@ -246,6 +246,7 @@ export function DynamicZoneBuilder({
 
   const handleDragStart = (e: React.DragEvent<HTMLDivElement>, index: number) => {
     setDraggedIndex(index);
+    setDropTargetIndex(null);
     dragNodeRef.current = e.currentTarget;
     e.dataTransfer.effectAllowed = 'move';
     e.dataTransfer.setData('text/plain', String(index));
@@ -253,19 +254,75 @@ export function DynamicZoneBuilder({
 
   const handleDragOver = (e: React.DragEvent<HTMLDivElement>, index: number) => {
     e.preventDefault();
-    if (draggedIndex === null || draggedIndex === index) return;
-    setDragOverIndex(index);
+    e.dataTransfer.dropEffect = 'move';
+    if (draggedIndex === null) return;
+
+    const rect = e.currentTarget.getBoundingClientRect();
+    const offsetY = e.clientY - rect.top;
+    const isBelow = offsetY > rect.height / 2;
+    const targetPos = isBelow ? index + 1 : index;
+
+    if (dropTargetIndex !== targetPos) {
+      setDropTargetIndex(targetPos);
+    }
   };
 
   const handleDragEnd = () => {
-    if (draggedIndex !== null && dragOverIndex !== null && draggedIndex !== dragOverIndex) {
-      const updated = [...blocks];
-      const [moved] = updated.splice(draggedIndex, 1);
-      updated.splice(dragOverIndex, 0, moved);
-      onChange(updated);
+    if (draggedIndex !== null && dropTargetIndex !== null) {
+      const fromIndex = draggedIndex;
+      const toIndex = dropTargetIndex;
+
+      if (toIndex !== fromIndex && toIndex !== fromIndex + 1) {
+        const updated = [...blocks];
+        const [moved] = updated.splice(fromIndex, 1);
+        const insertIndex = toIndex > fromIndex ? toIndex - 1 : toIndex;
+        updated.splice(insertIndex, 0, moved);
+        onChange(updated);
+      }
     }
     setDraggedIndex(null);
-    setDragOverIndex(null);
+    setDropTargetIndex(null);
+  };
+
+  const renderDropPlaceholder = () => {
+    if (draggedIndex === null) return null;
+    const draggedBlock = blocks[draggedIndex];
+    if (!draggedBlock) return null;
+    const meta = BLOCK_CATALOG.find((c) => c.type === draggedBlock.type) || BLOCK_CATALOG[0];
+    const IconComp = meta.icon;
+
+    return (
+      <div className="my-2.5 rounded-xl border-2 border-dashed border-[#B32B2F] bg-rose-50/70 p-3.5 shadow-xs transition-all animate-in fade-in zoom-in-95 duration-150 select-none">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-3 min-w-0">
+            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-white border border-rose-200 text-[#B32B2F] shadow-2xs shrink-0">
+              <IconComp size={16} />
+            </div>
+            <div className="min-w-0">
+              <div className="flex items-center gap-2">
+                <span className="text-xs font-bold text-slate-800 truncate">
+                  {meta.title}
+                </span>
+                <span className="text-[10px] font-semibold uppercase tracking-wider text-[#B32B2F] bg-white px-2 py-0.5 rounded-md border border-rose-200 shrink-0">
+                  Vị trí mới
+                </span>
+              </div>
+              <span className="text-[11px] text-slate-500 block truncate mt-0.5">
+                Thả chuột để chuyển khối nội dung tới vị trí này
+              </span>
+            </div>
+          </div>
+
+          <div className="flex items-center gap-1.5 text-xs font-bold text-[#B32B2F] shrink-0">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#B32B2F] opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-[#B32B2F]"></span>
+            </span>
+            <span>Thả tại đây</span>
+          </div>
+        </div>
+      </div>
+    );
   };
 
   const openPickerAbove = (index: number) => {
@@ -294,15 +351,23 @@ export function DynamicZoneBuilder({
 
       <div className="space-y-0">
         <div className="space-y-0">
+          {draggedIndex !== null && dropTargetIndex === 0 && draggedIndex !== 0 && (
+            renderDropPlaceholder()
+          )}
+
           {blocks.map((block, index) => {
             const meta = BLOCK_CATALOG.find((c) => c.type === block.type) || BLOCK_CATALOG[0];
             const isDragging = draggedIndex === index;
-            const isDragOver = dragOverIndex === index;
             const isMenuOpen = openMenuIndex === index;
+            const showPlaceholderAfter =
+              draggedIndex !== null &&
+              dropTargetIndex === index + 1 &&
+              dropTargetIndex !== draggedIndex &&
+              dropTargetIndex !== draggedIndex + 1;
 
             return (
               <React.Fragment key={block.id}>
-                {index > 0 && (
+                {index > 0 && !showPlaceholderAfter && (
                   <div className="flex justify-center py-1">
                     <div className="w-[2px] h-3 bg-[#4a4a68]" />
                   </div>
@@ -315,9 +380,7 @@ export function DynamicZoneBuilder({
                   onDragEnd={handleDragEnd}
                   className={`relative rounded-xl border transition-all duration-150 ${
                     isDragging
-                      ? 'opacity-40 border-dashed border-[#B32B2F] bg-slate-100 scale-98'
-                      : isDragOver
-                      ? 'border-2 border-[#B32B2F] shadow-md bg-rose-50/20'
+                      ? 'opacity-30 border-dashed border-slate-300 bg-slate-100 scale-98 pointer-events-none'
                       : 'border-slate-300 bg-[#212134] text-white shadow-xs hover:border-slate-400'
                   }`}
                 >
@@ -599,6 +662,9 @@ export function DynamicZoneBuilder({
                     </div>
                   )}
                 </div>
+
+                {/* Drop placeholder after this block */}
+                {showPlaceholderAfter && renderDropPlaceholder()}
               </React.Fragment>
             );
           })}

@@ -6,9 +6,6 @@ import {
   List,
   ListOrdered,
   Link as LinkIcon,
-  Image as ImageIcon,
-  Code,
-  Heading1,
   Heading2,
   Heading3,
 } from 'lucide-react';

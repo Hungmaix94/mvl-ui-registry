@@ -1,27 +1,41 @@
-import { useEffect, useRef, type RefObject } from 'react';
+import { useEffect, type RefObject } from 'react';
 
+/**
+ * Hook to detect clicks and touch events outside of a specified element.
+ * Also supports closing when the 'Escape' key is pressed.
+ */
 export function useClickOutside<T extends HTMLElement = HTMLElement>(
-  handler: (event: MouseEvent | TouchEvent) => void
-): RefObject<T | null> {
-  const ref = useRef<T>(null);
-
+  ref: RefObject<T | null>,
+  handler: (event: MouseEvent | TouchEvent | KeyboardEvent) => void,
+  enabled: boolean = true
+) {
   useEffect(() => {
-    const listener = (event: MouseEvent | TouchEvent) => {
+    if (!enabled) return;
+
+    const handlePointerDown = (event: MouseEvent | TouchEvent) => {
       const el = ref.current;
-      if (!el || el.contains((event?.target as Node) || null)) {
+      if (!el || el.contains((event.target as Node) || null)) {
         return;
       }
       handler(event);
     };
 
-    document.addEventListener('mousedown', listener);
-    document.addEventListener('touchstart', listener);
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        handler(event);
+      }
+    };
+
+    document.addEventListener('mousedown', handlePointerDown);
+    document.addEventListener('touchstart', handlePointerDown);
+    document.addEventListener('keydown', handleKeyDown);
 
     return () => {
-      document.removeEventListener('mousedown', listener);
-      document.removeEventListener('touchstart', listener);
+      document.removeEventListener('mousedown', handlePointerDown);
+      document.removeEventListener('touchstart', handlePointerDown);
+      document.removeEventListener('keydown', handleKeyDown);
     };
-  }, [handler]);
-
-  return ref;
+  }, [ref, handler, enabled]);
 }
+
+export default useClickOutside;

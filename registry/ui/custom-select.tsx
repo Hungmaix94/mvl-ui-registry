@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { ChevronDown, Check, X } from 'lucide-react';
 import { cn } from '../lib/utils';
 
-export interface SelectOption {
+export interface CustomSelectOption {
   label: string;
   value: string;
   subtitle?: string;
@@ -11,7 +11,7 @@ export interface SelectOption {
 
 export interface CustomSelectProps {
   label?: string;
-  options: SelectOption[];
+  options: CustomSelectOption[];
   value: string;
   onChange: (value: string) => void;
   placeholder?: string;

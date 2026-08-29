@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "contact-lead-form-block",
+  "type": "registry:block",
+  "title": "ContactLeadForm Block",
+  "description": "Form đăng ký nhận bảng giá & hotline tư vấn.",
+  "dependencies": [
+    "clsx",
+    "tailwind-merge",
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/blocks/ContactLeadForm.tsx",
+      "content": "import React from 'react';\nimport { PhoneCall } from 'lucide-react';\n\nexport interface ContactLeadFormProps {\n  title: string;\n  subtitle?: string;\n  btnText?: string;\n  hotline?: string;\n}\n\nexport const ContactLeadForm: React.FC<ContactLeadFormProps> = ({\n  title,\n  subtitle,\n  btnText = 'Gửi Thông Tin Nhận Báo Giá',\n  hotline,\n}) => {\n  return (\n    <section className=\"bg-slate-900 text-white py-16 px-6 font-sans\" id=\"dang-ky\">\n      <div className=\"max-w-2xl mx-auto text-center space-y-6\">\n        <div className=\"space-y-2\">\n          <h2 className=\"text-2xl md:text-3xl font-black\">{title}</h2>\n          {subtitle && <p className=\"text-xs text-slate-300\">{subtitle}</p>}\n        </div>\n        <form onSubmit={(e) => e.preventDefault()} className=\"space-y-3 bg-white/10 p-6 rounded-2xl backdrop-blur-md border border-white/20\">\n          <div className=\"grid grid-cols-1 sm:grid-cols-2 gap-3\">\n            <input\n              type=\"text\"\n              placeholder=\"Họ và tên của bạn *\"\n              className=\"rounded-xl border border-white/30 bg-white/20 px-3.5 py-2.5 text-xs text-white placeholder-white/60 focus:outline-hidden focus:ring-2 focus:ring-[#B32B2F]\"\n            />\n            <input\n              type=\"tel\"\n              placeholder=\"Số điện thoại Zalo *\"\n              className=\"rounded-xl border border-white/30 bg-white/20 px-3.5 py-2.5 text-xs text-white placeholder-white/60 focus:outline-hidden focus:ring-2 focus:ring-[#B32B2F]\"\n            />\n          </div>\n          <input\n            type=\"email\"\n            placeholder=\"Địa chỉ Email nhận tài liệu\"\n            className=\"w-full rounded-xl border border-white/30 bg-white/20 px-3.5 py-2.5 text-xs text-white placeholder-white/60 focus:outline-hidden focus:ring-2 focus:ring-[#B32B2F]\"\n          />\n          <button\n            type=\"submit\"\n            className=\"w-full rounded-xl bg-[#B32B2F] hover:bg-[#870B0B] py-3 text-sm font-bold text-white shadow-lg transition-all cursor-pointer\"\n          >\n            {btnText}\n          </button>\n        </form>\n        {hotline && (\n          <div className=\"text-xs text-slate-300 flex items-center justify-center gap-2\">\n            <PhoneCall size={14} className=\"text-amber-400\" />\n            <span>\n              Hotline 24/7: <strong className=\"text-white\">{hotline}</strong>\n            </span>\n          </div>\n        )}\n      </div>\n    </section>\n  );\n};\n\nexport const ContactLeadFormConfig = {\n  fields: {\n    title: { type: 'text' as const, label: 'Tiêu đề Form' },\n    subtitle: { type: 'textarea' as const, label: 'Mô tả' },\n    btnText: { type: 'text' as const, label: 'Nút gửi' },\n    hotline: { type: 'text' as const, label: 'Hotline tư vấn' },\n  },\n  defaultProps: {\n    title: 'Đăng Ký Nhận Bảng Giá & Ưu Đãi Độc Quyền',\n    subtitle: 'Chuyên viên tư vấn Mai Việt Land sẽ liên hệ cung cấp thông tin quỹ căn ngoại giao trong 5 phút.',\n    btnText: 'Gửi Thông Tin Nhận Báo Giá',\n    hotline: '1900 6868 - 0988 888 888',\n  },\n  render: ContactLeadForm,\n};\n",
+      "type": "registry:block"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "hero-banner-block",
+  "type": "registry:block",
+  "title": "HeroBanner Block",
+  "description": "Khối banner tiêu đề chính, slogan và nút CTA chuyển đổi.",
+  "dependencies": [
+    "clsx",
+    "tailwind-merge",
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/blocks/HeroBanner.tsx",
+      "content": "import React from 'react';\nimport { Sparkles } from 'lucide-react';\n\nexport interface HeroBannerProps {\n  badge?: string;\n  title: string;\n  subtitle?: string;\n  bgImage?: string;\n  ctaText?: string;\n  ctaLink?: string;\n  secondaryCtaText?: string;\n  secondaryCtaLink?: string;\n}\n\nexport const HeroBanner: React.FC<HeroBannerProps> = ({\n  badge,\n  title,\n  subtitle,\n  bgImage,\n  ctaText,\n  ctaLink,\n  secondaryCtaText,\n  secondaryCtaLink,\n}) => {\n  return (\n    <section className=\"relative min-h-[520px] flex items-center justify-center text-white overflow-hidden bg-slate-900 px-6 py-20 font-sans\">\n      {bgImage && (\n        <div className=\"absolute inset-0 z-0\">\n          <img src={bgImage} alt={title} className=\"h-full w-full object-cover brightness-50\" />\n        </div>\n      )}\n      <div className=\"relative z-10 max-w-4xl mx-auto text-center space-y-5\">\n        {badge && (\n          <span className=\"inline-flex items-center gap-1.5 rounded-full bg-[#B32B2F]/90 border border-white/20 px-4 py-1 text-xs font-bold text-white shadow-lg\">\n            <Sparkles size={13} className=\"text-amber-300\" />\n            <span>{badge}</span>\n          </span>\n        )}\n        <h1 className=\"text-3xl md:text-5xl font-black tracking-tight leading-tight\">{title}</h1>\n        {subtitle && (\n          <p className=\"text-sm md:text-base text-slate-200 max-w-2xl mx-auto leading-relaxed\">{subtitle}</p>\n        )}\n        <div className=\"flex flex-wrap items-center justify-center gap-3 pt-4\">\n          {ctaText && (\n            <a\n              href={ctaLink || '#'}\n              className=\"rounded-xl bg-[#B32B2F] hover:bg-[#870B0B] px-6 py-3 text-sm font-bold text-white shadow-lg transition-all\"\n            >\n              {ctaText}\n            </a>\n          )}\n          {secondaryCtaText && (\n            <a\n              href={secondaryCtaLink || '#'}\n              className=\"rounded-xl bg-white/20 hover:bg-white/30 backdrop-blur-xs border border-white/30 px-6 py-3 text-sm font-bold text-white transition-all\"\n            >\n              {secondaryCtaText}\n            </a>\n          )}\n        </div>\n      </div>\n    </section>\n  );\n};\n\nexport const HeroBannerConfig = {\n  fields: {\n    badge: { type: 'text' as const, label: 'Badge Tag' },\n    title: { type: 'text' as const, label: 'Tiêu đề chính' },\n    subtitle: { type: 'textarea' as const, label: 'Mô tả phụ' },\n    bgImage: { type: 'text' as const, label: 'URL Ảnh nền' },\n    ctaText: { type: 'text' as const, label: 'Nút CTA chính' },\n    ctaLink: { type: 'text' as const, label: 'Link CTA chính' },\n    secondaryCtaText: { type: 'text' as const, label: 'Nút CTA phụ' },\n    secondaryCtaLink: { type: 'text' as const, label: 'Link CTA phụ' },\n  },\n  defaultProps: {\n    badge: 'MỞ BÁN PHÂN KHU ĐẸP NHẤT 2026',\n    title: 'Tuyệt Tác Không Gian Sống Thượng Lưu',\n    subtitle: 'Sở hữu căn hộ cao cấp với chính sách thanh toán đột phá 0% lãi suất trong 24 tháng.',\n    bgImage: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1600&q=80',\n    ctaText: 'Nhận Bảng Giá Chi Tiết',\n    ctaLink: '#dang-ky',\n    secondaryCtaText: 'Xem Mặt Bằng',\n    secondaryCtaLink: '#mat-bang',\n  },\n  render: HeroBanner,\n};\n",
+      "type": "registry:block"
+    }
+  ]
+}
