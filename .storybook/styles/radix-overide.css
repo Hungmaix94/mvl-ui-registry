@@ -1,0 +1,86 @@
+.radix-themes {
+  --accent-indicator: var(--color-action-primary-red-default);
+  --default-font-family: var(--font-family-inter);
+}
+
+.rt-BaseTabList {
+  box-shadow: none !important;
+}
+
+.rt-BaseTabListTriggerInner {
+  font-size: var(--font-size-body-base-semibold);
+  font-weight: var(--font-weight-body-base-semibold);
+  line-height: var(--line-height-body-base-semibold);
+  padding: 0;
+}
+
+.rt-BaseTabListTriggerInner:hover {
+  background-color: var(--color-data-red-hover);
+}
+
+.rt-TabsTrigger:hover {
+  background-color: var(--color-red-10);
+  border-radius: 4px;
+}
+.rt-TabsTrigger:hover .rt-BaseTabListTriggerInner {
+  background-color: var(--color-red-10);
+}
+.rt-TableColumnHeaderCell {
+  font-weight: inherit;
+}
+
+/* TBC tables — vertically center every body cell regardless of inner content
+   height (kebab buttons, multi-line notes, single-line text, chips).
+   Radix's default vertical-align beats Tailwind's `align-middle` utility, so
+   we lock it here with a scoped rule. */
+.tbc-history-table .rt-TableCell,
+.tbc-current-card-table .rt-TableCell {
+  vertical-align: middle;
+}
+
+/* Mục ① "Phân chia HH — Các bên tham gia" của màn Chia HH sale.
+   Radix khai `.rt-TableCell { vertical-align: inherit }` và đặt `top` ở `.rt-TableRoot`,
+   nên cell kế thừa `top` — hàng nào có ô nhiều dòng là các ô còn lại dính lên đỉnh.
+   Không sửa được bằng Tailwind: `align-middle` hoà độ đặc hiệu (0,1,0) với Radix mà
+   Radix nạp sau nên thắng, còn biến thể `[&_.rt-TableCell]:align-middle` thì Tailwind
+   KHÔNG sinh ra rule (đã kiểm trên trình duyệt: class có trong DOM, stylesheet không có
+   selector tương ứng). Rule phạm vi hẹp (0,2,0) dưới đây là cách duy nhất còn lại —
+   cùng khuôn với hai khối ngay trên.
+   `.rt-TableColumnHeaderCell` mang luôn cả class `.rt-TableCell` nên một selector
+   phủ cả header lẫn body. */
+.deal-split-table .rt-TableCell {
+  vertical-align: middle;
+}
+
+/* Cùng lý do độ đặc hiệu: khối `.rt-TableColumnHeaderCell { font-weight: inherit }` ở đầu
+   file này (0,1,0) hoà với utility `font-medium` của Tailwind rồi thắng nhờ nạp sau, nên
+   tiêu đề cột Mục ① rơi về 400 trong khi 5 mục kia là 500. Ghim ở đây cho khớp. */
+.deal-split-table .rt-TableColumnHeaderCell {
+  font-weight: 500;
+}
+
+/* ── "Lịch sử đối chiếu" ledger — sticky-right "Thành tiền" column ──────────────
+   Radix Themes paints .rt-TableCell / .rt-TableColumnHeaderCell backgrounds (loaded
+   after Tailwind, same specificity) so Tailwind `bg-*` utilities on the sticky cell
+   lose and the rail renders transparent — columns underneath bleed through on
+   horizontal scroll. We give every cell an opaque surface + drive the sticky rail
+   here with a scoped (0-2-0+) selector that beats Radix. */
+.recon-history-table .rt-TableCell {
+  background-color: var(--color-background-1);
+}
+.recon-history-table .rt-TableColumnHeaderCell {
+  background-color: var(--color-background-2);
+  /* Căn giữa theo chiều dọc — Radix default vertical-align thắng Tailwind utility nên khóa ở đây. */
+  vertical-align: middle;
+}
+.recon-history-table .rt-TableColumnHeaderCell:last-child,
+.recon-history-table .rt-TableCell:last-child {
+  position: sticky;
+  right: 0;
+  z-index: 2;
+  box-shadow: -1px 0 0 var(--color-border-1, #e5e7eb);
+}
+/* "Đang lập" preview row tint — all cells incl. the sticky rail (no seam). */
+.recon-history-table .recon-history-current-row .rt-TableCell {
+  background-color: var(--color-data-blue-disabled);
+}
