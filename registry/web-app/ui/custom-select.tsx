@@ -54,7 +54,7 @@ export const CustomSelect: React.FC<CustomSelectProps> = ({
   return (
     <div className={cn('w-full space-y-1.5 font-inter relative', className)} ref={containerRef}>
       {label && (
-        <label className="block text-xs font-semibold text-slate-700">
+        <label className="block text-sm font-semibold text-content-dark-1 mb-1.5">
           {label} {required && <span className="text-action-primary-red-default font-bold">*</span>}
         </label>
       )}
@@ -62,13 +62,13 @@ export const CustomSelect: React.FC<CustomSelectProps> = ({
       <div
         onClick={() => !disabled && setIsOpen(!isOpen)}
         className={cn(
-          'w-full min-h-[38px] px-3 py-2 flex items-center justify-between text-xs bg-white border rounded cursor-pointer select-none transition-all duration-150',
+          'w-full min-h-[38px] px-3 py-2 flex items-center justify-between text-sm bg-white border rounded cursor-pointer select-none transition-all duration-150',
           error
-            ? 'border-rose-400 bg-rose-50/20'
+            ? 'border-data-red-default bg-data-red-default/5'
             : isOpen
-            ? 'border-[#B32B2F] ring-2 ring-[#B32B2F]/20'
+            ? 'border-action-primary-red-default outline-none'
             : 'border-slate-200 hover:border-slate-300',
-          disabled && 'bg-slate-50 text-slate-400 border-slate-200 cursor-not-allowed'
+          disabled && 'bg-data-light-grey-disabled text-content-dark-4 border-slate-200 cursor-not-allowed'
         )}
       >
         <span className={selectedOption ? 'text-slate-900 font-medium truncate' : 'text-slate-400 truncate'}>
@@ -96,9 +96,9 @@ export const CustomSelect: React.FC<CustomSelectProps> = ({
       </div>
 
       {isOpen && !disabled && (
-        <div className="absolute z-50 left-0 right-0 top-full mt-1 max-h-60 overflow-y-auto rounded border border-slate-200 bg-white p-1 shadow-xl animate-in fade-in zoom-in-95">
+        <div className="absolute z-50 left-0 right-0 top-full mt-1 max-h-60 overflow-y-auto rounded border border-slate-200 bg-white p-1 shadow-md animate-in fade-in zoom-in-95">
           {options.length === 0 ? (
-            <div className="px-3 py-2 text-xs text-slate-400 text-center">Không có lựa chọn nào</div>
+            <div className="px-3 py-3 text-sm text-content-dark-3 text-center">Không có lựa chọn nào</div>
           ) : (
             options.map((opt) => {
               const isSelected = opt.value === value;
@@ -112,19 +112,19 @@ export const CustomSelect: React.FC<CustomSelectProps> = ({
                     }
                   }}
                   className={cn(
-                    'flex items-center justify-between px-3 py-2 rounded text-xs cursor-pointer transition-colors',
+                    'flex items-center justify-between px-3 py-2 rounded text-sm cursor-pointer transition-colors',
                     isSelected
-                      ? 'bg-rose-50 text-action-primary-red-default font-bold'
+                      ? 'bg-action-primary-red-default/10 text-action-primary-red-default font-medium'
                       : opt.disabled
-                      ? 'text-slate-300 cursor-not-allowed'
-                      : 'text-slate-700 hover:bg-slate-50'
+                      ? 'text-content-dark-4 cursor-not-allowed bg-transparent'
+                      : 'text-content-dark-1 hover:bg-slate-50'
                   )}
                 >
                   <div>
                     <div className="truncate">{opt.label}</div>
-                    {opt.subtitle && <div className="text-[10px] text-slate-400 font-normal">{opt.subtitle}</div>}
+                    {opt.subtitle && <div className="text-[11px] text-content-dark-3 font-normal mt-0.5">{opt.subtitle}</div>}
                   </div>
-                  {isSelected && <Check size={14} className="text-action-primary-red-default shrink-0" />}
+                  {isSelected && <Check size={16} className="text-action-primary-red-default shrink-0" />}
                 </div>
               );
             })
