@@ -6,6 +6,7 @@ import {
   CollapsibleContent,
 } from './collapsible';
 import { Button } from './button';
+import { ChevronDown, ChevronUp } from 'lucide-react';
 
 const meta: Meta<typeof Collapsible> = {
   title: 'Web App/Collapsible',
@@ -26,28 +27,34 @@ export const Default: StoryObj<typeof Collapsible> = {
       <Collapsible
         open={isOpen}
         onOpenChange={setIsOpen}
-        className="w-[350px] space-y-2"
+        className="w-[400px] border border-slate-200 rounded-lg bg-white overflow-hidden"
       >
-        <div className="flex items-center justify-between space-x-4 px-4">
-          <h4 className="text-sm font-semibold">
-            @peduarte starred 3 repositories
+        <div className="flex items-center justify-between px-4 py-3 bg-slate-50 border-b border-slate-100">
+          <h4 className="text-sm font-semibold text-content-dark-1">
+            Thông tin dự án
           </h4>
           <CollapsibleTrigger asChild>
-            <Button variant="ghost" size="sm" className="w-9 p-0">
+            <Button variant="ghost" size="icon" className="h-8 w-8 text-slate-500 hover:text-slate-800">
               <span className="sr-only">Toggle</span>
-              {isOpen ? 'Close' : 'Open'}
+              {isOpen ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
             </Button>
           </CollapsibleTrigger>
         </div>
-        <div className="rounded-md border px-4 py-3 font-mono text-sm">
-          @radix-ui/primitives
-        </div>
-        <CollapsibleContent className="space-y-2">
-          <div className="rounded-md border px-4 py-3 font-mono text-sm">
-            @radix-ui/colors
-          </div>
-          <div className="rounded-md border px-4 py-3 font-mono text-sm">
-            @stitches/react
+        
+        <CollapsibleContent className="transition-all data-[state=closed]:animate-out data-[state=closed]:fade-out data-[state=open]:animate-in data-[state=open]:fade-in">
+          <div className="p-4 space-y-3 bg-white">
+            <div className="flex justify-between text-sm">
+              <span className="text-slate-500">Mã dự án:</span>
+              <span className="font-medium text-content-dark-1">PRJ-2026-001</span>
+            </div>
+            <div className="flex justify-between text-sm">
+              <span className="text-slate-500">Trạng thái:</span>
+              <span className="font-medium text-emerald-600">Đang triển khai</span>
+            </div>
+            <div className="flex justify-between text-sm">
+              <span className="text-slate-500">Người phụ trách:</span>
+              <span className="font-medium text-content-dark-1">Nguyễn Văn A</span>
+            </div>
           </div>
         </CollapsibleContent>
       </Collapsible>
