@@ -52,14 +52,8 @@
       "title": "Avatar",
       "description": "Auto-generated ui component for avatar",
       "dependencies": [],
-      "registryDependencies": [
-        "@radix-ui/themes"
-      ],
+      "registryDependencies": [],
       "files": [
-        {
-          "path": "registry/web-app/ui/avatar/Avatar.tsx",
-          "type": "registry:ui"
-        },
         {
           "path": "registry/web-app/ui/avatar/DefaultAvatar.tsx",
           "type": "registry:ui"
@@ -67,15 +61,15 @@
       ]
     },
     {
-      "name": "badge",
+      "name": "badge.stories",
       "type": "registry:ui",
-      "title": "Badge",
-      "description": "Auto-generated ui component for badge",
+      "title": "Badge.stories",
+      "description": "Auto-generated ui component for badge.stories",
       "dependencies": [],
       "registryDependencies": [],
       "files": [
         {
-          "path": "registry/web-app/ui/badge/amount-badge.tsx",
+          "path": "registry/web-app/ui/badge.stories.tsx",
           "type": "registry:ui"
         }
       ]
@@ -100,18 +94,8 @@
       "title": "Breadcrumb",
       "description": "Auto-generated ui component for breadcrumb",
       "dependencies": [],
-      "registryDependencies": [
-        "slot"
-      ],
+      "registryDependencies": [],
       "files": [
-        {
-          "path": "registry/web-app/ui/breadcrumb/Breadcrumb.tsx",
-          "type": "registry:ui"
-        },
-        {
-          "path": "registry/web-app/ui/breadcrumb/BreadcrumbWrapper.tsx",
-          "type": "registry:ui"
-        },
         {
           "path": "registry/web-app/ui/breadcrumb/index.ts",
           "type": "registry:ui"
@@ -127,15 +111,25 @@
       "registryDependencies": [],
       "files": [
         {
-          "path": "registry/web-app/ui/button/Button.tsx",
-          "type": "registry:ui"
-        },
-        {
           "path": "registry/web-app/ui/button/IconButton.tsx",
           "type": "registry:ui"
         },
         {
           "path": "registry/web-app/ui/button/index.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "button.stories",
+      "type": "registry:ui",
+      "title": "Button.stories",
+      "description": "Auto-generated ui component for button.stories",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "registry/web-app/ui/button.stories.tsx",
           "type": "registry:ui"
         }
       ]
@@ -249,11 +243,23 @@
       "registryDependencies": [],
       "files": [
         {
-          "path": "registry/web-app/ui/chip/Chip.tsx",
-          "type": "registry:ui"
-        },
-        {
           "path": "registry/web-app/ui/chip/index.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "collapsible.stories",
+      "type": "registry:ui",
+      "title": "Collapsible.stories",
+      "description": "Auto-generated ui component for collapsible.stories",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "registry/web-app/ui/collapsible.stories.tsx",
           "type": "registry:ui"
         }
       ]
@@ -291,13 +297,25 @@
       ]
     },
     {
+      "name": "confirm-modal.stories",
+      "type": "registry:ui",
+      "title": "Confirm modal.stories",
+      "description": "Auto-generated ui component for confirm-modal.stories",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "registry/web-app/ui/confirm-modal.stories.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "confirm-modal",
       "type": "registry:ui",
       "title": "Confirm modal",
       "description": "Auto-generated ui component for confirm-modal",
-      "dependencies": [
-        "lucide-react"
-      ],
+      "dependencies": [],
       "registryDependencies": [],
       "files": [
         {
@@ -325,6 +343,20 @@
       ]
     },
     {
+      "name": "custom-select.stories",
+      "type": "registry:ui",
+      "title": "Custom select.stories",
+      "description": "Auto-generated ui component for custom-select.stories",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "registry/web-app/ui/custom-select.stories.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "custom-select",
       "type": "registry:ui",
       "title": "Custom select",
@@ -336,6 +368,20 @@
       "files": [
         {
           "path": "registry/web-app/ui/custom-select.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "data-table.stories",
+      "type": "registry:ui",
+      "title": "Data table.stories",
+      "description": "Auto-generated ui component for data-table.stories",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "registry/web-app/ui/data-table.stories.tsx",
           "type": "registry:ui"
         }
       ]
@@ -359,27 +405,15 @@
       "type": "registry:ui",
       "title": "Date range picker",
       "description": "Auto-generated ui component for date-range-picker",
-      "dependencies": [
-        "react-day-picker"
-      ],
-      "registryDependencies": [
-        "@radix-ui/themes"
-      ],
+      "dependencies": [],
+      "registryDependencies": [],
       "files": [
         {
           "path": "registry/web-app/ui/date-range-picker/DateRangePicker.test.tsx",
           "type": "registry:ui"
         },
         {
-          "path": "registry/web-app/ui/date-range-picker/DateRangePicker.tsx",
-          "type": "registry:ui"
-        },
-        {
           "path": "registry/web-app/ui/date-range-picker/date-range-bounds.test.ts",
-          "type": "registry:ui"
-        },
-        {
-          "path": "registry/web-app/ui/date-range-picker/date-range-bounds.ts",
           "type": "registry:ui"
         }
       ]
@@ -423,10 +457,6 @@
       "registryDependencies": [],
       "files": [
         {
-          "path": "registry/web-app/ui/dot/Dot.tsx",
-          "type": "registry:ui"
-        },
-        {
           "path": "registry/web-app/ui/dot/index.ts",
           "type": "registry:ui"
         }
@@ -446,6 +476,20 @@
         },
         {
           "path": "registry/web-app/ui/dot-loader/index.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "dynamic-zone-builder.stories",
+      "type": "registry:ui",
+      "title": "Dynamic zone builder.stories",
+      "description": "Auto-generated ui component for dynamic-zone-builder.stories",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "registry/web-app/ui/dynamic-zone-builder.stories.tsx",
           "type": "registry:ui"
         }
       ]
@@ -527,10 +571,6 @@
       "registryDependencies": [],
       "files": [
         {
-          "path": "registry/web-app/ui/grid/Grid.tsx",
-          "type": "registry:ui"
-        },
-        {
           "path": "registry/web-app/ui/grid/index.ts",
           "type": "registry:ui"
         }
@@ -573,6 +613,20 @@
       ]
     },
     {
+      "name": "input.stories",
+      "type": "registry:ui",
+      "title": "Input.stories",
+      "description": "Auto-generated ui component for input.stories",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "registry/web-app/ui/input.stories.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "input",
       "type": "registry:ui",
       "title": "Input",
@@ -582,6 +636,20 @@
       "files": [
         {
           "path": "registry/web-app/ui/input.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "modal.stories",
+      "type": "registry:ui",
+      "title": "Modal.stories",
+      "description": "Auto-generated ui component for modal.stories",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "registry/web-app/ui/modal.stories.tsx",
           "type": "registry:ui"
         }
       ]
@@ -624,18 +692,8 @@
       "title": "Page title",
       "description": "Auto-generated ui component for page-title",
       "dependencies": [],
-      "registryDependencies": [
-        "@radix-ui/themes"
-      ],
+      "registryDependencies": [],
       "files": [
-        {
-          "path": "registry/web-app/ui/page-title/PageTitle.tsx",
-          "type": "registry:ui"
-        },
-        {
-          "path": "registry/web-app/ui/page-title/PageTitleToolbar.tsx",
-          "type": "registry:ui"
-        },
         {
           "path": "registry/web-app/ui/page-title/back-navigation.guard.test.ts",
           "type": "registry:ui"
@@ -727,15 +785,21 @@
       "registryDependencies": [],
       "files": [
         {
-          "path": "registry/web-app/ui/rich-text/RichText.tsx",
-          "type": "registry:ui"
-        },
-        {
-          "path": "registry/web-app/ui/rich-text/Toolbar.tsx",
-          "type": "registry:ui"
-        },
-        {
           "path": "registry/web-app/ui/rich-text/index.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "rich-text-editor.stories",
+      "type": "registry:ui",
+      "title": "Rich text editor.stories",
+      "description": "Auto-generated ui component for rich-text-editor.stories",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "registry/web-app/ui/rich-text-editor.stories.tsx",
           "type": "registry:ui"
         }
       ]
@@ -763,11 +827,21 @@
       "registryDependencies": [],
       "files": [
         {
-          "path": "registry/web-app/ui/select/Select.tsx",
-          "type": "registry:ui"
-        },
-        {
           "path": "registry/web-app/ui/select/index.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "select.stories",
+      "type": "registry:ui",
+      "title": "Select.stories",
+      "description": "Auto-generated ui component for select.stories",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "registry/web-app/ui/select.stories.tsx",
           "type": "registry:ui"
         }
       ]
@@ -877,6 +951,10 @@
       "dependencies": [],
       "registryDependencies": [],
       "files": [
+        {
+          "path": "registry/web-app/ui/summary-card/SummaryCard.stories.tsx",
+          "type": "registry:ui"
+        },
         {
           "path": "registry/web-app/ui/summary-card/SummaryCard.tsx",
           "type": "registry:ui"
@@ -1072,6 +1150,20 @@
       ]
     },
     {
+      "name": "textarea.stories",
+      "type": "registry:ui",
+      "title": "Textarea.stories",
+      "description": "Auto-generated ui component for textarea.stories",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "registry/web-app/ui/textarea.stories.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "textarea",
       "type": "registry:ui",
       "title": "Textarea",
@@ -1158,19 +1250,9 @@
       "type": "registry:ui",
       "title": "Tree select",
       "description": "Auto-generated ui component for tree-select",
-      "dependencies": [
-        "lucide-react"
-      ],
+      "dependencies": [],
       "registryDependencies": [],
       "files": [
-        {
-          "path": "registry/web-app/ui/tree-select/TreeNode.tsx",
-          "type": "registry:ui"
-        },
-        {
-          "path": "registry/web-app/ui/tree-select/TreeSelect.tsx",
-          "type": "registry:ui"
-        },
         {
           "path": "registry/web-app/ui/tree-select/types.ts",
           "type": "registry:ui"

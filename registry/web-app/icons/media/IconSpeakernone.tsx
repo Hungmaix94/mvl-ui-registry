@@ -1,0 +1,19 @@
+import { TIcon } from '@/types/common.ts'
+
+function IconSpeakernone({ size = 24, color = 'currentColor', title = '', ...props }: TIcon) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill={color}
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      {title && <title>{title}</title>}
+      <path d="M13.7891 2.4082C14.0151 2.23242 14.3219 2.20053 14.5791 2.32617C14.8364 2.45203 15 2.71357 15 3V21C15 21.2864 14.8364 21.548 14.5791 21.6738C14.3219 21.7994 14.015 21.7675 13.7891 21.5918L7.24219 16.5H3C2.60221 16.5 2.22075 16.3418 1.93945 16.0605C1.65818 15.7793 1.50003 15.3978 1.5 15V9C1.5 8.60221 1.65819 8.22075 1.93945 7.93945C2.22076 7.65815 2.60217 7.5 3 7.5H7.24219L13.7891 2.4082ZM8.24902 8.61719V15.3818L13.5 19.4658V4.5332L8.24902 8.61719ZM3 9V15H6.74902V9H3Z" />
+    </svg>
+  )
+}
+
+export { IconSpeakernone }

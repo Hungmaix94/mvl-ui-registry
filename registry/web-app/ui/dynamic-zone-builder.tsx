@@ -292,7 +292,7 @@ export function DynamicZoneBuilder({
     const IconComp = meta.icon;
 
     return (
-      <div className="my-2.5 rounded border-2 border-dashed border-[#B32B2F] bg-rose-50/70 p-3.5 shadow-xs transition-all animate-in fade-in zoom-in-95 duration-150 select-none">
+      <div className="my-2.5 rounded border-2 border-dashed border-[action-primary-red-default] bg-rose-50/70 p-3.5 shadow-xs transition-all animate-in fade-in zoom-in-95 duration-150 select-none">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3 min-w-0">
             <div className="flex h-8 w-8 items-center justify-center rounded bg-white border border-rose-200 text-action-primary-red-default shadow-2xs shrink-0">

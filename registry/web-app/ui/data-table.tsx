@@ -45,7 +45,7 @@ export function DataTable<T>({
               <tr>
                 <td colSpan={columns.length} className="px-4 py-12 text-center text-slate-400">
                   <div className="flex flex-col items-center justify-center gap-2">
-                    <span className="h-5 w-5 animate-spin rounded-full border-2 border-[#B32B2F] border-t-transparent" />
+                    <span className="h-5 w-5 animate-spin rounded-full border-2 border-[action-primary-red-default] border-t-transparent" />
                     <span>Đang tải dữ liệu...</span>
                   </div>
                 </td>

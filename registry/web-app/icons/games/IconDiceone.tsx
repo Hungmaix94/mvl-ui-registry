@@ -1,0 +1,19 @@
+import { TIcon } from '@/types/common.ts'
+
+function IconDiceone({ size = 24, color = 'currentColor', title = '', ...props }: TIcon) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill={color}
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      {title && <title>{title}</title>}
+      <path d="M18 3C19.6569 3 21 4.34315 21 6V18C21 19.6569 19.6569 21 18 21H6C4.34315 21 3 19.6569 3 18V6C3 4.34315 4.34315 3 6 3H18ZM6 4.5C5.17157 4.5 4.5 5.17157 4.5 6V18C4.5 18.8284 5.17157 19.5 6 19.5H18C18.8284 19.5 19.5 18.8284 19.5 18V6C19.5 5.17157 18.8284 4.5 18 4.5H6ZM12 11.0625C12.5178 11.0625 12.9375 11.4822 12.9375 12C12.9375 12.5178 12.5178 12.9375 12 12.9375C11.4822 12.9375 11.0625 12.5178 11.0625 12C11.0625 11.4822 11.4822 11.0625 12 11.0625Z" />
+    </svg>
+  )
+}
+
+export { IconDiceone }
