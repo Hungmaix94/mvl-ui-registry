@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "grid",
+  "type": "registry:ui",
+  "title": "Grid",
+  "description": "Auto-generated ui component for grid",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/web-app/ui/grid/Grid.tsx",
+      "content": "import React from 'react'\nimport { cn } from '@/lib/utils'\n\nexport interface GridProps extends React.HTMLAttributes<HTMLDivElement> {\n  children?: React.ReactNode\n  cols?: number | string\n  rows?: number | string\n  gap?: number | string\n  gapX?: number | string\n  gapY?: number | string\n  className?: string\n}\n\nconst Grid = React.forwardRef<HTMLDivElement, GridProps>(\n  ({ children, cols, rows, gap, gapX, gapY, className, ...props }, ref) => {\n    const gridStyles = cn(\n      'grid',\n      cols && `grid-cols-${cols}`,\n      rows && `grid-rows-${rows}`,\n      gap && `gap-${gap}`,\n      gapX && `gap-x-${gapX}`,\n      gapY && `gap-y-${gapY}`,\n      className\n    )\n\n    return (\n      <div ref={ref} className={gridStyles} {...props}>\n        {children}\n      </div>\n    )\n  }\n)\n\nGrid.displayName = 'Grid'\n\nexport default Grid\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "registry/web-app/ui/grid/index.ts",
+      "content": "export { default as Grid } from './Grid'\nexport type { GridProps } from './Grid'\n",
+      "type": "registry:ui"
+    }
+  ]
+}

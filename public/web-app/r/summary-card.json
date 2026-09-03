@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "summary-card",
+  "type": "registry:ui",
+  "title": "Summary card",
+  "description": "Auto-generated ui component for summary-card",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/web-app/ui/summary-card/SummaryCard.tsx",
+      "content": "import { FC } from 'react'\n\nexport interface SummaryCardProps {\n  label: string\n  value: string | number\n  color?: string\n  /** Chú thích nhỏ dưới con số — dùng khi phạm vi của thẻ khác phạm vi của bảng bên dưới. */\n  note?: string\n}\n\nexport const SummaryCard: FC<SummaryCardProps> = ({\n  label,\n  value,\n  color = 'text-gray-900',\n  note,\n}) => (\n  <div className=\"p-4\">\n    <div className=\"text-[11px] font-bold tracking-wider text-gray-500 uppercase\">{label}</div>\n    <div className={`mt-1 text-lg font-bold ${color}`}>{value}</div>\n    {note && <div className=\"mt-0.5 text-[11px] text-gray-500\">{note}</div>}\n  </div>\n)\n\nexport default SummaryCard\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "registry/web-app/ui/summary-card/index.ts",
+      "content": "export * from './SummaryCard'\nexport { default } from './SummaryCard'\n",
+      "type": "registry:ui"
+    }
+  ]
+}

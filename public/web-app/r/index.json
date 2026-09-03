@@ -1,0 +1,372 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "web-app",
+  "items": [
+    {
+      "name": "Dash",
+      "type": "registry:ui",
+      "title": "Dash",
+      "description": "Auto-generated ui component for Dash"
+    },
+    {
+      "name": "SearchableInput",
+      "type": "registry:ui",
+      "title": "SearchableInput",
+      "description": "Auto-generated ui component for SearchableInput"
+    },
+    {
+      "name": "attachment-section",
+      "type": "registry:ui",
+      "title": "Attachment section",
+      "description": "Auto-generated ui component for attachment-section"
+    },
+    {
+      "name": "avatar",
+      "type": "registry:ui",
+      "title": "Avatar",
+      "description": "Auto-generated ui component for avatar"
+    },
+    {
+      "name": "badge",
+      "type": "registry:ui",
+      "title": "Badge",
+      "description": "Auto-generated ui component for badge"
+    },
+    {
+      "name": "badge",
+      "type": "registry:ui",
+      "title": "Badge",
+      "description": "Auto-generated ui component for badge"
+    },
+    {
+      "name": "breadcrumb",
+      "type": "registry:ui",
+      "title": "Breadcrumb",
+      "description": "Auto-generated ui component for breadcrumb"
+    },
+    {
+      "name": "button",
+      "type": "registry:ui",
+      "title": "Button",
+      "description": "Auto-generated ui component for button"
+    },
+    {
+      "name": "button",
+      "type": "registry:ui",
+      "title": "Button",
+      "description": "Auto-generated ui component for button"
+    },
+    {
+      "name": "calendar",
+      "type": "registry:ui",
+      "title": "Calendar",
+      "description": "Auto-generated ui component for calendar"
+    },
+    {
+      "name": "chart",
+      "type": "registry:ui",
+      "title": "Chart",
+      "description": "Auto-generated ui component for chart"
+    },
+    {
+      "name": "chart",
+      "type": "registry:ui",
+      "title": "Chart",
+      "description": "Auto-generated ui component for chart"
+    },
+    {
+      "name": "checkbox",
+      "type": "registry:ui",
+      "title": "Checkbox",
+      "description": "Auto-generated ui component for checkbox"
+    },
+    {
+      "name": "chip",
+      "type": "registry:ui",
+      "title": "Chip",
+      "description": "Auto-generated ui component for chip"
+    },
+    {
+      "name": "collapsible",
+      "type": "registry:ui",
+      "title": "Collapsible",
+      "description": "Auto-generated ui component for collapsible"
+    },
+    {
+      "name": "command",
+      "type": "registry:ui",
+      "title": "Command",
+      "description": "Auto-generated ui component for command"
+    },
+    {
+      "name": "confirm-modal",
+      "type": "registry:ui",
+      "title": "Confirm modal",
+      "description": "Auto-generated ui component for confirm-modal"
+    },
+    {
+      "name": "currency-input",
+      "type": "registry:ui",
+      "title": "Currency input",
+      "description": "Auto-generated ui component for currency-input"
+    },
+    {
+      "name": "custom-select",
+      "type": "registry:ui",
+      "title": "Custom select",
+      "description": "Auto-generated ui component for custom-select"
+    },
+    {
+      "name": "data-table",
+      "type": "registry:ui",
+      "title": "Data table",
+      "description": "Auto-generated ui component for data-table"
+    },
+    {
+      "name": "date-range-picker",
+      "type": "registry:ui",
+      "title": "Date range picker",
+      "description": "Auto-generated ui component for date-range-picker"
+    },
+    {
+      "name": "development-in-progress",
+      "type": "registry:ui",
+      "title": "Development in progress",
+      "description": "Auto-generated ui component for development-in-progress"
+    },
+    {
+      "name": "dialog",
+      "type": "registry:ui",
+      "title": "Dialog",
+      "description": "Auto-generated ui component for dialog"
+    },
+    {
+      "name": "dot",
+      "type": "registry:ui",
+      "title": "Dot",
+      "description": "Auto-generated ui component for dot"
+    },
+    {
+      "name": "dot-loader",
+      "type": "registry:ui",
+      "title": "Dot loader",
+      "description": "Auto-generated ui component for dot-loader"
+    },
+    {
+      "name": "dynamic-zone-builder",
+      "type": "registry:ui",
+      "title": "Dynamic zone builder",
+      "description": "Auto-generated ui component for dynamic-zone-builder"
+    },
+    {
+      "name": "file-upload",
+      "type": "registry:ui",
+      "title": "File upload",
+      "description": "Auto-generated ui component for file-upload"
+    },
+    {
+      "name": "form",
+      "type": "registry:ui",
+      "title": "Form",
+      "description": "Auto-generated ui component for form"
+    },
+    {
+      "name": "grid",
+      "type": "registry:ui",
+      "title": "Grid",
+      "description": "Auto-generated ui component for grid"
+    },
+    {
+      "name": "icon",
+      "type": "registry:ui",
+      "title": "Icon",
+      "description": "Auto-generated ui component for icon"
+    },
+    {
+      "name": "input-otp",
+      "type": "registry:ui",
+      "title": "Input otp",
+      "description": "Auto-generated ui component for input-otp"
+    },
+    {
+      "name": "input",
+      "type": "registry:ui",
+      "title": "Input",
+      "description": "Auto-generated ui component for input"
+    },
+    {
+      "name": "modal",
+      "type": "registry:ui",
+      "title": "Modal",
+      "description": "Auto-generated ui component for modal"
+    },
+    {
+      "name": "month-picker",
+      "type": "registry:ui",
+      "title": "Month picker",
+      "description": "Auto-generated ui component for month-picker"
+    },
+    {
+      "name": "page-title",
+      "type": "registry:ui",
+      "title": "Page title",
+      "description": "Auto-generated ui component for page-title"
+    },
+    {
+      "name": "phone-input",
+      "type": "registry:ui",
+      "title": "Phone input",
+      "description": "Auto-generated ui component for phone-input"
+    },
+    {
+      "name": "popover",
+      "type": "registry:ui",
+      "title": "Popover",
+      "description": "Auto-generated ui component for popover"
+    },
+    {
+      "name": "radio-group",
+      "type": "registry:ui",
+      "title": "Radio group",
+      "description": "Auto-generated ui component for radio-group"
+    },
+    {
+      "name": "rate-input",
+      "type": "registry:ui",
+      "title": "Rate input",
+      "description": "Auto-generated ui component for rate-input"
+    },
+    {
+      "name": "rich-text",
+      "type": "registry:ui",
+      "title": "Rich text",
+      "description": "Auto-generated ui component for rich-text"
+    },
+    {
+      "name": "rich-text-editor",
+      "type": "registry:ui",
+      "title": "Rich text editor",
+      "description": "Auto-generated ui component for rich-text-editor"
+    },
+    {
+      "name": "select",
+      "type": "registry:ui",
+      "title": "Select",
+      "description": "Auto-generated ui component for select"
+    },
+    {
+      "name": "select",
+      "type": "registry:ui",
+      "title": "Select",
+      "description": "Auto-generated ui component for select"
+    },
+    {
+      "name": "separator",
+      "type": "registry:ui",
+      "title": "Separator",
+      "description": "Auto-generated ui component for separator"
+    },
+    {
+      "name": "separator",
+      "type": "registry:ui",
+      "title": "Separator",
+      "description": "Auto-generated ui component for separator"
+    },
+    {
+      "name": "sheet",
+      "type": "registry:ui",
+      "title": "Sheet",
+      "description": "Auto-generated ui component for sheet"
+    },
+    {
+      "name": "sidebar",
+      "type": "registry:ui",
+      "title": "Sidebar",
+      "description": "Auto-generated ui component for sidebar"
+    },
+    {
+      "name": "skeleton",
+      "type": "registry:ui",
+      "title": "Skeleton",
+      "description": "Auto-generated ui component for skeleton"
+    },
+    {
+      "name": "summary-card",
+      "type": "registry:ui",
+      "title": "Summary card",
+      "description": "Auto-generated ui component for summary-card"
+    },
+    {
+      "name": "switch",
+      "type": "registry:ui",
+      "title": "Switch",
+      "description": "Auto-generated ui component for switch"
+    },
+    {
+      "name": "table",
+      "type": "registry:ui",
+      "title": "Table",
+      "description": "Auto-generated ui component for table"
+    },
+    {
+      "name": "table-tree",
+      "type": "registry:ui",
+      "title": "Table tree",
+      "description": "Auto-generated ui component for table-tree"
+    },
+    {
+      "name": "tabs",
+      "type": "registry:ui",
+      "title": "Tabs",
+      "description": "Auto-generated ui component for tabs"
+    },
+    {
+      "name": "text-area",
+      "type": "registry:ui",
+      "title": "Text area",
+      "description": "Auto-generated ui component for text-area"
+    },
+    {
+      "name": "text-field",
+      "type": "registry:ui",
+      "title": "Text field",
+      "description": "Auto-generated ui component for text-field"
+    },
+    {
+      "name": "text",
+      "type": "registry:ui",
+      "title": "Text",
+      "description": "Auto-generated ui component for text"
+    },
+    {
+      "name": "textarea",
+      "type": "registry:ui",
+      "title": "Textarea",
+      "description": "Auto-generated ui component for textarea"
+    },
+    {
+      "name": "time-picker",
+      "type": "registry:ui",
+      "title": "Time picker",
+      "description": "Auto-generated ui component for time-picker"
+    },
+    {
+      "name": "timesheet-table",
+      "type": "registry:ui",
+      "title": "Timesheet table",
+      "description": "Auto-generated ui component for timesheet-table"
+    },
+    {
+      "name": "tooltip",
+      "type": "registry:ui",
+      "title": "Tooltip",
+      "description": "Auto-generated ui component for tooltip"
+    },
+    {
+      "name": "tree-select",
+      "type": "registry:ui",
+      "title": "Tree select",
+      "description": "Auto-generated ui component for tree-select"
+    }
+  ]
+}

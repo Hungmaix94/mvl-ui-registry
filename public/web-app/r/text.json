@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "text",
+  "type": "registry:ui",
+  "title": "Text",
+  "description": "Auto-generated ui component for text",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/web-app/ui/text.tsx",
+      "content": "import * as React from 'react'\nimport { cva, type VariantProps } from 'class-variance-authority'\nimport { cn } from '@/lib/utils'\n\nconst textVariants = cva('text-base', {\n  variants: {\n    variant: {\n      default: '',\n      muted: 'text-muted-foreground',\n      danger: 'text-destructive',\n      success: 'text-green-600',\n      warning: 'text-yellow-600',\n    },\n    size: {\n      sm: 'text-sm',\n      base: 'text-base',\n      lg: 'text-lg',\n      xl: 'text-xl',\n    },\n    weight: {\n      normal: 'font-normal',\n      medium: 'font-medium',\n      semibold: 'font-semibold',\n      bold: 'font-bold',\n    },\n    align: {\n      left: 'text-left',\n      center: 'text-center',\n      right: 'text-right',\n    },\n  },\n  defaultVariants: {\n    variant: 'default',\n    size: 'base',\n    weight: 'normal',\n    align: 'left',\n  },\n})\n\nexport interface TextProps\n  extends React.HTMLAttributes<HTMLElement>,\n    VariantProps<typeof textVariants> {\n  as?: React.ElementType\n}\n\nconst Text = React.forwardRef<HTMLElement, TextProps>(\n  ({ as: Comp = 'span', className, variant, size, weight, align, ...props }, ref) => {\n    return (\n      <Comp\n        ref={ref}\n        className={cn(textVariants({ variant, size, weight, align }), className)}\n        {...props}\n      />\n    )\n  }\n)\nText.displayName = 'Text'\n\nexport { Text, textVariants }\n",
+      "type": "registry:ui"
+    }
+  ]
+}

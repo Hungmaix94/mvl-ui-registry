@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "separator",
+  "type": "registry:ui",
+  "title": "Separator",
+  "description": "Auto-generated ui component for separator",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/web-app/ui/separator.tsx",
+      "content": "import * as React from 'react'\n\nimport { cn } from '@/lib/utils'\n\nexport interface SeparatorProps extends React.HTMLAttributes<HTMLDivElement> {\n  orientation?: 'horizontal' | 'vertical'\n  decorative?: boolean\n}\n\nfunction Separator({\n  className,\n  orientation = 'horizontal',\n  decorative = true,\n  ...props\n}: SeparatorProps) {\n  return (\n    <div\n      role={decorative ? 'none' : 'separator'}\n      aria-orientation={decorative ? undefined : orientation}\n      className={cn(\n        'border-border-1 shrink-0',\n        orientation === 'horizontal' ? 'w-full border-b' : 'h-full border-r',\n        className\n      )}\n      {...props}\n    />\n  )\n}\n\nexport { Separator }\n",
+      "type": "registry:ui"
+    }
+  ]
+}

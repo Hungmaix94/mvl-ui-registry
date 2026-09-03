@@ -1,0 +1,50 @@
+.ProseMirror {
+  min-height: 150px;
+  padding: 10px;
+  outline: none;
+}
+
+.ProseMirror p {
+  margin: 0;
+}
+
+.ProseMirror ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.ProseMirror ol {
+  list-style-type: decimal;
+  padding-left: 20px;
+}
+
+.ProseMirror h1 {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.ProseMirror h2 {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.ProseMirror h3 {
+  font-size: 1.17em;
+  font-weight: bold;
+}
+
+.ProseMirror-focused {
+  outline: none;
+}
+
+.ProseMirror:focus {
+  outline: none;
+}
+
+.ProseMirror[contenteditable='true']:empty:before {
+  content: attr(placeholder);
+  color: #a1a1aa; /* text-neutral-400 */
+  float: left;
+  height: 0;
+  pointer-events: none;
+}

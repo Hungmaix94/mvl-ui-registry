@@ -1,0 +1,190 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "web-public",
+  "items": [
+    {
+      "name": "AmenitiesGrid",
+      "type": "registry:block",
+      "title": "AmenitiesGrid",
+      "description": "Auto-generated block component for AmenitiesGrid",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "registry/web-public/blocks/AmenitiesGrid.tsx",
+          "type": "registry:block"
+        }
+      ]
+    },
+    {
+      "name": "ContactLeadForm",
+      "type": "registry:block",
+      "title": "ContactLeadForm",
+      "description": "Auto-generated block component for ContactLeadForm",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "registry/web-public/blocks/ContactLeadForm.tsx",
+          "type": "registry:block"
+        }
+      ]
+    },
+    {
+      "name": "FAQAccordion",
+      "type": "registry:block",
+      "title": "FAQAccordion",
+      "description": "Auto-generated block component for FAQAccordion",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "registry/web-public/blocks/FAQAccordion.tsx",
+          "type": "registry:block"
+        }
+      ]
+    },
+    {
+      "name": "FloorPlans",
+      "type": "registry:block",
+      "title": "FloorPlans",
+      "description": "Auto-generated block component for FloorPlans",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "registry/web-public/blocks/FloorPlans.tsx",
+          "type": "registry:block"
+        }
+      ]
+    },
+    {
+      "name": "FooterSection",
+      "type": "registry:block",
+      "title": "FooterSection",
+      "description": "Auto-generated block component for FooterSection",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "registry/web-public/blocks/FooterSection.tsx",
+          "type": "registry:block"
+        }
+      ]
+    },
+    {
+      "name": "HeroBanner",
+      "type": "registry:block",
+      "title": "HeroBanner",
+      "description": "Auto-generated block component for HeroBanner",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "registry/web-public/blocks/HeroBanner.tsx",
+          "type": "registry:block"
+        }
+      ]
+    },
+    {
+      "name": "LocationMap",
+      "type": "registry:block",
+      "title": "LocationMap",
+      "description": "Auto-generated block component for LocationMap",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "registry/web-public/blocks/LocationMap.tsx",
+          "type": "registry:block"
+        }
+      ]
+    },
+    {
+      "name": "MasterPlan3D",
+      "type": "registry:block",
+      "title": "MasterPlan3D",
+      "description": "Auto-generated block component for MasterPlan3D",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "registry/web-public/blocks/MasterPlan3D.tsx",
+          "type": "registry:block"
+        }
+      ]
+    },
+    {
+      "name": "PricingTable",
+      "type": "registry:block",
+      "title": "PricingTable",
+      "description": "Auto-generated block component for PricingTable",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "registry/web-public/blocks/PricingTable.tsx",
+          "type": "registry:block"
+        }
+      ]
+    },
+    {
+      "name": "PropertyGallery",
+      "type": "registry:block",
+      "title": "PropertyGallery",
+      "description": "Auto-generated block component for PropertyGallery",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "registry/web-public/blocks/PropertyGallery.tsx",
+          "type": "registry:block"
+        }
+      ]
+    },
+    {
+      "name": "VRTour3D",
+      "type": "registry:block",
+      "title": "VRTour3D",
+      "description": "Auto-generated block component for VRTour3D",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "registry/web-public/blocks/VRTour3D.tsx",
+          "type": "registry:block"
+        }
+      ]
+    },
+    {
+      "name": "VideoSection",
+      "type": "registry:block",
+      "title": "VideoSection",
+      "description": "Auto-generated block component for VideoSection",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "registry/web-public/blocks/VideoSection.tsx",
+          "type": "registry:block"
+        }
+      ]
+    }
+  ]
+}

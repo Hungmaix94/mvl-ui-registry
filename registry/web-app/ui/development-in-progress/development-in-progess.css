@@ -1,0 +1,14 @@
+@keyframes setting-gear-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.setting-gear {
+  animation: setting-gear-spin 4s linear infinite;
+  transform-box: fill-box; /* Đảm bảo transform-origin tham chiếu đến hộp giới hạn của phần tử */
+  transform-origin: center; /* Đặt điểm gốc xoay về tâm của phần tử */
+}

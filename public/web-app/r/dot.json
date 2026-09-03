@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "dot",
+  "type": "registry:ui",
+  "title": "Dot",
+  "description": "Auto-generated ui component for dot",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/web-app/ui/dot/Dot.tsx",
+      "content": "import { cn } from '@/utils'\nimport { ColoredValueVariant } from '@/api/schema.ts'\n\nexport type DotVariant = ColoredValueVariant\nexport type DotSize = 'small' | 'base'\n\nexport type DotProps = {\n  variant?: DotVariant\n  size?: DotSize\n  className?: string\n}\n\n/**\n * Dot Component\n *\n * A reusable dot indicator component with different color variants and sizes.\n * Uses design tokens for consistent theming based on Figma design system.\n * Commonly used to show status indicators.\n *\n * @example\n * ```tsx\n * <Dot variant={ColoredValueVariant.GREEN} size=\"small\" />\n * <Dot variant={ColoredValueVariant.PURPLE} size=\"base\" />\n * ```\n */\nconst Dot = ({ variant = ColoredValueVariant.GREEN, size = 'small', className }: DotProps) => {\n  // Dot background colors matching Chip component\n  const variantStyles = {\n    [ColoredValueVariant.GREEN]: 'bg-data-green-default',\n    [ColoredValueVariant.BLUE]: 'bg-data-blue-default',\n    [ColoredValueVariant.YELLOW]: 'bg-data-yellow-default',\n    [ColoredValueVariant.PURPLE]: 'bg-data-purple-default',\n    [ColoredValueVariant.RED]: 'bg-data-red-default',\n    [ColoredValueVariant.ORANGE]: 'bg-data-orange-default',\n    [ColoredValueVariant.GREY]: 'bg-content-dark-3',\n  }\n\n  // Size styles\n  const sizeStyles = {\n    small: 'size-2',\n    base: 'size-[10px]',\n  }\n\n  return (\n    <span\n      className={cn('shrink-0 rounded-full', variantStyles[variant], sizeStyles[size], className)}\n    />\n  )\n}\n\nexport default Dot\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "registry/web-app/ui/dot/index.ts",
+      "content": "export { default as Dot } from './Dot'\nexport type { DotProps } from './Dot'\n",
+      "type": "registry:ui"
+    }
+  ]
+}

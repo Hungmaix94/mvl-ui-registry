@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "VideoSection",
+  "type": "registry:block",
+  "title": "VideoSection",
+  "description": "Auto-generated block component for VideoSection",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/web-public/blocks/VideoSection.tsx",
+      "content": "import React from 'react';\nimport { Video } from 'lucide-react';\n\nexport interface VideoSectionProps {\n  title: string;\n  videoUrl?: string;\n  posterUrl?: string;\n}\n\nexport const VideoSection: React.FC<VideoSectionProps> = ({\n  title,\n  posterUrl,\n}) => {\n  return (\n    <section className=\"bg-white py-16 px-6 font-sans text-center\">\n      <div className=\"max-w-4xl mx-auto space-y-6\">\n        <h2 className=\"text-2xl md:text-3xl font-black text-slate-900\">{title}</h2>\n        <div className=\"relative aspect-video rounded-2xl border border-slate-200 overflow-hidden bg-slate-900 flex items-center justify-center group cursor-pointer shadow-lg\">\n          {posterUrl && (\n            <img\n              src={posterUrl}\n              alt={title}\n              className=\"h-full w-full object-cover brightness-75 group-hover:scale-105 transition-all duration-300\"\n            />\n          )}\n          <div className=\"absolute flex h-16 w-16 items-center justify-center rounded-full bg-[#B32B2F] text-white shadow-xl group-hover:scale-110 transition-transform\">\n            <Video size={24} />\n          </div>\n        </div>\n      </div>\n    </section>\n  );\n};\n\nexport const VideoSectionConfig = {\n  fields: {\n    title: { type: 'text' as const, label: 'Tiêu đề Video' },\n    videoUrl: { type: 'text' as const, label: 'URL Video YouTube' },\n    posterUrl: { type: 'text' as const, label: 'URL Poster' },\n  },\n  defaultProps: {\n    title: 'Video Giới Thiệu Dự Án Toàn Cảnh',\n    videoUrl: 'https://youtube.com',\n    posterUrl: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80',\n  },\n  render: VideoSection,\n};\n",
+      "type": "registry:block"
+    }
+  ]
+}

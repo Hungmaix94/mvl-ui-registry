@@ -1,0 +1,24 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "checkbox",
+  "type": "registry:ui",
+  "title": "Checkbox",
+  "description": "Auto-generated ui component for checkbox",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [
+    "checkbox"
+  ],
+  "files": [
+    {
+      "path": "registry/web-app/ui/checkbox/Checkbox.tsx",
+      "content": "import React from 'react'\nimport * as CheckboxPrimitive from '@radix-ui/react-checkbox'\nimport { IconCheck } from '@/assets/icons/system-devices'\nimport { cn } from '@/utils'\nimport { IconMinus } from '@/assets/icons'\nimport { FormCaption } from '@/components/ui/form'\n\nexport interface CheckboxProps extends React.ComponentProps<typeof CheckboxPrimitive.Root> {\n  className?: string\n  childrenClassName?: string\n  label?: string\n  error?: string\n}\n\nconst Checkbox = React.forwardRef<\n  React.ElementRef<typeof CheckboxPrimitive.Root>,\n  CheckboxProps & { value?: any; onChange?: (value: any) => void }\n>(\n  (\n    {\n      className,\n      childrenClassName,\n      label,\n      error,\n      checked,\n      value,\n      onChange,\n      onCheckedChange,\n      ...props\n    },\n    ref\n  ) => {\n    const isChecked = checked ?? value\n\n    // `htmlFor` bên dưới trỏ vào `props.id`; không ai truyền `id` thì React bỏ hẳn thuộc tính,\n    // `<label>` chẳng buộc vào đâu và `CheckboxPrimitive.Root` — vốn là `<button role=\"checkbox\">`\n    // rỗng ruột — không có tên khả truy cập nào. Kết quả: bấm vào chữ không ăn, còn trình đọc\n    // màn hình đọc mọi ô là \"checkbox, not checked\". Tự cấp một id khi call site không cho.\n    const fallbackId = React.useId()\n    const inputId = props.id ?? fallbackId\n\n    const handleChange = React.useCallback(\n      (newChecked: boolean | 'indeterminate') => {\n        onCheckedChange?.(newChecked)\n        onChange?.(newChecked)\n      },\n      [onCheckedChange, onChange]\n    )\n    return (\n      <div className=\"flex flex-col gap-1\">\n        <div className=\"flex items-center space-x-2\">\n          <CheckboxPrimitive.Root\n            ref={ref}\n            className={cn(\n              // Base\n              'peer border-border-1 h-4 w-4 shrink-0 rounded-sm border',\n              'ring-offset-background focus-visible:ring-ring focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none',\n              'disabled:cursor-not-allowed disabled:opacity-50',\n\n              // State colors\n              'data-[state=checked]:bg-action-primary-red-default data-[state=checked]:text-content-light-1',\n              'data-[state=checked]:border-action-primary-red-default',\n              'data-[state=indeterminate]:bg-action-primary-red-default data-[state=indeterminate]:text-content-light-1',\n              'data-[state=indeterminate]:border-action-primary-red-default',\n              'hover:data-[state=unchecked]:bg-data-light-grey-hover',\n\n              // Error state\n              error && 'border-action-primary-red-default',\n\n              className\n            )}\n            checked={isChecked}\n            onCheckedChange={handleChange}\n            {...props}\n            id={inputId}\n          >\n            <CheckboxPrimitive.Indicator\n              className={cn('flex items-center justify-center text-current', childrenClassName)}\n            >\n              {isChecked === 'indeterminate' ? (\n                <IconMinus className=\"h-3 w-3\" />\n              ) : (\n                isChecked && <IconCheck className=\"h-3 w-3\" />\n              )}\n            </CheckboxPrimitive.Indicator>\n          </CheckboxPrimitive.Root>\n          {label && (\n            <label\n              htmlFor={inputId}\n              className=\"text-sm leading-none font-normal peer-disabled:cursor-not-allowed peer-disabled:opacity-70\"\n            >\n              {label}\n            </label>\n          )}\n        </div>\n        {error && <FormCaption error={error} disabled={props.disabled} />}\n      </div>\n    )\n  }\n)\n\nCheckbox.displayName = CheckboxPrimitive.Root.displayName\n\nexport default Checkbox\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "registry/web-app/ui/checkbox/index.ts",
+      "content": "export { default as Checkbox } from './Checkbox'\nexport type { CheckboxProps } from './Checkbox'\n",
+      "type": "registry:ui"
+    }
+  ]
+}

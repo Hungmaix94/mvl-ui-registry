@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "PropertyGallery",
+  "type": "registry:block",
+  "title": "PropertyGallery",
+  "description": "Auto-generated block component for PropertyGallery",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/web-public/blocks/PropertyGallery.tsx",
+      "content": "import React from 'react';\n\nexport interface GalleryImageItem {\n  url: string;\n  caption?: string;\n}\n\nexport interface PropertyGalleryProps {\n  title: string;\n  subtitle?: string;\n  images: GalleryImageItem[];\n}\n\nexport const PropertyGallery: React.FC<PropertyGalleryProps> = ({\n  title,\n  subtitle,\n  images = [],\n}) => {\n  return (\n    <section className=\"bg-slate-50 py-16 px-6 font-sans\">\n      <div className=\"max-w-6xl mx-auto space-y-8\">\n        <div className=\"text-center space-y-2 max-w-2xl mx-auto\">\n          <h2 className=\"text-2xl md:text-3xl font-black text-slate-900\">{title}</h2>\n          {subtitle && <p className=\"text-xs md:text-sm text-slate-500\">{subtitle}</p>}\n        </div>\n        <div className=\"grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4\">\n          {images.map((img, idx) => (\n            <div\n              key={idx}\n              className=\"group relative aspect-4/3 overflow-hidden rounded-xl border border-slate-200 bg-slate-100 shadow-2xs\"\n            >\n              <img\n                src={img.url}\n                alt={img.caption || title}\n                className=\"h-full w-full object-cover transition-transform duration-300 group-hover:scale-105\"\n              />\n              {img.caption && (\n                <div className=\"absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-3 text-white text-xs font-semibold\">\n                  {img.caption}\n                </div>\n              )}\n            </div>\n          ))}\n        </div>\n      </div>\n    </section>\n  );\n};\n\nexport const PropertyGalleryConfig = {\n  fields: {\n    title: { type: 'text' as const, label: 'Tiêu đề' },\n    subtitle: { type: 'textarea' as const, label: 'Mô tả' },\n    images: {\n      type: 'array' as const,\n      label: 'Danh sách hình ảnh',\n      arrayFields: {\n        url: { type: 'text' as const, label: 'URL Ảnh' },\n        caption: { type: 'text' as const, label: 'Chú thích' },\n      },\n    },\n  },\n  defaultProps: {\n    title: 'Thư Viện Hình Ảnh Phối Cảnh & Thực Tế',\n    subtitle: 'Chiêm ngưỡng kiến trúc kiệt tác và không gian sống đỉnh cao.',\n    images: [\n      {\n        url: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80',\n        caption: 'Phối cảnh tòa tháp về đêm',\n      },\n      {\n        url: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80',\n        caption: 'Phòng khách Panorama kính tràn',\n      },\n      {\n        url: 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=800&q=80',\n        caption: 'Hồ bơi vô cực trên tầng thượng',\n      },\n    ],\n  },\n  render: PropertyGallery,\n};\n",
+      "type": "registry:block"
+    }
+  ]
+}

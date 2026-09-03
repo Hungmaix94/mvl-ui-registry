@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "AmenitiesGrid",
+  "type": "registry:block",
+  "title": "AmenitiesGrid",
+  "description": "Auto-generated block component for AmenitiesGrid",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/web-public/blocks/AmenitiesGrid.tsx",
+      "content": "import React from 'react';\n\nexport interface AmenityItem {\n  icon: string;\n  name: string;\n  desc: string;\n}\n\nexport interface AmenitiesGridProps {\n  title: string;\n  subtitle?: string;\n  columns?: number;\n  amenities: AmenityItem[];\n}\n\nexport const AmenitiesGrid: React.FC<AmenitiesGridProps> = ({\n  title,\n  subtitle,\n  columns = 3,\n  amenities = [],\n}) => {\n  return (\n    <section className=\"bg-slate-50 py-16 px-6 font-sans\">\n      <div className=\"max-w-6xl mx-auto space-y-10\">\n        <div className=\"text-center space-y-2 max-w-2xl mx-auto\">\n          <h2 className=\"text-2xl md:text-3xl font-black text-slate-900\">{title}</h2>\n          {subtitle && <p className=\"text-xs md:text-sm text-slate-500\">{subtitle}</p>}\n        </div>\n        <div className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-${columns || 3} gap-5`}>\n          {amenities.map((item, idx) => (\n            <div\n              key={idx}\n              className=\"rounded-xl border border-slate-200 bg-white p-5 shadow-2xs hover:shadow-md transition-all space-y-2\"\n            >\n              <div className=\"text-3xl\">{item.icon}</div>\n              <h4 className=\"text-sm font-bold text-slate-900\">{item.name}</h4>\n              <p className=\"text-xs text-slate-500 leading-relaxed\">{item.desc}</p>\n            </div>\n          ))}\n        </div>\n      </div>\n    </section>\n  );\n};\n\nexport const AmenitiesGridConfig = {\n  fields: {\n    title: { type: 'text' as const, label: 'Tiêu đề' },\n    subtitle: { type: 'textarea' as const, label: 'Mô tả' },\n    columns: {\n      type: 'select' as const,\n      label: 'Số cột hiển thị',\n      options: [\n        { label: '2 Cột', value: 2 },\n        { label: '3 Cột', value: 3 },\n        { label: '4 Cột', value: 4 },\n      ],\n    },\n    amenities: {\n      type: 'array' as const,\n      label: 'Danh sách tiện ích',\n      arrayFields: {\n        icon: { type: 'text' as const, label: 'Icon' },\n        name: { type: 'text' as const, label: 'Tên tiện ích' },\n        desc: { type: 'text' as const, label: 'Mô tả chi tiết' },\n      },\n    },\n  },\n  defaultProps: {\n    title: 'Hệ Sinh Thái Tiện Ích Đẳng Cấp 5 Sao',\n    subtitle: 'Trải nghiệm không gian sống nghỉ dưỡng tiện nghi mỗi ngày ngay thềm nhà.',\n    columns: 3,\n    amenities: [\n      { icon: '🏊‍♂️', name: 'Hồ bơi vô cực điện phân muối', desc: 'Quy mô 1000m² đạt chuẩn Olympic với quầy bar nước.' },\n      { icon: '🌳', name: 'Công viên cây xanh 36ha', desc: 'Lá phổi xanh điều hòa không khí và đường dạo bộ ven sông.' },\n      { icon: '🏋️‍♂️', name: 'Phòng Gym & Yoga Panorama', desc: 'Trang thiết bị chuẩn Technogym nhập khẩu Châu Âu.' },\n      { icon: '🛍️', name: 'TTTM Vincom Mega Mall', desc: 'Tổ hợp mua sắm, ẩm thực và rạp chiếu phim giải trí đỉnh cao.' },\n      { icon: '🏫', name: 'Hệ thống trường Vinschool', desc: 'Giáo dục quốc tế liên cấp từ mầm non đến THPT.' },\n      { icon: '🏥', name: 'Bệnh viện Vinmec 5 sao', desc: 'Chăm sóc sức khỏe toàn diện 24/7 với đội ngũ y bác sĩ đầu ngành.' },\n    ],\n  },\n  render: AmenitiesGrid,\n};\n",
+      "type": "registry:block"
+    }
+  ]
+}

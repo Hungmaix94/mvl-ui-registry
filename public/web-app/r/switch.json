@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "switch",
+  "type": "registry:ui",
+  "title": "Switch",
+  "description": "Auto-generated ui component for switch",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/web-app/ui/switch/Switch.tsx",
+      "content": "import React from 'react'\nimport { cn } from '@/utils'\n\nexport type SwitchProps = {\n  checked?: boolean\n  onChange?: (checked: boolean) => void\n  disabled?: boolean\n  className?: string\n  size?: 'small' | 'medium' | 'large'\n  tooltip?: string\n}\n\nconst Switch = React.forwardRef<HTMLButtonElement, SwitchProps>(\n  (\n    { checked = false, onChange, disabled = false, className, size = 'medium', tooltip, ...props },\n    ref\n  ) => {\n    const handleClick = () => {\n      if (!disabled && onChange) {\n        onChange(!checked)\n      }\n    }\n\n    const sizeConfig = {\n      small: {\n        container: 'h-[14px] w-[26px]',\n        thumb: 'h-[10px] w-[10px]',\n        translate: checked ? 'translate-x-[13px]' : 'translate-x-[2px]',\n      },\n      medium: {\n        container: 'h-[18px] w-[32px]',\n        thumb: 'h-[12px] w-[12px]',\n        translate: checked ? 'translate-x-[15px]' : 'translate-x-[3px]',\n      },\n      large: {\n        container: 'h-[22px] w-[40px]',\n        thumb: 'h-[16px] w-[16px]',\n        translate: checked ? 'translate-x-[19px]' : 'translate-x-[3px]',\n      },\n    }\n\n    const currentSize = sizeConfig[size]\n\n    return (\n      <button\n        ref={ref}\n        type=\"button\"\n        role=\"switch\"\n        title={tooltip || undefined}\n        aria-checked={checked}\n        disabled={disabled}\n        onClick={handleClick}\n        className={cn(\n          'relative',\n          'inline-flex shrink-0 ease-in-out focus:ring-0 focus:outline-none',\n          'transition-colors duration-200',\n          'rounded-full border-[1px] border-solid',\n          'cursor-pointer',\n          currentSize.container,\n          checked\n            ? 'bg-data-light-grey-default border-action-primary-red-default'\n            : 'bg-data-light-grey-default border-action-outline-disabled',\n          disabled && 'cursor-not-allowed opacity-50',\n          className\n        )}\n        {...props}\n      >\n        <span\n          className={cn(\n            'pointer-events-none',\n            'inline-block',\n            'transform transition duration-200 ease-in-out',\n            'rounded-full',\n            'shadow-lg ring-0',\n            'absolute top-1/2 -translate-y-1/2',\n            currentSize.thumb,\n            currentSize.translate,\n            checked ? 'bg-data-red-default' : 'bg-data-light-grey-disabled'\n          )}\n        />\n      </button>\n    )\n  }\n)\n\nSwitch.displayName = 'Switch'\n\nexport default Switch\n",
+      "type": "registry:ui"
+    }
+  ]
+}

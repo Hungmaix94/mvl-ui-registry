@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "Dash",
+  "type": "registry:ui",
+  "title": "Dash",
+  "description": "Auto-generated ui component for Dash",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/web-app/ui/Dash.tsx",
+      "content": "import { cn } from '@/lib/utils'\n\nexport function Dash({ className, ...props }: React.ComponentProps<'span'>) {\n  return (\n    <span\n      data-slot=\"dash\"\n      className={cn('text-gray-300', className)}\n      {...props}\n    >\n      —\n    </span>\n  )\n}\n",
+      "type": "registry:ui"
+    }
+  ]
+}

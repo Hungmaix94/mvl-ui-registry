@@ -1,0 +1,78 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "web-public",
+  "items": [
+    {
+      "name": "AmenitiesGrid",
+      "type": "registry:block",
+      "title": "AmenitiesGrid",
+      "description": "Auto-generated block component for AmenitiesGrid"
+    },
+    {
+      "name": "ContactLeadForm",
+      "type": "registry:block",
+      "title": "ContactLeadForm",
+      "description": "Auto-generated block component for ContactLeadForm"
+    },
+    {
+      "name": "FAQAccordion",
+      "type": "registry:block",
+      "title": "FAQAccordion",
+      "description": "Auto-generated block component for FAQAccordion"
+    },
+    {
+      "name": "FloorPlans",
+      "type": "registry:block",
+      "title": "FloorPlans",
+      "description": "Auto-generated block component for FloorPlans"
+    },
+    {
+      "name": "FooterSection",
+      "type": "registry:block",
+      "title": "FooterSection",
+      "description": "Auto-generated block component for FooterSection"
+    },
+    {
+      "name": "HeroBanner",
+      "type": "registry:block",
+      "title": "HeroBanner",
+      "description": "Auto-generated block component for HeroBanner"
+    },
+    {
+      "name": "LocationMap",
+      "type": "registry:block",
+      "title": "LocationMap",
+      "description": "Auto-generated block component for LocationMap"
+    },
+    {
+      "name": "MasterPlan3D",
+      "type": "registry:block",
+      "title": "MasterPlan3D",
+      "description": "Auto-generated block component for MasterPlan3D"
+    },
+    {
+      "name": "PricingTable",
+      "type": "registry:block",
+      "title": "PricingTable",
+      "description": "Auto-generated block component for PricingTable"
+    },
+    {
+      "name": "PropertyGallery",
+      "type": "registry:block",
+      "title": "PropertyGallery",
+      "description": "Auto-generated block component for PropertyGallery"
+    },
+    {
+      "name": "VRTour3D",
+      "type": "registry:block",
+      "title": "VRTour3D",
+      "description": "Auto-generated block component for VRTour3D"
+    },
+    {
+      "name": "VideoSection",
+      "type": "registry:block",
+      "title": "VideoSection",
+      "description": "Auto-generated block component for VideoSection"
+    }
+  ]
+}

@@ -1,0 +1,1181 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "web-app",
+  "items": [
+    {
+      "name": "Dash",
+      "type": "registry:ui",
+      "title": "Dash",
+      "description": "Auto-generated ui component for Dash",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "registry/web-app/ui/Dash.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "SearchableInput",
+      "type": "registry:ui",
+      "title": "SearchableInput",
+      "description": "Auto-generated ui component for SearchableInput",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "registry/web-app/ui/SearchableInput.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "attachment-section",
+      "type": "registry:ui",
+      "title": "Attachment section",
+      "description": "Auto-generated ui component for attachment-section",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "registry/web-app/ui/attachment-section/AttachmentSection.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "avatar",
+      "type": "registry:ui",
+      "title": "Avatar",
+      "description": "Auto-generated ui component for avatar",
+      "dependencies": [],
+      "registryDependencies": [
+        "@radix-ui/themes"
+      ],
+      "files": [
+        {
+          "path": "registry/web-app/ui/avatar/Avatar.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/web-app/ui/avatar/DefaultAvatar.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "badge",
+      "type": "registry:ui",
+      "title": "Badge",
+      "description": "Auto-generated ui component for badge",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "registry/web-app/ui/badge/amount-badge.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "badge",
+      "type": "registry:ui",
+      "title": "Badge",
+      "description": "Auto-generated ui component for badge",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "registry/web-app/ui/badge.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "breadcrumb",
+      "type": "registry:ui",
+      "title": "Breadcrumb",
+      "description": "Auto-generated ui component for breadcrumb",
+      "dependencies": [],
+      "registryDependencies": [
+        "slot"
+      ],
+      "files": [
+        {
+          "path": "registry/web-app/ui/breadcrumb/Breadcrumb.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/web-app/ui/breadcrumb/BreadcrumbWrapper.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/web-app/ui/breadcrumb/index.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "button",
+      "type": "registry:ui",
+      "title": "Button",
+      "description": "Auto-generated ui component for button",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "registry/web-app/ui/button/Button.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/web-app/ui/button/IconButton.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/web-app/ui/button/index.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "button",
+      "type": "registry:ui",
+      "title": "Button",
+      "description": "Auto-generated ui component for button",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "registry/web-app/ui/button.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "calendar",
+      "type": "registry:ui",
+      "title": "Calendar",
+      "description": "Auto-generated ui component for calendar",
+      "dependencies": [
+        "react-day-picker"
+      ],
+      "registryDependencies": [
+        "slot"
+      ],
+      "files": [
+        {
+          "path": "registry/web-app/ui/calendar/button.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/web-app/ui/calendar/calendar-button.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/web-app/ui/calendar/index.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "chart",
+      "type": "registry:ui",
+      "title": "Chart",
+      "description": "Auto-generated ui component for chart",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "registry/web-app/ui/chart/CostBySourceBarChart.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/web-app/ui/chart/CustomBarChart.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/web-app/ui/chart/DoughnutChart.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/web-app/ui/chart/StackedBarChart.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "chart",
+      "type": "registry:ui",
+      "title": "Chart",
+      "description": "Auto-generated ui component for chart",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "registry/web-app/ui/chart.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "checkbox",
+      "type": "registry:ui",
+      "title": "Checkbox",
+      "description": "Auto-generated ui component for checkbox",
+      "dependencies": [],
+      "registryDependencies": [
+        "checkbox"
+      ],
+      "files": [
+        {
+          "path": "registry/web-app/ui/checkbox/Checkbox.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/web-app/ui/checkbox/index.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "chip",
+      "type": "registry:ui",
+      "title": "Chip",
+      "description": "Auto-generated ui component for chip",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "registry/web-app/ui/chip/Chip.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/web-app/ui/chip/index.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "collapsible",
+      "type": "registry:ui",
+      "title": "Collapsible",
+      "description": "Auto-generated ui component for collapsible",
+      "dependencies": [],
+      "registryDependencies": [
+        "collapsible"
+      ],
+      "files": [
+        {
+          "path": "registry/web-app/ui/collapsible.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "command",
+      "type": "registry:ui",
+      "title": "Command",
+      "description": "Auto-generated ui component for command",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "registry/web-app/ui/command.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "confirm-modal",
+      "type": "registry:ui",
+      "title": "Confirm modal",
+      "description": "Auto-generated ui component for confirm-modal",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "registry/web-app/ui/confirm-modal.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "currency-input",
+      "type": "registry:ui",
+      "title": "Currency input",
+      "description": "Auto-generated ui component for currency-input",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "registry/web-app/ui/currency-input/CurrencyInput.test.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/web-app/ui/currency-input/CurrencyInput.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "custom-select",
+      "type": "registry:ui",
+      "title": "Custom select",
+      "description": "Auto-generated ui component for custom-select",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "registry/web-app/ui/custom-select.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "data-table",
+      "type": "registry:ui",
+      "title": "Data table",
+      "description": "Auto-generated ui component for data-table",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "registry/web-app/ui/data-table.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "date-range-picker",
+      "type": "registry:ui",
+      "title": "Date range picker",
+      "description": "Auto-generated ui component for date-range-picker",
+      "dependencies": [
+        "react-day-picker"
+      ],
+      "registryDependencies": [
+        "@radix-ui/themes"
+      ],
+      "files": [
+        {
+          "path": "registry/web-app/ui/date-range-picker/DateRangePicker.test.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/web-app/ui/date-range-picker/DateRangePicker.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/web-app/ui/date-range-picker/date-range-bounds.test.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/web-app/ui/date-range-picker/date-range-bounds.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "development-in-progress",
+      "type": "registry:ui",
+      "title": "Development in progress",
+      "description": "Auto-generated ui component for development-in-progress",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "registry/web-app/ui/development-in-progress/DevelopmentInProgressSVG.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "dialog",
+      "type": "registry:ui",
+      "title": "Dialog",
+      "description": "Auto-generated ui component for dialog",
+      "dependencies": [],
+      "registryDependencies": [
+        "dialog"
+      ],
+      "files": [
+        {
+          "path": "registry/web-app/ui/dialog.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "dot",
+      "type": "registry:ui",
+      "title": "Dot",
+      "description": "Auto-generated ui component for dot",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "registry/web-app/ui/dot/Dot.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/web-app/ui/dot/index.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "dot-loader",
+      "type": "registry:ui",
+      "title": "Dot loader",
+      "description": "Auto-generated ui component for dot-loader",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "registry/web-app/ui/dot-loader/DotLoader.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/web-app/ui/dot-loader/index.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "dynamic-zone-builder",
+      "type": "registry:ui",
+      "title": "Dynamic zone builder",
+      "description": "Auto-generated ui component for dynamic-zone-builder",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "registry/web-app/ui/dynamic-zone-builder.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "file-upload",
+      "type": "registry:ui",
+      "title": "File upload",
+      "description": "Auto-generated ui component for file-upload",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "registry/web-app/ui/file-upload/FileUpload.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "form",
+      "type": "registry:ui",
+      "title": "Form",
+      "description": "Auto-generated ui component for form",
+      "dependencies": [
+        "react-hook-form"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "registry/web-app/ui/form/Form.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/web-app/ui/form/FormArrayError.test.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/web-app/ui/form/FormArrayError.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/web-app/ui/form/FormCaption.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/web-app/ui/form/FormController.test.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/web-app/ui/form/FormController.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/web-app/ui/form/index.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "grid",
+      "type": "registry:ui",
+      "title": "Grid",
+      "description": "Auto-generated ui component for grid",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "registry/web-app/ui/grid/Grid.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/web-app/ui/grid/index.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "icon",
+      "type": "registry:ui",
+      "title": "Icon",
+      "description": "Auto-generated ui component for icon",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "registry/web-app/ui/icon/IconReveal.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/web-app/ui/icon/IconUnion.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "input-otp",
+      "type": "registry:ui",
+      "title": "Input otp",
+      "description": "Auto-generated ui component for input-otp",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "registry/web-app/ui/input-otp/InputOtp.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/web-app/ui/input-otp/index.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "input",
+      "type": "registry:ui",
+      "title": "Input",
+      "description": "Auto-generated ui component for input",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "registry/web-app/ui/input.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "modal",
+      "type": "registry:ui",
+      "title": "Modal",
+      "description": "Auto-generated ui component for modal",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "registry/web-app/ui/modal.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "month-picker",
+      "type": "registry:ui",
+      "title": "Month picker",
+      "description": "Auto-generated ui component for month-picker",
+      "dependencies": [],
+      "registryDependencies": [
+        "@radix-ui/themes"
+      ],
+      "files": [
+        {
+          "path": "registry/web-app/ui/month-picker/MonthPicker.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "page-title",
+      "type": "registry:ui",
+      "title": "Page title",
+      "description": "Auto-generated ui component for page-title",
+      "dependencies": [],
+      "registryDependencies": [
+        "@radix-ui/themes"
+      ],
+      "files": [
+        {
+          "path": "registry/web-app/ui/page-title/PageTitle.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/web-app/ui/page-title/PageTitleToolbar.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/web-app/ui/page-title/back-navigation.guard.test.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/web-app/ui/page-title/index.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "phone-input",
+      "type": "registry:ui",
+      "title": "Phone input",
+      "description": "Auto-generated ui component for phone-input",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "registry/web-app/ui/phone-input/PhoneInput.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/web-app/ui/phone-input/index.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "popover",
+      "type": "registry:ui",
+      "title": "Popover",
+      "description": "Auto-generated ui component for popover",
+      "dependencies": [],
+      "registryDependencies": [
+        "popover"
+      ],
+      "files": [
+        {
+          "path": "registry/web-app/ui/popover.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "radio-group",
+      "type": "registry:ui",
+      "title": "Radio group",
+      "description": "Auto-generated ui component for radio-group",
+      "dependencies": [],
+      "registryDependencies": [
+        "radio-group"
+      ],
+      "files": [
+        {
+          "path": "registry/web-app/ui/radio-group.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "rate-input",
+      "type": "registry:ui",
+      "title": "Rate input",
+      "description": "Auto-generated ui component for rate-input",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "registry/web-app/ui/rate-input/RateInput.test.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/web-app/ui/rate-input/RateInput.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/web-app/ui/rate-input/index.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "rich-text",
+      "type": "registry:ui",
+      "title": "Rich text",
+      "description": "Auto-generated ui component for rich-text",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "registry/web-app/ui/rich-text/RichText.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/web-app/ui/rich-text/Toolbar.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/web-app/ui/rich-text/index.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "rich-text-editor",
+      "type": "registry:ui",
+      "title": "Rich text editor",
+      "description": "Auto-generated ui component for rich-text-editor",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "registry/web-app/ui/rich-text-editor.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "select",
+      "type": "registry:ui",
+      "title": "Select",
+      "description": "Auto-generated ui component for select",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "registry/web-app/ui/select/Select.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/web-app/ui/select/index.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "select",
+      "type": "registry:ui",
+      "title": "Select",
+      "description": "Auto-generated ui component for select",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "registry/web-app/ui/select.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "separator",
+      "type": "registry:ui",
+      "title": "Separator",
+      "description": "Auto-generated ui component for separator",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "registry/web-app/ui/separator/SeparatorHorizontal.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "separator",
+      "type": "registry:ui",
+      "title": "Separator",
+      "description": "Auto-generated ui component for separator",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "registry/web-app/ui/separator.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "sheet",
+      "type": "registry:ui",
+      "title": "Sheet",
+      "description": "Auto-generated ui component for sheet",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "dialog"
+      ],
+      "files": [
+        {
+          "path": "registry/web-app/ui/sheet.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "sidebar",
+      "type": "registry:ui",
+      "title": "Sidebar",
+      "description": "Auto-generated ui component for sidebar",
+      "dependencies": [],
+      "registryDependencies": [
+        "@radix-ui/themes",
+        "slot"
+      ],
+      "files": [
+        {
+          "path": "registry/web-app/ui/sidebar/AppSidebar.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/web-app/ui/sidebar/sidebar.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "skeleton",
+      "type": "registry:ui",
+      "title": "Skeleton",
+      "description": "Auto-generated ui component for skeleton",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "registry/web-app/ui/skeleton.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "summary-card",
+      "type": "registry:ui",
+      "title": "Summary card",
+      "description": "Auto-generated ui component for summary-card",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "registry/web-app/ui/summary-card/SummaryCard.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/web-app/ui/summary-card/index.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "switch",
+      "type": "registry:ui",
+      "title": "Switch",
+      "description": "Auto-generated ui component for switch",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "registry/web-app/ui/switch/Switch.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "table",
+      "type": "registry:ui",
+      "title": "Table",
+      "description": "Auto-generated ui component for table",
+      "dependencies": [],
+      "registryDependencies": [
+        "@radix-ui/themes"
+      ],
+      "files": [
+        {
+          "path": "registry/web-app/ui/table/CursorActionMenuOverlay.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/web-app/ui/table/HorizontalScrollBar.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/web-app/ui/table/SimplePagination.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/web-app/ui/table/Table.static-scrollbar.test.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/web-app/ui/table/Table.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/web-app/ui/table/TableActionMenu.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/web-app/ui/table/TableBody.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/web-app/ui/table/TableEmpty.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/web-app/ui/table/TableError.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/web-app/ui/table/TableFooter.test.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/web-app/ui/table/TableFooter.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/web-app/ui/table/TableHeader.test.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/web-app/ui/table/TableHeader.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/web-app/ui/table/TableNoData.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/web-app/ui/table/TablePagination.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/web-app/ui/table/TableRow.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/web-app/ui/table/action-menu-position.guard.test.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/web-app/ui/table/index.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "table-tree",
+      "type": "registry:ui",
+      "title": "Table tree",
+      "description": "Auto-generated ui component for table-tree",
+      "dependencies": [],
+      "registryDependencies": [
+        "@radix-ui/themes"
+      ],
+      "files": [
+        {
+          "path": "registry/web-app/ui/table-tree/TableTree.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/web-app/ui/table-tree/VirtualTreeTable.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "tabs",
+      "type": "registry:ui",
+      "title": "Tabs",
+      "description": "Auto-generated ui component for tabs",
+      "dependencies": [],
+      "registryDependencies": [
+        "tabs"
+      ],
+      "files": [
+        {
+          "path": "registry/web-app/ui/tabs.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "text-area",
+      "type": "registry:ui",
+      "title": "Text area",
+      "description": "Auto-generated ui component for text-area",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "registry/web-app/ui/text-area/TextArea.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/web-app/ui/text-area/index.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "text-field",
+      "type": "registry:ui",
+      "title": "Text field",
+      "description": "Auto-generated ui component for text-field",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "registry/web-app/ui/text-field/TextField.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/web-app/ui/text-field/index.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "text",
+      "type": "registry:ui",
+      "title": "Text",
+      "description": "Auto-generated ui component for text",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "registry/web-app/ui/text.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "textarea",
+      "type": "registry:ui",
+      "title": "Textarea",
+      "description": "Auto-generated ui component for textarea",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "registry/web-app/ui/textarea.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "time-picker",
+      "type": "registry:ui",
+      "title": "Time picker",
+      "description": "Auto-generated ui component for time-picker",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "registry/web-app/ui/time-picker/TimePicker.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "timesheet-table",
+      "type": "registry:ui",
+      "title": "Timesheet table",
+      "description": "Auto-generated ui component for timesheet-table",
+      "dependencies": [
+        "date-fns"
+      ],
+      "registryDependencies": [
+        "@radix-ui/themes"
+      ],
+      "files": [
+        {
+          "path": "registry/web-app/ui/timesheet-table/TimesheetDayCell.test.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/web-app/ui/timesheet-table/TimesheetDayCell.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/web-app/ui/timesheet-table/TimesheetDayHeader.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/web-app/ui/timesheet-table/TimesheetMonthSelector.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/web-app/ui/timesheet-table/TimesheetPagination.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/web-app/ui/timesheet-table/TimesheetTable.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "tooltip",
+      "type": "registry:ui",
+      "title": "Tooltip",
+      "description": "Auto-generated ui component for tooltip",
+      "dependencies": [],
+      "registryDependencies": [
+        "tooltip"
+      ],
+      "files": [
+        {
+          "path": "registry/web-app/ui/tooltip.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "tree-select",
+      "type": "registry:ui",
+      "title": "Tree select",
+      "description": "Auto-generated ui component for tree-select",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "registry/web-app/ui/tree-select/TreeNode.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/web-app/ui/tree-select/TreeSelect.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/web-app/ui/tree-select/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    }
+  ]
+}

@@ -24,78 +24,83 @@ interface RegistryManifest {
 }
 
 const ROOT_DIR = path.resolve(process.cwd());
-const REGISTRY_PATH = path.join(ROOT_DIR, 'registry.json');
-const PUBLIC_R_DIR = path.join(ROOT_DIR, 'public', 'r');
+
+const REGISTRIES = [
+  { file: 'registry-web-public.json', outDir: 'public/web-public/r' },
+  { file: 'registry-web-app.json', outDir: 'public/web-app/r' }
+];
 
 async function buildRegistry() {
   console.log('🚀 Đang biên dịch MVL Shadcn Custom Registry...');
 
-  if (!fs.existsSync(REGISTRY_PATH)) {
-    console.error('❌ Không tìm thấy registry.json');
-    process.exit(1);
-  }
+  for (const registry of REGISTRIES) {
+    const registryPath = path.join(ROOT_DIR, registry.file);
+    const publicRDir = path.join(ROOT_DIR, registry.outDir);
 
-  if (!fs.existsSync(PUBLIC_R_DIR)) {
-    fs.mkdirSync(PUBLIC_R_DIR, { recursive: true });
-  }
+    if (!fs.existsSync(registryPath)) {
+      console.warn(`⚠️ Không tìm thấy ${registry.file}, bỏ qua...`);
+      continue;
+    }
 
-  const manifestRaw = fs.readFileSync(REGISTRY_PATH, 'utf-8');
-  const manifest: RegistryManifest = JSON.parse(manifestRaw);
+    if (!fs.existsSync(publicRDir)) {
+      fs.mkdirSync(publicRDir, { recursive: true });
+    }
 
-  const indexItems: any[] = [];
+    const manifestRaw = fs.readFileSync(registryPath, 'utf-8');
+    const manifest: RegistryManifest = JSON.parse(manifestRaw);
+    const indexItems: any[] = [];
 
-  for (const item of manifest.items) {
-    const compiledFiles: Array<{ path: string; content: string; type: string; target?: string }> = [];
+    for (const item of manifest.items) {
+      const compiledFiles: Array<{ path: string; content: string; type: string; target?: string }> = [];
 
-    for (const file of item.files) {
-      const filePath = path.join(ROOT_DIR, file.path);
-      if (!fs.existsSync(filePath)) {
-        console.warn(`⚠️ File không tồn tại: ${file.path}`);
-        continue;
+      for (const file of item.files) {
+        const filePath = path.join(ROOT_DIR, file.path);
+        if (!fs.existsSync(filePath)) {
+          console.warn(`⚠️ File không tồn tại: ${file.path}`);
+          continue;
+        }
+
+        const content = fs.readFileSync(filePath, 'utf-8');
+        compiledFiles.push({
+          path: file.path,
+          content,
+          type: file.type,
+          target: file.target,
+        });
       }
 
-      const content = fs.readFileSync(filePath, 'utf-8');
-      compiledFiles.push({
-        path: file.path,
-        content,
-        type: file.type,
-        target: file.target,
+      const payload = {
+        $schema: 'https://ui.shadcn.com/schema/registry-item.json',
+        name: item.name,
+        type: item.type,
+        title: item.title,
+        description: item.description,
+        dependencies: item.dependencies || [],
+        devDependencies: item.devDependencies || [],
+        registryDependencies: item.registryDependencies || [],
+        files: compiledFiles,
+      };
+
+      const outFilePath = path.join(publicRDir, `${item.name}.json`);
+      fs.writeFileSync(outFilePath, JSON.stringify(payload, null, 2), 'utf-8');
+      
+      indexItems.push({
+        name: item.name,
+        type: item.type,
+        title: item.title,
+        description: item.description,
       });
     }
 
-    const payload = {
-      $schema: 'https://ui.shadcn.com/schema/registry-item.json',
-      name: item.name,
-      type: item.type,
-      title: item.title,
-      description: item.description,
-      dependencies: item.dependencies || [],
-      devDependencies: item.devDependencies || [],
-      registryDependencies: item.registryDependencies || [],
-      files: compiledFiles,
+    const indexPayload = {
+      $schema: 'https://ui.shadcn.com/schema/registry.json',
+      name: manifest.name,
+      items: indexItems,
     };
-
-    const outFilePath = path.join(PUBLIC_R_DIR, `${item.name}.json`);
-    fs.writeFileSync(outFilePath, JSON.stringify(payload, null, 2), 'utf-8');
-    console.log(` ✅ Đã xuất component JSON: public/r/${item.name}.json`);
-
-    indexItems.push({
-      name: item.name,
-      type: item.type,
-      title: item.title,
-      description: item.description,
-    });
+    fs.writeFileSync(path.join(publicRDir, 'index.json'), JSON.stringify(indexPayload, null, 2), 'utf-8');
+    console.log(` ✨ Đã xuất registry index: ${registry.outDir}/index.json`);
+    console.log(`🎉 Hoàn tất biên dịch ${manifest.items.length} components cho ${manifest.name}!`);
   }
-
-  // Xuất file index.json
-  const indexPayload = {
-    $schema: 'https://ui.shadcn.com/schema/registry.json',
-    name: manifest.name,
-    items: indexItems,
-  };
-  fs.writeFileSync(path.join(PUBLIC_R_DIR, 'index.json'), JSON.stringify(indexPayload, null, 2), 'utf-8');
-  console.log(' ✨ Đã xuất registry index: public/r/index.json');
-  console.log(`🎉 Hoàn tất biên dịch ${manifest.items.length} components trong Registry!`);
 }
 
 buildRegistry().catch((err) => {
