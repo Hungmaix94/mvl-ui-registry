@@ -1,20 +1,21 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { BLOCK_CATALOG, DynamicZoneBuilder } from './dynamic-zone-builder';
+import { DynamicZoneBuilder } from './dynamic-zone-builder';
 
-const meta: Meta<typeof BLOCK_CATALOG> = {
-  title: 'Web App/BLOCK_CATALOG/BLOCK_CATALOG',
-  component: BLOCK_CATALOG,
+const meta: Meta<typeof DynamicZoneBuilder> = {
+  title: 'Web App/DynamicZoneBuilder',
+  component: DynamicZoneBuilder,
   tags: ['autodocs'],
   parameters: {
-    layout: 'centered',
+    layout: 'padded',
   },
 };
 
 export default meta;
-type Story = StoryObj<typeof BLOCK_CATALOG>;
+type Story = StoryObj<typeof DynamicZoneBuilder>;
 
 export const Default: Story = {
   args: {
-    // Add default args here
+    initialBlocks: [],
+    onSave: (blocks) => console.log('Saved blocks:', blocks),
   },
 };
