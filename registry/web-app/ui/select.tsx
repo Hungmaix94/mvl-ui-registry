@@ -122,15 +122,15 @@ export function Select({
         onClick={() => !disabled && setIsOpen(!isOpen)}
         aria-expanded={isOpen}
         aria-haspopup="listbox"
-        className={`flex w-full items-center justify-between border bg-white font-medium transition-all select-none cursor-pointer ${sizeClasses} ${
+        className={`flex w-full items-center justify-between border bg-white font-medium transition-all select-none cursor-pointer outline-none ${sizeClasses} ${
           error
-            ? 'border-[#DE350B] ring-1 ring-[#DE350B]/20 text-slate-900'
+            ? 'border-data-red-default bg-data-red-default/5 text-content-dark-1'
             : isOpen
-              ? 'border-[#B32B2F] ring-2 ring-[#B32B2F]/20 text-slate-900'
-              : 'border-slate-300 hover:border-slate-400 text-slate-900'
-        } ${disabled ? 'cursor-not-allowed bg-slate-100 text-slate-400 opacity-70' : ''} ${triggerClassName}`}
+              ? 'border-action-primary-red-default text-content-dark-1'
+              : 'border-border-1 hover:border-slate-400 text-content-dark-1'
+        } ${disabled ? 'cursor-not-allowed bg-data-light-grey-disabled text-content-dark-4 opacity-100' : ''} ${triggerClassName}`}
       >
-        <span className={`truncate text-left ${selectedOption ? 'text-slate-900 font-semibold' : 'text-slate-400'}`}>
+        <span className={`truncate text-left font-normal ${selectedOption ? 'text-content-dark-1' : 'text-content-light-4'}`}>
           {selectedOption ? String(selectedOption.label) : placeholder}
         </span>
 
@@ -157,25 +157,25 @@ export function Select({
       {isOpen && (
         <div
           role="listbox"
-          className={`absolute left-0 z-50 mt-1 min-w-full max-h-60 overflow-y-auto rounded border border-slate-200 bg-white p-1 shadow-xl animate-in fade-in zoom-in-95 duration-100 ${dropdownClassName}`}
+          className={`absolute left-0 z-50 mt-1 min-w-full max-h-60 overflow-y-auto rounded border border-border-1 bg-white p-0 shadow-md animate-in fade-in zoom-in-95 duration-100 ${dropdownClassName}`}
         >
           {(searchable || options.length > 8) && (
             <div className="relative mb-1 p-1">
-              <Search size={12} className="absolute left-2.5 top-2.5 text-slate-400" />
+              <Search size={12} className="absolute left-2.5 top-2.5 text-content-light-4" />
               <input
                 type="text"
                 autoFocus
                 placeholder="Tìm..."
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
-                className="w-full rounded border border-slate-200 bg-slate-50 pl-7 pr-2 py-1 text-[11px] text-slate-800 placeholder-slate-400 outline-none focus:border-[#B32B2F] focus:bg-white"
+                className="w-full rounded border border-border-1 bg-content-light-2 pl-7 pr-2 py-1 text-[11px] text-content-dark-1 placeholder-content-light-4 outline-none focus:border-action-primary-red-default focus:bg-white"
               />
             </div>
           )}
 
-          <div className="space-y-0.5">
+          <div className="space-y-0 py-1">
             {filteredOptions.length === 0 ? (
-              <div className="py-2.5 text-center text-xs text-slate-400">
+              <div className="py-2.5 px-3 text-center text-sm text-content-dark-3">
                 Không tìm thấy kết quả
               </div>
             ) : (
@@ -189,24 +189,24 @@ export function Select({
                     aria-selected={isSelected}
                     disabled={opt.disabled}
                     onClick={() => handleSelect(opt.value)}
-                    className={`flex w-full items-center justify-between rounded px-2.5 py-1.5 text-left text-xs transition-colors cursor-pointer ${
+                    className={`flex w-full items-center justify-between px-3 py-2 text-left text-sm transition-colors cursor-pointer ${
                       isSelected
-                        ? 'bg-rose-50 font-bold text-action-primary-red-default'
-                        : 'hover:bg-slate-50 text-slate-800'
-                    } ${opt.disabled ? 'cursor-not-allowed opacity-40' : ''}`}
+                        ? 'bg-action-primary-red-default/10 font-medium text-action-primary-red-default'
+                        : 'hover:bg-slate-50 text-content-dark-1'
+                    } ${opt.disabled ? 'cursor-not-allowed text-content-dark-4 bg-transparent' : ''}`}
                   >
                     <div className="min-w-0 flex-1 pr-2">
                       <span className="truncate block">{String(opt.label)}</span>
                       {opt.subtitle && (
-                        <span className="text-[10px] text-slate-400 truncate block mt-0.5">
+                        <span className="text-[11px] text-content-dark-3 truncate block mt-0.5">
                           {opt.subtitle}
                         </span>
                       )}
                     </div>
                     {isSelected && (
                       <Check
-                        size={iconSize}
-                        className="text-action-primary-red-default shrink-0 animate-in zoom-in-75 duration-100"
+                        size={iconSize + 2}
+                        className="text-action-primary-red-default shrink-0"
                       />
                     )}
                   </button>
@@ -222,13 +222,13 @@ export function Select({
   if (label) {
     return (
       <div className="space-y-1.5">
-        <label htmlFor={id} className="block text-xs font-semibold text-slate-700">
+        <label htmlFor={id} className="block text-sm font-semibold text-content-dark-1">
           {label}
-          {required && <span className="ml-1 text-[#DE350B]">*</span>}
+          {required && <span className="ml-1 text-action-primary-red-default">*</span>}
         </label>
         {trigger}
-        {hint && !error && <p className="text-[11px] text-content-light-10">{hint}</p>}
-        {error && <p className="text-[11px] font-medium text-[#DE350B]">{error}</p>}
+        {hint && !error && <p className="text-[11px] text-content-dark-3 mt-1">{hint}</p>}
+        {error && <p className="text-[11px] font-medium text-data-red-default mt-1">{error}</p>}
       </div>
     );
   }
