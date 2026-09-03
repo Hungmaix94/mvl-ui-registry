@@ -292,10 +292,10 @@ export function DynamicZoneBuilder({
     const IconComp = meta.icon;
 
     return (
-      <div className="my-2.5 rounded-xl border-2 border-dashed border-[#B32B2F] bg-rose-50/70 p-3.5 shadow-xs transition-all animate-in fade-in zoom-in-95 duration-150 select-none">
+      <div className="my-2.5 rounded border-2 border-dashed border-[#B32B2F] bg-rose-50/70 p-3.5 shadow-xs transition-all animate-in fade-in zoom-in-95 duration-150 select-none">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3 min-w-0">
-            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-white border border-rose-200 text-[#B32B2F] shadow-2xs shrink-0">
+            <div className="flex h-8 w-8 items-center justify-center rounded bg-white border border-rose-200 text-action-primary-red-default shadow-2xs shrink-0">
               <IconComp size={16} />
             </div>
             <div className="min-w-0">
@@ -303,20 +303,20 @@ export function DynamicZoneBuilder({
                 <span className="text-xs font-bold text-slate-800 truncate">
                   {meta.title}
                 </span>
-                <span className="text-[10px] font-semibold uppercase tracking-wider text-[#B32B2F] bg-white px-2 py-0.5 rounded-md border border-rose-200 shrink-0">
+                <span className="text-[10px] font-semibold uppercase tracking-wider text-action-primary-red-default bg-white px-2 py-0.5 rounded border border-rose-200 shrink-0">
                   Vị trí mới
                 </span>
               </div>
-              <span className="text-[11px] text-slate-500 block truncate mt-0.5">
+              <span className="text-[11px] text-content-light-10 block truncate mt-0.5">
                 Thả chuột để chuyển khối nội dung tới vị trí này
               </span>
             </div>
           </div>
 
-          <div className="flex items-center gap-1.5 text-xs font-bold text-[#B32B2F] shrink-0">
+          <div className="flex items-center gap-1.5 text-xs font-bold text-action-primary-red-default shrink-0">
             <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#B32B2F] opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-[#B32B2F]"></span>
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-action-primary-red-default opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-action-primary-red-default"></span>
             </span>
             <span>Thả tại đây</span>
           </div>
@@ -340,7 +340,7 @@ export function DynamicZoneBuilder({
   const filteredCatalog = BLOCK_CATALOG.filter((c) => c.category === activeCategory);
 
   return (
-    <div className="space-y-4 font-sans">
+    <div className="space-y-4 font-inter">
       <div className="flex items-center justify-between pb-1">
         <div className="flex items-center gap-2">
           <span className="text-xs font-bold text-slate-800 tracking-wide">
@@ -378,7 +378,7 @@ export function DynamicZoneBuilder({
                   onDragStart={(e) => handleDragStart(e, index)}
                   onDragOver={(e) => handleDragOver(e, index)}
                   onDragEnd={handleDragEnd}
-                  className={`relative rounded-xl border transition-all duration-150 ${
+                  className={`relative rounded border transition-all duration-150 ${
                     isDragging
                       ? 'opacity-30 border-dashed border-slate-300 bg-slate-100 scale-98 pointer-events-none'
                       : 'border-slate-300 bg-[#212134] text-white shadow-xs hover:border-slate-400'
@@ -435,7 +435,7 @@ export function DynamicZoneBuilder({
                         </button>
 
                         {isMenuOpen && (
-                          <div className="absolute right-0 top-full mt-1.5 z-50 w-52 overflow-hidden rounded-xl border border-slate-700 bg-[#181826] py-1 text-xs text-slate-200 shadow-2xl animate-in fade-in zoom-in-95">
+                          <div className="absolute right-0 top-full mt-1.5 z-50 w-52 overflow-hidden rounded border border-slate-700 bg-[#181826] py-1 text-xs text-slate-200 shadow-2xl animate-in fade-in zoom-in-95">
                             <button
                               type="button"
                               onClick={() => openPickerAbove(index)}
@@ -445,7 +445,7 @@ export function DynamicZoneBuilder({
                                 <ArrowUp size={13} className="text-slate-400" />
                                 Add component above
                               </span>
-                              <span className="text-slate-500">›</span>
+                              <span className="text-content-light-10">›</span>
                             </button>
 
                             <button
@@ -457,7 +457,7 @@ export function DynamicZoneBuilder({
                                 <ArrowDown size={13} className="text-slate-400" />
                                 Add component below
                               </span>
-                              <span className="text-slate-500">›</span>
+                              <span className="text-content-light-10">›</span>
                             </button>
 
                             <div className="my-1 border-t border-slate-700/60" />
@@ -556,7 +556,7 @@ export function DynamicZoneBuilder({
                             value={block.value.table_title || ''}
                             onChange={(e) => handleUpdateBlockValue(index, 'table_title', e.target.value)}
                           />
-                          <div className="overflow-x-auto rounded-xl border border-slate-200">
+                          <div className="overflow-x-auto rounded border border-slate-200">
                             <table className="w-full text-xs text-left">
                               <thead className="bg-slate-50 text-slate-700 font-semibold border-b border-slate-200">
                                 <tr>
@@ -571,8 +571,8 @@ export function DynamicZoneBuilder({
                                   <tr key={rIdx} className="hover:bg-slate-50/50">
                                     <td className="p-2 font-semibold text-slate-800">{row.phase}</td>
                                     <td className="p-2 text-slate-600">{row.timing}</td>
-                                    <td className="p-2 font-bold text-[#B32B2F]">{row.percent}</td>
-                                    <td className="p-2 text-slate-500 text-[11px]">{row.note}</td>
+                                    <td className="p-2 font-bold text-action-primary-red-default">{row.percent}</td>
+                                    <td className="p-2 text-content-light-10 text-[11px]">{row.note}</td>
                                   </tr>
                                 ))}
                               </tbody>
@@ -635,7 +635,7 @@ export function DynamicZoneBuilder({
                             Danh sách câu hỏi & trả lời ({block.value.faqs?.length || 0})
                           </label>
                           {(block.value.faqs || []).map((faq: any, fIdx: number) => (
-                            <div key={fIdx} className="p-3 rounded-xl border border-slate-200 bg-slate-50 space-y-2">
+                            <div key={fIdx} className="p-3 rounded border border-slate-200 bg-slate-50 space-y-2">
                               <TextInput
                                 label={`Câu hỏi ${fIdx + 1}`}
                                 value={faq.question}
@@ -712,7 +712,7 @@ export function DynamicZoneBuilder({
         )}
 
         {pickerOpen && (
-          <div className="rounded-xl border border-slate-700 bg-[#1e1e2f] p-5 shadow-2xl animate-in fade-in zoom-in-95 duration-150">
+          <div className="rounded border border-slate-700 bg-[#1e1e2f] p-5 shadow-2xl animate-in fade-in zoom-in-95 duration-150">
             <h4 className="text-center text-xs font-semibold text-slate-300 mb-3 uppercase tracking-wider">
               Pick one component
             </h4>
@@ -745,7 +745,7 @@ export function DynamicZoneBuilder({
                   key={item.type}
                   type="button"
                   onClick={() => handleSelectComponent(item)}
-                  className="flex flex-col items-center justify-center gap-2 rounded-xl border border-slate-700/80 bg-[#212134] p-4 text-center transition-all hover:border-[#fae79b] hover:bg-[#2a2a42] hover:scale-105 active:scale-95 cursor-pointer group"
+                  className="flex flex-col items-center justify-center gap-2 rounded border border-slate-700/80 bg-[#212134] p-4 text-center transition-all hover:border-[#fae79b] hover:bg-[#2a2a42] hover:scale-105 active:scale-95 cursor-pointer group"
                 >
                   <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[#fae79b] text-[#735e00] shadow-md group-hover:bg-[#ffe366] transition-colors">
                     <div className="grid grid-cols-2 gap-1">

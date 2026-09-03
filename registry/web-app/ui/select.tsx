@@ -107,13 +107,13 @@ export function Select({
   };
 
   const sizeClasses = {
-    sm: 'h-8 px-2.5 py-1 text-xs rounded-md',
-    md: 'h-9.5 px-3.5 py-2 text-xs rounded-lg',
-    lg: 'h-11 px-4 py-2.5 text-sm rounded-xl',
+    sm: 'h-8 px-2.5 py-1 text-xs rounded',
+    md: 'h-9.5 px-3.5 py-2 text-xs rounded',
+    lg: 'h-11 px-4 py-2.5 text-sm rounded',
   }[size];
 
   const trigger = (
-    <div ref={containerRef} className={`relative inline-block w-full font-sans ${className}`}>
+    <div ref={containerRef} className={`relative inline-block w-full font-inter ${className}`}>
       <button
         type="button"
         id={id}
@@ -147,7 +147,7 @@ export function Select({
           <ChevronDown
             size={iconSize}
             className={`text-slate-400 transition-transform duration-200 ${
-              isOpen ? 'rotate-180 text-[#B32B2F]' : ''
+              isOpen ? 'rotate-180 text-action-primary-red-default' : ''
             }`}
           />
         </div>
@@ -157,7 +157,7 @@ export function Select({
       {isOpen && (
         <div
           role="listbox"
-          className={`absolute left-0 z-50 mt-1 min-w-full max-h-60 overflow-y-auto rounded-lg border border-slate-200 bg-white p-1 shadow-xl animate-in fade-in zoom-in-95 duration-100 ${dropdownClassName}`}
+          className={`absolute left-0 z-50 mt-1 min-w-full max-h-60 overflow-y-auto rounded border border-slate-200 bg-white p-1 shadow-xl animate-in fade-in zoom-in-95 duration-100 ${dropdownClassName}`}
         >
           {(searchable || options.length > 8) && (
             <div className="relative mb-1 p-1">
@@ -189,9 +189,9 @@ export function Select({
                     aria-selected={isSelected}
                     disabled={opt.disabled}
                     onClick={() => handleSelect(opt.value)}
-                    className={`flex w-full items-center justify-between rounded-md px-2.5 py-1.5 text-left text-xs transition-colors cursor-pointer ${
+                    className={`flex w-full items-center justify-between rounded px-2.5 py-1.5 text-left text-xs transition-colors cursor-pointer ${
                       isSelected
-                        ? 'bg-rose-50 font-bold text-[#B32B2F]'
+                        ? 'bg-rose-50 font-bold text-action-primary-red-default'
                         : 'hover:bg-slate-50 text-slate-800'
                     } ${opt.disabled ? 'cursor-not-allowed opacity-40' : ''}`}
                   >
@@ -206,7 +206,7 @@ export function Select({
                     {isSelected && (
                       <Check
                         size={iconSize}
-                        className="text-[#B32B2F] shrink-0 animate-in zoom-in-75 duration-100"
+                        className="text-action-primary-red-default shrink-0 animate-in zoom-in-75 duration-100"
                       />
                     )}
                   </button>
@@ -227,7 +227,7 @@ export function Select({
           {required && <span className="ml-1 text-[#DE350B]">*</span>}
         </label>
         {trigger}
-        {hint && !error && <p className="text-[11px] text-slate-500">{hint}</p>}
+        {hint && !error && <p className="text-[11px] text-content-light-10">{hint}</p>}
         {error && <p className="text-[11px] font-medium text-[#DE350B]">{error}</p>}
       </div>
     );

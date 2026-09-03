@@ -33,14 +33,14 @@ export const RichTextEditor: React.FC<RichTextEditorProps> = ({
   };
 
   return (
-    <div className={cn('overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-2xs font-sans', className)}>
+    <div className={cn('overflow-hidden rounded border border-slate-200 bg-white shadow-2xs font-inter', className)}>
       {/* Toolbar */}
       <div className="flex flex-wrap items-center justify-between border-b border-slate-200 bg-slate-50/80 px-3 py-2 gap-2 select-none">
         <div className="flex flex-wrap items-center gap-1 text-slate-600">
           <button
             type="button"
             onClick={() => insertTag('strong')}
-            className="p-1.5 rounded-lg hover:bg-slate-200/70 hover:text-slate-900 transition-colors"
+            className="p-1.5 rounded hover:bg-slate-200/70 hover:text-slate-900 transition-colors"
             title="In đậm"
           >
             <Bold size={15} />
@@ -48,7 +48,7 @@ export const RichTextEditor: React.FC<RichTextEditorProps> = ({
           <button
             type="button"
             onClick={() => insertTag('em')}
-            className="p-1.5 rounded-lg hover:bg-slate-200/70 hover:text-slate-900 transition-colors"
+            className="p-1.5 rounded hover:bg-slate-200/70 hover:text-slate-900 transition-colors"
             title="In nghiêng"
           >
             <Italic size={15} />
@@ -56,7 +56,7 @@ export const RichTextEditor: React.FC<RichTextEditorProps> = ({
           <button
             type="button"
             onClick={() => insertTag('u')}
-            className="p-1.5 rounded-lg hover:bg-slate-200/70 hover:text-slate-900 transition-colors"
+            className="p-1.5 rounded hover:bg-slate-200/70 hover:text-slate-900 transition-colors"
             title="Gạch chân"
           >
             <Underline size={15} />
@@ -67,7 +67,7 @@ export const RichTextEditor: React.FC<RichTextEditorProps> = ({
           <button
             type="button"
             onClick={() => insertTag('h2')}
-            className="p-1.5 rounded-lg hover:bg-slate-200/70 hover:text-slate-900 transition-colors"
+            className="p-1.5 rounded hover:bg-slate-200/70 hover:text-slate-900 transition-colors"
             title="Tiêu đề H2"
           >
             <Heading2 size={15} />
@@ -75,7 +75,7 @@ export const RichTextEditor: React.FC<RichTextEditorProps> = ({
           <button
             type="button"
             onClick={() => insertTag('h3')}
-            className="p-1.5 rounded-lg hover:bg-slate-200/70 hover:text-slate-900 transition-colors"
+            className="p-1.5 rounded hover:bg-slate-200/70 hover:text-slate-900 transition-colors"
             title="Tiêu đề H3"
           >
             <Heading3 size={15} />
@@ -86,7 +86,7 @@ export const RichTextEditor: React.FC<RichTextEditorProps> = ({
           <button
             type="button"
             onClick={() => insertTag('ul')}
-            className="p-1.5 rounded-lg hover:bg-slate-200/70 hover:text-slate-900 transition-colors"
+            className="p-1.5 rounded hover:bg-slate-200/70 hover:text-slate-900 transition-colors"
             title="Danh sách gạch đầu dòng"
           >
             <List size={15} />
@@ -94,7 +94,7 @@ export const RichTextEditor: React.FC<RichTextEditorProps> = ({
           <button
             type="button"
             onClick={() => insertTag('ol')}
-            className="p-1.5 rounded-lg hover:bg-slate-200/70 hover:text-slate-900 transition-colors"
+            className="p-1.5 rounded hover:bg-slate-200/70 hover:text-slate-900 transition-colors"
             title="Danh sách số thứ tự"
           >
             <ListOrdered size={15} />
@@ -102,7 +102,7 @@ export const RichTextEditor: React.FC<RichTextEditorProps> = ({
           <button
             type="button"
             onClick={() => insertTag('a')}
-            className="p-1.5 rounded-lg hover:bg-slate-200/70 hover:text-slate-900 transition-colors"
+            className="p-1.5 rounded hover:bg-slate-200/70 hover:text-slate-900 transition-colors"
             title="Chèn liên kết"
           >
             <LinkIcon size={15} />
@@ -110,12 +110,12 @@ export const RichTextEditor: React.FC<RichTextEditorProps> = ({
         </div>
 
         {/* Tab View */}
-        <div className="flex items-center gap-1 bg-slate-200/60 p-0.5 rounded-lg text-[11px] font-semibold">
+        <div className="flex items-center gap-1 bg-slate-200/60 p-0.5 rounded text-[11px] font-semibold">
           <button
             type="button"
             onClick={() => setActiveTab('visual')}
             className={cn(
-              'px-2.5 py-1 rounded-md transition-all',
+              'px-2.5 py-1 rounded transition-all',
               activeTab === 'visual' ? 'bg-white text-slate-900 shadow-2xs' : 'text-slate-600 hover:text-slate-900'
             )}
           >
@@ -125,7 +125,7 @@ export const RichTextEditor: React.FC<RichTextEditorProps> = ({
             type="button"
             onClick={() => setActiveTab('html')}
             className={cn(
-              'px-2.5 py-1 rounded-md transition-all',
+              'px-2.5 py-1 rounded transition-all',
               activeTab === 'html' ? 'bg-white text-slate-900 shadow-2xs' : 'text-slate-600 hover:text-slate-900'
             )}
           >
@@ -141,14 +141,14 @@ export const RichTextEditor: React.FC<RichTextEditorProps> = ({
           onChange={(e) => onChange(e.target.value)}
           placeholder={placeholder}
           style={{ minHeight }}
-          className="w-full p-4 text-xs text-slate-800 bg-white outline-none leading-relaxed resize-y font-sans"
+          className="w-full p-4 text-xs text-slate-800 bg-white outline-none leading-relaxed resize-y font-inter"
         />
       ) : (
         <textarea
           value={value}
           onChange={(e) => onChange(e.target.value)}
           style={{ minHeight }}
-          className="w-full p-4 text-xs font-mono text-emerald-800 bg-slate-900/5 outline-none leading-relaxed resize-y"
+          className="w-full p-4 text-xs font-mono text-emerald-800 bg-content-dark-1/5 outline-none leading-relaxed resize-y"
         />
       )}
     </div>

@@ -28,9 +28,9 @@ export function DataTable<T>({
   className,
 }: DataTableProps<T>) {
   return (
-    <div className={cn('w-full overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-2xs', className)}>
+    <div className={cn('w-full overflow-hidden rounded border border-slate-200 bg-white shadow-2xs', className)}>
       <div className="overflow-x-auto">
-        <table className="w-full text-left text-xs font-sans">
+        <table className="w-full text-left text-xs font-inter">
           <thead className="border-b border-slate-200 bg-slate-50/80 text-slate-700 font-bold tracking-wider">
             <tr>
               {columns.map((col, idx) => (

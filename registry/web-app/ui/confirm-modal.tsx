@@ -42,7 +42,7 @@ export const ConfirmModal: React.FC<ConfirmModalProps> = ({
     <Modal isOpen={isOpen} onClose={onClose} title={title} maxWidth="md">
       <div className="space-y-4">
         <div className="flex items-start gap-3.5">
-          <div className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl border shadow-2xs ${bgMap[variant]}`}>
+          <div className={`flex h-11 w-11 shrink-0 items-center justify-center rounded border shadow-2xs ${bgMap[variant]}`}>
             {iconMap[variant]}
           </div>
           <div className="text-xs text-slate-600 leading-relaxed pt-1">{description}</div>

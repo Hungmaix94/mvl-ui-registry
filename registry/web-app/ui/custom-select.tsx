@@ -52,17 +52,17 @@ export const CustomSelect: React.FC<CustomSelectProps> = ({
   }, []);
 
   return (
-    <div className={cn('w-full space-y-1.5 font-sans relative', className)} ref={containerRef}>
+    <div className={cn('w-full space-y-1.5 font-inter relative', className)} ref={containerRef}>
       {label && (
         <label className="block text-xs font-semibold text-slate-700">
-          {label} {required && <span className="text-[#B32B2F] font-bold">*</span>}
+          {label} {required && <span className="text-action-primary-red-default font-bold">*</span>}
         </label>
       )}
 
       <div
         onClick={() => !disabled && setIsOpen(!isOpen)}
         className={cn(
-          'w-full min-h-[38px] px-3 py-2 flex items-center justify-between text-xs bg-white border rounded-xl cursor-pointer select-none transition-all duration-150',
+          'w-full min-h-[38px] px-3 py-2 flex items-center justify-between text-xs bg-white border rounded cursor-pointer select-none transition-all duration-150',
           error
             ? 'border-rose-400 bg-rose-50/20'
             : isOpen
@@ -90,13 +90,13 @@ export const CustomSelect: React.FC<CustomSelectProps> = ({
           )}
           <ChevronDown
             size={14}
-            className={cn('text-slate-400 transition-transform duration-200', isOpen && 'rotate-180 text-[#B32B2F]')}
+            className={cn('text-slate-400 transition-transform duration-200', isOpen && 'rotate-180 text-action-primary-red-default')}
           />
         </div>
       </div>
 
       {isOpen && !disabled && (
-        <div className="absolute z-50 left-0 right-0 top-full mt-1 max-h-60 overflow-y-auto rounded-xl border border-slate-200 bg-white p-1 shadow-xl animate-in fade-in zoom-in-95">
+        <div className="absolute z-50 left-0 right-0 top-full mt-1 max-h-60 overflow-y-auto rounded border border-slate-200 bg-white p-1 shadow-xl animate-in fade-in zoom-in-95">
           {options.length === 0 ? (
             <div className="px-3 py-2 text-xs text-slate-400 text-center">Không có lựa chọn nào</div>
           ) : (
@@ -112,9 +112,9 @@ export const CustomSelect: React.FC<CustomSelectProps> = ({
                     }
                   }}
                   className={cn(
-                    'flex items-center justify-between px-3 py-2 rounded-lg text-xs cursor-pointer transition-colors',
+                    'flex items-center justify-between px-3 py-2 rounded text-xs cursor-pointer transition-colors',
                     isSelected
-                      ? 'bg-rose-50 text-[#B32B2F] font-bold'
+                      ? 'bg-rose-50 text-action-primary-red-default font-bold'
                       : opt.disabled
                       ? 'text-slate-300 cursor-not-allowed'
                       : 'text-slate-700 hover:bg-slate-50'
@@ -124,7 +124,7 @@ export const CustomSelect: React.FC<CustomSelectProps> = ({
                     <div className="truncate">{opt.label}</div>
                     {opt.subtitle && <div className="text-[10px] text-slate-400 font-normal">{opt.subtitle}</div>}
                   </div>
-                  {isSelected && <Check size={14} className="text-[#B32B2F] shrink-0" />}
+                  {isSelected && <Check size={14} className="text-action-primary-red-default shrink-0" />}
                 </div>
               );
             })

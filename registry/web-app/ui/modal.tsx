@@ -36,13 +36,13 @@ export const Modal: React.FC<ModalProps> = ({
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
       <div
-        className="fixed inset-0 bg-slate-900/60 backdrop-blur-xs transition-opacity animate-in fade-in"
+        className="fixed inset-0 bg-content-dark-1/60 backdrop-blur-xs transition-opacity animate-in fade-in"
         onClick={onClose}
       />
 
       <div
         className={cn(
-          'relative w-full overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-2xl transition-all animate-in zoom-in-95 duration-200',
+          'relative w-full overflow-hidden rounded border border-slate-200 bg-white shadow-2xl transition-all animate-in zoom-in-95 duration-200',
           maxWidthStyles[maxWidth],
           className
         )}
@@ -50,12 +50,12 @@ export const Modal: React.FC<ModalProps> = ({
         <div className="flex items-center justify-between border-b border-slate-200 bg-slate-50/80 px-6 py-4">
           <div>
             <h3 className="text-sm font-bold text-slate-900">{title}</h3>
-            {description && <p className="text-xs text-slate-500 mt-0.5">{description}</p>}
+            {description && <p className="text-xs text-content-light-10 mt-0.5">{description}</p>}
           </div>
           <button
             type="button"
             onClick={onClose}
-            className="rounded-lg p-1.5 text-slate-400 hover:bg-slate-200/80 hover:text-slate-700 transition-colors cursor-pointer"
+            className="rounded p-1.5 text-slate-400 hover:bg-slate-200/80 hover:text-slate-700 transition-colors cursor-pointer"
           >
             <X size={18} />
           </button>
