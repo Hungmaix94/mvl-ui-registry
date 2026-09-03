@@ -1,0 +1,19 @@
+import { TIcon } from '@/types/common.ts'
+
+function IconMinus({ size = 24, color = 'currentColor', title = '', ...props }: TIcon) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill={color}
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      {title && <title>{title}</title>}
+      <path d="M20.25 11.25C20.6642 11.25 21 11.5858 21 12C21 12.4142 20.6642 12.75 20.25 12.75H3.75C3.33579 12.75 3 12.4142 3 12C3 11.5858 3.33579 11.25 3.75 11.25H20.25Z" />
+    </svg>
+  )
+}
+
+export { IconMinus }

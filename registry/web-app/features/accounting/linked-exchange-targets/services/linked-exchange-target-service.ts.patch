@@ -1,0 +1,18 @@
+--- src/features/accounting/linked-exchange-targets/services/linked-exchange-target-service.ts
++++ src/features/accounting/linked-exchange-targets/services/linked-exchange-target-service.ts
+@@ -48,6 +48,15 @@
+     return await this.get(ApiPaths.accounting_linked_exchange_targets_history_retrieve, {
+       path: { id: String(id), log_id: logId },
+     })
+   }
++
++  async computeLinkedExchangeTarget(data: { year: number; month: number }) {
++    // According to the spec: POST /api/accounting/linked-exchange-target-configs/compute/ {year, month}
++    return await this.post('/api/accounting/linked-exchange-target-configs/compute/' as any, data)
++  }
++
++  async confirmLinkedExchangeTarget(id: number, data: any = {}) {
++    // According to the spec: POST /api/accounting/linked-exchange-target-configs/:id/confirm/
++    return await this.post(ApiPaths.accounting_linked_exchange_targets_confirm_create, data, { path: { id } })
++  }
+ }

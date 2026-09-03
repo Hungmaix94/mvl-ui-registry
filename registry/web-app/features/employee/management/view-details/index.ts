@@ -1,0 +1,6 @@
+export { default as GeneralInfoTab } from '@/features/employee/management/view-details/tab-general/GeneralInfoTab.tsx'
+export { default as CertificateTab } from '@/features/employee/management/view-details/tab-certicate/CertificateTab.tsx'
+export { default as RelationTab } from './tab-relation/RelationTab.tsx'
+export { default as DependentTab } from '@/features/employee/management/view-details/tab-dependent/DependentTab.tsx'
+export { default as ContractTab } from '@/features/employee/management/view-details/tab-contract/ContractTab.tsx'
+export { default as LeaveHistoryTab } from '@/features/employee/management/view-details/tab-history/HistoryTab.tsx'

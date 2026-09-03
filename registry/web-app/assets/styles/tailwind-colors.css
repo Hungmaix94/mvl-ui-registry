@@ -1,0 +1,1505 @@
+/* Generated automatically by color pipeline */
+/* Do not edit manually - run 'yarn update:colors' to regenerate */
+
+@theme {
+  /* Global Colors */
+  /* Neutral Colors */
+  --color-neutral-0: #ffffff;
+  --color-neutral-10: #fdfdfd;
+  --color-neutral-20: #f9f9f9;
+  --color-neutral-30: #f2f2f2;
+  --color-neutral-40: #e8e8e8;
+  --color-neutral-50: #e4e4e4;
+  --color-neutral-60: #d8d8d8;
+  --color-neutral-70: #bfbfbf;
+  --color-neutral-80: #8c8c8c;
+  --color-neutral-90: #4b4b4b;
+  --color-neutral-100: #000000;
+
+  /* Red Colors */
+  --color-red-10: #f7ebeb;
+  --color-red-20: #efdbdb;
+  --color-red-30: #df9c9c;
+  --color-red-40: #cf6868;
+  --color-red-50: #bf4343;
+  --color-red-60: #af4b4b;
+  --color-red-70: #870b0b;
+  --color-red-80: #690000;
+  --color-red-90: #461e1e;
+  --color-red-100: #230f0f;
+
+  /* Orange Colors */
+  --color-orange-10: #fbf4ec;
+  --color-orange-20: #f6e8d8;
+  --color-orange-30: #ebc698;
+  --color-orange-40: #e4bb8b;
+  --color-orange-50: #f0a346;
+  --color-orange-60: #d28a35;
+  --color-orange-70: #995b0f;
+  --color-orange-80: #7e5525;
+  --color-orange-90: #543918;
+  --color-orange-100: #2a1c0c;
+
+  /* Lime yellow Colors */
+  --color-lime-yellow-10: #f8f4e1;
+  --color-lime-yellow-20: #fff5c9;
+  --color-lime-yellow-30: #e0dda5;
+  --color-lime-yellow-40: #d0cd77;
+  --color-lime-yellow-50: #ebc61f;
+  --color-lime-yellow-60: #d3b326;
+  --color-lime-yellow-70: #af9526;
+  --color-lime-yellow-80: #6a6711;
+  --color-lime-yellow-90: #47440c;
+  --color-lime-yellow-100: #232206;
+
+  /* Purple Colors */
+  --color-purple-10: #f4edf7;
+  --color-purple-20: #eadbef;
+  --color-purple-30: #d5b7df;
+  --color-purple-40: #bf93cf;
+  --color-purple-50: #aa6fbf;
+  --color-purple-60: #9858af;
+  --color-purple-70: #722a8c;
+  --color-purple-80: #592d69;
+  --color-purple-90: #3c1e46;
+  --color-purple-100: #1e0f23;
+
+  /* Green Colors */
+  --color-green-10: #eef5f0;
+  --color-green-20: #daf4e0;
+  --color-green-30: #bcd8c2;
+  --color-green-40: #9bc5a4;
+  --color-green-50: #79b185;
+  --color-green-60: #2f9e47;
+  --color-green-70: #007e1b;
+  --color-green-80: #355f3e;
+  --color-green-90: #233f29;
+  --color-green-100: #122015;
+
+  /* Irish Colors */
+  --color-irish-10: #eeeff5;
+  --color-irish-20: #dedfec;
+  --color-irish-30: #bcbfd8;
+  --color-irish-40: #9b9fc5;
+  --color-irish-50: #797fb1;
+  --color-irish-60: #585f9e;
+  --color-irish-70: #464c7e;
+  --color-irish-80: #35395f;
+  --color-irish-90: #23263f;
+  --color-irish-100: #121320;
+
+  /* Brand Colors */
+  --color-brand-90: #bbbbbb;
+  --color-brand-100: #b32b2f;
+
+  /* Semantic Colors */
+  /* Content Colors */
+  --color-content-dark-1: #000000;
+  --color-content-dark-2: #4b4b4b;
+  --color-content-dark-3: #8c8c8c;
+  --color-content-dark-4: #bfbfbf;
+  --color-content-light-1: #ffffff;
+  --color-content-light-2: #d8d8d8;
+  --color-content-light-3: #bfbfbf;
+  --color-content-light-4: #8c8c8c;
+
+  /* Action Colors */
+  --color-action-primary-red-default: #b32b2f;
+  --color-action-primary-red-hover: #870b0b;
+  --color-action-primary-red-focus: #cf6868;
+  --color-action-primary-red-disabled: #f9f9f9;
+  --color-action-primary-red-activated: #f7ebeb;
+  --color-action-secondary-grey-default: #d8d8d8;
+  --color-action-secondary-grey-hover: #bfbfbf;
+  --color-action-secondary-grey-focus: #8c8c8c;
+  --color-action-secondary-grey-disabled: #f2f2f2;
+  --color-action-outline-default: #e4e4e4;
+  --color-action-outline-hover: #8c8c8c;
+  --color-action-outline-focus: #000000;
+  --color-action-outline-disabled: #d8d8d8;
+  --color-action-outline-activated: #b6c8fb;
+  --color-action-outline-state-6: #bcd8c2;
+  --color-action-outline-state-7: #df9c9c;
+  --color-action-outline-state-8: #ebc698;
+
+  /* Border Colors */
+  --color-border-1: #d8d8d8;
+  --color-border-2: #bfbfbf;
+  --color-border-3: #8c8c8c;
+
+  /* Background Colors */
+  --color-background-1: #ffffff;
+  --color-background-2: #f9f9f9;
+  --color-background-3: #f2f2f2;
+  --color-background-4: #eef5f0;
+  --color-background-5: #edf2fe;
+  --color-background-6: #f7ebeb;
+  --color-background-7: #f8f4e1;
+  --color-background-8: #fbf4ec;
+  --color-background-9: #f4edf7;
+  --color-background-org-block: #e2efda;
+  --color-background-org-department: #c6d9f0;
+
+  /* Data Colors */
+  --color-data-light-grey-default: #fdfdfd;
+  --color-data-light-grey-hover: #f2f2f2;
+  --color-data-light-grey-focus: #f9f9f9;
+  --color-data-light-grey-disabled: #e8e8e8;
+  --color-data-red-default: #af2323;
+  --color-data-red-hover: #870b0b;
+  --color-data-red-focus: #df9c9c;
+  --color-data-red-disabled: #efcbcb;
+  --color-data-green-default: #2f9e47;
+  --color-data-green-hover: #007e1b;
+  --color-data-green-focus: #79b185;
+  --color-data-green-disabled: #daf4e0;
+  --color-data-blue-default: #4c78f5;
+  --color-data-blue-hover: #1f3f99;
+  --color-data-blue-focus: #b6c8fb;
+  --color-data-blue-disabled: #dbe4fd;
+  --color-data-yellow-default: #d3b326;
+  --color-data-yellow-hover: #af9526;
+  --color-data-yellow-focus: #fff0b0;
+  --color-data-yellow-disabled: #fff5c9;
+  --color-data-purple-default: #9858af;
+  --color-data-purple-hover: #722a8c;
+  --color-data-purple-focus: #d5b7df;
+  --color-data-purple-disabled: #eadbef;
+  --color-data-orange-default: #d28a35;
+  --color-data-orange-hover: #995b0f;
+  --color-data-orange-focus: #ebc698;
+  --color-data-orange-disabled: #f6e8d8;
+  --color-data-irish-default: #6950ce;
+  --color-data-irish-hover: #19247e;
+  --color-data-irish-focus: #c0bcd8;
+  --color-data-irish-disabled: #dedfec;
+}
+
+/* Utility Classes with Figma Name Mapping */
+@layer utilities {
+  /* Global Color Utilities */
+  .bg-neutral-0 {
+    background-color: var(--color-neutral-0);
+  } /* Figma: Neutral 0 */
+  .text-neutral-0 {
+    color: var(--color-neutral-0);
+  } /* Figma: Neutral 0 */
+  .border-neutral-0 {
+    border-color: var(--color-neutral-0);
+  } /* Figma: Neutral 0 */
+  .bg-neutral-10 {
+    background-color: var(--color-neutral-10);
+  } /* Figma: Neutral 10 */
+  .text-neutral-10 {
+    color: var(--color-neutral-10);
+  } /* Figma: Neutral 10 */
+  .border-neutral-10 {
+    border-color: var(--color-neutral-10);
+  } /* Figma: Neutral 10 */
+  .bg-neutral-20 {
+    background-color: var(--color-neutral-20);
+  } /* Figma: Neutral 20 */
+  .text-neutral-20 {
+    color: var(--color-neutral-20);
+  } /* Figma: Neutral 20 */
+  .border-neutral-20 {
+    border-color: var(--color-neutral-20);
+  } /* Figma: Neutral 20 */
+  .bg-neutral-30 {
+    background-color: var(--color-neutral-30);
+  } /* Figma: Neutral 30 */
+  .text-neutral-30 {
+    color: var(--color-neutral-30);
+  } /* Figma: Neutral 30 */
+  .border-neutral-30 {
+    border-color: var(--color-neutral-30);
+  } /* Figma: Neutral 30 */
+  .bg-neutral-40 {
+    background-color: var(--color-neutral-40);
+  } /* Figma: Neutral 40 */
+  .text-neutral-40 {
+    color: var(--color-neutral-40);
+  } /* Figma: Neutral 40 */
+  .border-neutral-40 {
+    border-color: var(--color-neutral-40);
+  } /* Figma: Neutral 40 */
+  .bg-neutral-50 {
+    background-color: var(--color-neutral-50);
+  } /* Figma: Neutral 50 */
+  .text-neutral-50 {
+    color: var(--color-neutral-50);
+  } /* Figma: Neutral 50 */
+  .border-neutral-50 {
+    border-color: var(--color-neutral-50);
+  } /* Figma: Neutral 50 */
+  .bg-neutral-60 {
+    background-color: var(--color-neutral-60);
+  } /* Figma: Neutral 60 */
+  .text-neutral-60 {
+    color: var(--color-neutral-60);
+  } /* Figma: Neutral 60 */
+  .border-neutral-60 {
+    border-color: var(--color-neutral-60);
+  } /* Figma: Neutral 60 */
+  .bg-neutral-70 {
+    background-color: var(--color-neutral-70);
+  } /* Figma: Neutral 70 */
+  .text-neutral-70 {
+    color: var(--color-neutral-70);
+  } /* Figma: Neutral 70 */
+  .border-neutral-70 {
+    border-color: var(--color-neutral-70);
+  } /* Figma: Neutral 70 */
+  .bg-neutral-80 {
+    background-color: var(--color-neutral-80);
+  } /* Figma: Neutral 80 */
+  .text-neutral-80 {
+    color: var(--color-neutral-80);
+  } /* Figma: Neutral 80 */
+  .border-neutral-80 {
+    border-color: var(--color-neutral-80);
+  } /* Figma: Neutral 80 */
+  .bg-neutral-90 {
+    background-color: var(--color-neutral-90);
+  } /* Figma: Neutral 90 */
+  .text-neutral-90 {
+    color: var(--color-neutral-90);
+  } /* Figma: Neutral 90 */
+  .border-neutral-90 {
+    border-color: var(--color-neutral-90);
+  } /* Figma: Neutral 90 */
+  .bg-neutral-100 {
+    background-color: var(--color-neutral-100);
+  } /* Figma: Neutral 100 */
+  .text-neutral-100 {
+    color: var(--color-neutral-100);
+  } /* Figma: Neutral 100 */
+  .border-neutral-100 {
+    border-color: var(--color-neutral-100);
+  } /* Figma: Neutral 100 */
+
+  .bg-red-10 {
+    background-color: var(--color-red-10);
+  } /* Figma: Red 10 */
+  .text-red-10 {
+    color: var(--color-red-10);
+  } /* Figma: Red 10 */
+  .border-red-10 {
+    border-color: var(--color-red-10);
+  } /* Figma: Red 10 */
+  .bg-red-20 {
+    background-color: var(--color-red-20);
+  } /* Figma: Red 20 */
+  .text-red-20 {
+    color: var(--color-red-20);
+  } /* Figma: Red 20 */
+  .border-red-20 {
+    border-color: var(--color-red-20);
+  } /* Figma: Red 20 */
+  .bg-red-30 {
+    background-color: var(--color-red-30);
+  } /* Figma: Red 30 */
+  .text-red-30 {
+    color: var(--color-red-30);
+  } /* Figma: Red 30 */
+  .border-red-30 {
+    border-color: var(--color-red-30);
+  } /* Figma: Red 30 */
+  .bg-red-40 {
+    background-color: var(--color-red-40);
+  } /* Figma: Red 40 */
+  .text-red-40 {
+    color: var(--color-red-40);
+  } /* Figma: Red 40 */
+  .border-red-40 {
+    border-color: var(--color-red-40);
+  } /* Figma: Red 40 */
+  .bg-red-50 {
+    background-color: var(--color-red-50);
+  } /* Figma: Red 50 */
+  .text-red-50 {
+    color: var(--color-red-50);
+  } /* Figma: Red 50 */
+  .border-red-50 {
+    border-color: var(--color-red-50);
+  } /* Figma: Red 50 */
+  .bg-red-60 {
+    background-color: var(--color-red-60);
+  } /* Figma: Red 60 */
+  .text-red-60 {
+    color: var(--color-red-60);
+  } /* Figma: Red 60 */
+  .border-red-60 {
+    border-color: var(--color-red-60);
+  } /* Figma: Red 60 */
+  .bg-red-70 {
+    background-color: var(--color-red-70);
+  } /* Figma: Red 70 */
+  .text-red-70 {
+    color: var(--color-red-70);
+  } /* Figma: Red 70 */
+  .border-red-70 {
+    border-color: var(--color-red-70);
+  } /* Figma: Red 70 */
+  .bg-red-80 {
+    background-color: var(--color-red-80);
+  } /* Figma: Red 80 */
+  .text-red-80 {
+    color: var(--color-red-80);
+  } /* Figma: Red 80 */
+  .border-red-80 {
+    border-color: var(--color-red-80);
+  } /* Figma: Red 80 */
+  .bg-red-90 {
+    background-color: var(--color-red-90);
+  } /* Figma: Red 90 */
+  .text-red-90 {
+    color: var(--color-red-90);
+  } /* Figma: Red 90 */
+  .border-red-90 {
+    border-color: var(--color-red-90);
+  } /* Figma: Red 90 */
+  .bg-red-100 {
+    background-color: var(--color-red-100);
+  } /* Figma: Red 100 */
+  .text-red-100 {
+    color: var(--color-red-100);
+  } /* Figma: Red 100 */
+  .border-red-100 {
+    border-color: var(--color-red-100);
+  } /* Figma: Red 100 */
+
+  .bg-orange-10 {
+    background-color: var(--color-orange-10);
+  } /* Figma: Orange 10 */
+  .text-orange-10 {
+    color: var(--color-orange-10);
+  } /* Figma: Orange 10 */
+  .border-orange-10 {
+    border-color: var(--color-orange-10);
+  } /* Figma: Orange 10 */
+  .bg-orange-20 {
+    background-color: var(--color-orange-20);
+  } /* Figma: Orange 20 */
+  .text-orange-20 {
+    color: var(--color-orange-20);
+  } /* Figma: Orange 20 */
+  .border-orange-20 {
+    border-color: var(--color-orange-20);
+  } /* Figma: Orange 20 */
+  .bg-orange-30 {
+    background-color: var(--color-orange-30);
+  } /* Figma: Orange 30 */
+  .text-orange-30 {
+    color: var(--color-orange-30);
+  } /* Figma: Orange 30 */
+  .border-orange-30 {
+    border-color: var(--color-orange-30);
+  } /* Figma: Orange 30 */
+  .bg-orange-40 {
+    background-color: var(--color-orange-40);
+  } /* Figma: Orange 40 */
+  .text-orange-40 {
+    color: var(--color-orange-40);
+  } /* Figma: Orange 40 */
+  .border-orange-40 {
+    border-color: var(--color-orange-40);
+  } /* Figma: Orange 40 */
+  .bg-orange-50 {
+    background-color: var(--color-orange-50);
+  } /* Figma: Orange 50 */
+  .text-orange-50 {
+    color: var(--color-orange-50);
+  } /* Figma: Orange 50 */
+  .border-orange-50 {
+    border-color: var(--color-orange-50);
+  } /* Figma: Orange 50 */
+  .bg-orange-60 {
+    background-color: var(--color-orange-60);
+  } /* Figma: Orange 60 */
+  .text-orange-60 {
+    color: var(--color-orange-60);
+  } /* Figma: Orange 60 */
+  .border-orange-60 {
+    border-color: var(--color-orange-60);
+  } /* Figma: Orange 60 */
+  .bg-orange-70 {
+    background-color: var(--color-orange-70);
+  } /* Figma: Orange 70 */
+  .text-orange-70 {
+    color: var(--color-orange-70);
+  } /* Figma: Orange 70 */
+  .border-orange-70 {
+    border-color: var(--color-orange-70);
+  } /* Figma: Orange 70 */
+  .bg-orange-80 {
+    background-color: var(--color-orange-80);
+  } /* Figma: Orange 80 */
+  .text-orange-80 {
+    color: var(--color-orange-80);
+  } /* Figma: Orange 80 */
+  .border-orange-80 {
+    border-color: var(--color-orange-80);
+  } /* Figma: Orange 80 */
+  .bg-orange-90 {
+    background-color: var(--color-orange-90);
+  } /* Figma: Orange 90 */
+  .text-orange-90 {
+    color: var(--color-orange-90);
+  } /* Figma: Orange 90 */
+  .border-orange-90 {
+    border-color: var(--color-orange-90);
+  } /* Figma: Orange 90 */
+  .bg-orange-100 {
+    background-color: var(--color-orange-100);
+  } /* Figma: Orange 100 */
+  .text-orange-100 {
+    color: var(--color-orange-100);
+  } /* Figma: Orange 100 */
+  .border-orange-100 {
+    border-color: var(--color-orange-100);
+  } /* Figma: Orange 100 */
+
+  .bg-lime-yellow-10 {
+    background-color: var(--color-lime-yellow-10);
+  } /* Figma: Lime yellow 10 */
+  .text-lime-yellow-10 {
+    color: var(--color-lime-yellow-10);
+  } /* Figma: Lime yellow 10 */
+  .border-lime-yellow-10 {
+    border-color: var(--color-lime-yellow-10);
+  } /* Figma: Lime yellow 10 */
+  .bg-lime-yellow-20 {
+    background-color: var(--color-lime-yellow-20);
+  } /* Figma: Lime yellow 20 */
+  .text-lime-yellow-20 {
+    color: var(--color-lime-yellow-20);
+  } /* Figma: Lime yellow 20 */
+  .border-lime-yellow-20 {
+    border-color: var(--color-lime-yellow-20);
+  } /* Figma: Lime yellow 20 */
+  .bg-lime-yellow-30 {
+    background-color: var(--color-lime-yellow-30);
+  } /* Figma: Lime yellow 30 */
+  .text-lime-yellow-30 {
+    color: var(--color-lime-yellow-30);
+  } /* Figma: Lime yellow 30 */
+  .border-lime-yellow-30 {
+    border-color: var(--color-lime-yellow-30);
+  } /* Figma: Lime yellow 30 */
+  .bg-lime-yellow-40 {
+    background-color: var(--color-lime-yellow-40);
+  } /* Figma: Lime yellow 40 */
+  .text-lime-yellow-40 {
+    color: var(--color-lime-yellow-40);
+  } /* Figma: Lime yellow 40 */
+  .border-lime-yellow-40 {
+    border-color: var(--color-lime-yellow-40);
+  } /* Figma: Lime yellow 40 */
+  .bg-lime-yellow-50 {
+    background-color: var(--color-lime-yellow-50);
+  } /* Figma: Lime yellow 50 */
+  .text-lime-yellow-50 {
+    color: var(--color-lime-yellow-50);
+  } /* Figma: Lime yellow 50 */
+  .border-lime-yellow-50 {
+    border-color: var(--color-lime-yellow-50);
+  } /* Figma: Lime yellow 50 */
+  .bg-lime-yellow-60 {
+    background-color: var(--color-lime-yellow-60);
+  } /* Figma: Lime yellow 60 */
+  .text-lime-yellow-60 {
+    color: var(--color-lime-yellow-60);
+  } /* Figma: Lime yellow 60 */
+  .border-lime-yellow-60 {
+    border-color: var(--color-lime-yellow-60);
+  } /* Figma: Lime yellow 60 */
+  .bg-lime-yellow-70 {
+    background-color: var(--color-lime-yellow-70);
+  } /* Figma: Lime yellow 70 */
+  .text-lime-yellow-70 {
+    color: var(--color-lime-yellow-70);
+  } /* Figma: Lime yellow 70 */
+  .border-lime-yellow-70 {
+    border-color: var(--color-lime-yellow-70);
+  } /* Figma: Lime yellow 70 */
+  .bg-lime-yellow-80 {
+    background-color: var(--color-lime-yellow-80);
+  } /* Figma: Lime yellow 80 */
+  .text-lime-yellow-80 {
+    color: var(--color-lime-yellow-80);
+  } /* Figma: Lime yellow 80 */
+  .border-lime-yellow-80 {
+    border-color: var(--color-lime-yellow-80);
+  } /* Figma: Lime yellow 80 */
+  .bg-lime-yellow-90 {
+    background-color: var(--color-lime-yellow-90);
+  } /* Figma: Lime yellow 90 */
+  .text-lime-yellow-90 {
+    color: var(--color-lime-yellow-90);
+  } /* Figma: Lime yellow 90 */
+  .border-lime-yellow-90 {
+    border-color: var(--color-lime-yellow-90);
+  } /* Figma: Lime yellow 90 */
+  .bg-lime-yellow-100 {
+    background-color: var(--color-lime-yellow-100);
+  } /* Figma: Lime yellow 100 */
+  .text-lime-yellow-100 {
+    color: var(--color-lime-yellow-100);
+  } /* Figma: Lime yellow 100 */
+  .border-lime-yellow-100 {
+    border-color: var(--color-lime-yellow-100);
+  } /* Figma: Lime yellow 100 */
+
+  .bg-purple-10 {
+    background-color: var(--color-purple-10);
+  } /* Figma: Purple 10 */
+  .text-purple-10 {
+    color: var(--color-purple-10);
+  } /* Figma: Purple 10 */
+  .border-purple-10 {
+    border-color: var(--color-purple-10);
+  } /* Figma: Purple 10 */
+  .bg-purple-20 {
+    background-color: var(--color-purple-20);
+  } /* Figma: Purple 20 */
+  .text-purple-20 {
+    color: var(--color-purple-20);
+  } /* Figma: Purple 20 */
+  .border-purple-20 {
+    border-color: var(--color-purple-20);
+  } /* Figma: Purple 20 */
+  .bg-purple-30 {
+    background-color: var(--color-purple-30);
+  } /* Figma: Purple 30 */
+  .text-purple-30 {
+    color: var(--color-purple-30);
+  } /* Figma: Purple 30 */
+  .border-purple-30 {
+    border-color: var(--color-purple-30);
+  } /* Figma: Purple 30 */
+  .bg-purple-40 {
+    background-color: var(--color-purple-40);
+  } /* Figma: Purple 40 */
+  .text-purple-40 {
+    color: var(--color-purple-40);
+  } /* Figma: Purple 40 */
+  .border-purple-40 {
+    border-color: var(--color-purple-40);
+  } /* Figma: Purple 40 */
+  .bg-purple-50 {
+    background-color: var(--color-purple-50);
+  } /* Figma: Purple 50 */
+  .text-purple-50 {
+    color: var(--color-purple-50);
+  } /* Figma: Purple 50 */
+  .border-purple-50 {
+    border-color: var(--color-purple-50);
+  } /* Figma: Purple 50 */
+  .bg-purple-60 {
+    background-color: var(--color-purple-60);
+  } /* Figma: Purple 60 */
+  .text-purple-60 {
+    color: var(--color-purple-60);
+  } /* Figma: Purple 60 */
+  .border-purple-60 {
+    border-color: var(--color-purple-60);
+  } /* Figma: Purple 60 */
+  .bg-purple-70 {
+    background-color: var(--color-purple-70);
+  } /* Figma: Purple 70 */
+  .text-purple-70 {
+    color: var(--color-purple-70);
+  } /* Figma: Purple 70 */
+  .border-purple-70 {
+    border-color: var(--color-purple-70);
+  } /* Figma: Purple 70 */
+  .bg-purple-80 {
+    background-color: var(--color-purple-80);
+  } /* Figma: Purple 80 */
+  .text-purple-80 {
+    color: var(--color-purple-80);
+  } /* Figma: Purple 80 */
+  .border-purple-80 {
+    border-color: var(--color-purple-80);
+  } /* Figma: Purple 80 */
+  .bg-purple-90 {
+    background-color: var(--color-purple-90);
+  } /* Figma: Purple 90 */
+  .text-purple-90 {
+    color: var(--color-purple-90);
+  } /* Figma: Purple 90 */
+  .border-purple-90 {
+    border-color: var(--color-purple-90);
+  } /* Figma: Purple 90 */
+  .bg-purple-100 {
+    background-color: var(--color-purple-100);
+  } /* Figma: Purple 100 */
+  .text-purple-100 {
+    color: var(--color-purple-100);
+  } /* Figma: Purple 100 */
+  .border-purple-100 {
+    border-color: var(--color-purple-100);
+  } /* Figma: Purple 100 */
+
+  .bg-green-10 {
+    background-color: var(--color-green-10);
+  } /* Figma: Green 10 */
+  .text-green-10 {
+    color: var(--color-green-10);
+  } /* Figma: Green 10 */
+  .border-green-10 {
+    border-color: var(--color-green-10);
+  } /* Figma: Green 10 */
+  .bg-green-20 {
+    background-color: var(--color-green-20);
+  } /* Figma: Green 20 */
+  .text-green-20 {
+    color: var(--color-green-20);
+  } /* Figma: Green 20 */
+  .border-green-20 {
+    border-color: var(--color-green-20);
+  } /* Figma: Green 20 */
+  .bg-green-30 {
+    background-color: var(--color-green-30);
+  } /* Figma: Green 30 */
+  .text-green-30 {
+    color: var(--color-green-30);
+  } /* Figma: Green 30 */
+  .border-green-30 {
+    border-color: var(--color-green-30);
+  } /* Figma: Green 30 */
+  .bg-green-40 {
+    background-color: var(--color-green-40);
+  } /* Figma: Green 40 */
+  .text-green-40 {
+    color: var(--color-green-40);
+  } /* Figma: Green 40 */
+  .border-green-40 {
+    border-color: var(--color-green-40);
+  } /* Figma: Green 40 */
+  .bg-green-50 {
+    background-color: var(--color-green-50);
+  } /* Figma: Green 50 */
+  .text-green-50 {
+    color: var(--color-green-50);
+  } /* Figma: Green 50 */
+  .border-green-50 {
+    border-color: var(--color-green-50);
+  } /* Figma: Green 50 */
+  .bg-green-60 {
+    background-color: var(--color-green-60);
+  } /* Figma: Green 60 */
+  .text-green-60 {
+    color: var(--color-green-60);
+  } /* Figma: Green 60 */
+  .border-green-60 {
+    border-color: var(--color-green-60);
+  } /* Figma: Green 60 */
+  .bg-green-70 {
+    background-color: var(--color-green-70);
+  } /* Figma: Green 70 */
+  .text-green-70 {
+    color: var(--color-green-70);
+  } /* Figma: Green 70 */
+  .border-green-70 {
+    border-color: var(--color-green-70);
+  } /* Figma: Green 70 */
+  .bg-green-80 {
+    background-color: var(--color-green-80);
+  } /* Figma: Green 80 */
+  .text-green-80 {
+    color: var(--color-green-80);
+  } /* Figma: Green 80 */
+  .border-green-80 {
+    border-color: var(--color-green-80);
+  } /* Figma: Green 80 */
+  .bg-green-90 {
+    background-color: var(--color-green-90);
+  } /* Figma: Green 90 */
+  .text-green-90 {
+    color: var(--color-green-90);
+  } /* Figma: Green 90 */
+  .border-green-90 {
+    border-color: var(--color-green-90);
+  } /* Figma: Green 90 */
+  .bg-green-100 {
+    background-color: var(--color-green-100);
+  } /* Figma: Green 100 */
+  .text-green-100 {
+    color: var(--color-green-100);
+  } /* Figma: Green 100 */
+  .border-green-100 {
+    border-color: var(--color-green-100);
+  } /* Figma: Green 100 */
+
+  .bg-irish-10 {
+    background-color: var(--color-irish-10);
+  } /* Figma: Irish 10 */
+  .text-irish-10 {
+    color: var(--color-irish-10);
+  } /* Figma: Irish 10 */
+  .border-irish-10 {
+    border-color: var(--color-irish-10);
+  } /* Figma: Irish 10 */
+  .bg-irish-20 {
+    background-color: var(--color-irish-20);
+  } /* Figma: Irish 20 */
+  .text-irish-20 {
+    color: var(--color-irish-20);
+  } /* Figma: Irish 20 */
+  .border-irish-20 {
+    border-color: var(--color-irish-20);
+  } /* Figma: Irish 20 */
+  .bg-irish-30 {
+    background-color: var(--color-irish-30);
+  } /* Figma: Irish 30 */
+  .text-irish-30 {
+    color: var(--color-irish-30);
+  } /* Figma: Irish 30 */
+  .border-irish-30 {
+    border-color: var(--color-irish-30);
+  } /* Figma: Irish 30 */
+  .bg-irish-40 {
+    background-color: var(--color-irish-40);
+  } /* Figma: Irish 40 */
+  .text-irish-40 {
+    color: var(--color-irish-40);
+  } /* Figma: Irish 40 */
+  .border-irish-40 {
+    border-color: var(--color-irish-40);
+  } /* Figma: Irish 40 */
+  .bg-irish-50 {
+    background-color: var(--color-irish-50);
+  } /* Figma: Irish 50 */
+  .text-irish-50 {
+    color: var(--color-irish-50);
+  } /* Figma: Irish 50 */
+  .border-irish-50 {
+    border-color: var(--color-irish-50);
+  } /* Figma: Irish 50 */
+  .bg-irish-60 {
+    background-color: var(--color-irish-60);
+  } /* Figma: Irish 60 */
+  .text-irish-60 {
+    color: var(--color-irish-60);
+  } /* Figma: Irish 60 */
+  .border-irish-60 {
+    border-color: var(--color-irish-60);
+  } /* Figma: Irish 60 */
+  .bg-irish-70 {
+    background-color: var(--color-irish-70);
+  } /* Figma: Irish 70 */
+  .text-irish-70 {
+    color: var(--color-irish-70);
+  } /* Figma: Irish 70 */
+  .border-irish-70 {
+    border-color: var(--color-irish-70);
+  } /* Figma: Irish 70 */
+  .bg-irish-80 {
+    background-color: var(--color-irish-80);
+  } /* Figma: Irish 80 */
+  .text-irish-80 {
+    color: var(--color-irish-80);
+  } /* Figma: Irish 80 */
+  .border-irish-80 {
+    border-color: var(--color-irish-80);
+  } /* Figma: Irish 80 */
+  .bg-irish-90 {
+    background-color: var(--color-irish-90);
+  } /* Figma: Irish 90 */
+  .text-irish-90 {
+    color: var(--color-irish-90);
+  } /* Figma: Irish 90 */
+  .border-irish-90 {
+    border-color: var(--color-irish-90);
+  } /* Figma: Irish 90 */
+  .bg-irish-100 {
+    background-color: var(--color-irish-100);
+  } /* Figma: Irish 100 */
+  .text-irish-100 {
+    color: var(--color-irish-100);
+  } /* Figma: Irish 100 */
+  .border-irish-100 {
+    border-color: var(--color-irish-100);
+  } /* Figma: Irish 100 */
+
+  .bg-brand-90 {
+    background-color: var(--color-brand-90);
+  } /* Figma: Brand 90 */
+  .text-brand-90 {
+    color: var(--color-brand-90);
+  } /* Figma: Brand 90 */
+  .border-brand-90 {
+    border-color: var(--color-brand-90);
+  } /* Figma: Brand 90 */
+  .bg-brand-100 {
+    background-color: var(--color-brand-100);
+  } /* Figma: Brand 100 */
+  .text-brand-100 {
+    color: var(--color-brand-100);
+  } /* Figma: Brand 100 */
+  .border-brand-100 {
+    border-color: var(--color-brand-100);
+  } /* Figma: Brand 100 */
+
+  /* Semantic Color Utilities */
+  /* Content Color Utilities */
+  .bg-content-dark-1 {
+    background-color: var(--color-content-dark-1);
+  } /* Figma: Content Dark 1 */
+  .text-content-dark-1 {
+    color: var(--color-content-dark-1);
+  } /* Figma: Content Dark 1 */
+  .border-content-dark-1 {
+    border-color: var(--color-content-dark-1);
+  } /* Figma: Content Dark 1 */
+  .bg-content-dark-2 {
+    background-color: var(--color-content-dark-2);
+  } /* Figma: Content Dark 2 */
+  .text-content-dark-2 {
+    color: var(--color-content-dark-2);
+  } /* Figma: Content Dark 2 */
+  .border-content-dark-2 {
+    border-color: var(--color-content-dark-2);
+  } /* Figma: Content Dark 2 */
+  .bg-content-dark-3 {
+    background-color: var(--color-content-dark-3);
+  } /* Figma: Content Dark 3 */
+  .text-content-dark-3 {
+    color: var(--color-content-dark-3);
+  } /* Figma: Content Dark 3 */
+  .border-content-dark-3 {
+    border-color: var(--color-content-dark-3);
+  } /* Figma: Content Dark 3 */
+  .bg-content-dark-4 {
+    background-color: var(--color-content-dark-4);
+  } /* Figma: Content Dark 4 */
+  .text-content-dark-4 {
+    color: var(--color-content-dark-4);
+  } /* Figma: Content Dark 4 */
+  .border-content-dark-4 {
+    border-color: var(--color-content-dark-4);
+  } /* Figma: Content Dark 4 */
+  .bg-content-light-1 {
+    background-color: var(--color-content-light-1);
+  } /* Figma: Content Light 1 */
+  .text-content-light-1 {
+    color: var(--color-content-light-1);
+  } /* Figma: Content Light 1 */
+  .border-content-light-1 {
+    border-color: var(--color-content-light-1);
+  } /* Figma: Content Light 1 */
+  .bg-content-light-2 {
+    background-color: var(--color-content-light-2);
+  } /* Figma: Content Light 2 */
+  .text-content-light-2 {
+    color: var(--color-content-light-2);
+  } /* Figma: Content Light 2 */
+  .border-content-light-2 {
+    border-color: var(--color-content-light-2);
+  } /* Figma: Content Light 2 */
+  .bg-content-light-3 {
+    background-color: var(--color-content-light-3);
+  } /* Figma: Content Light 3 */
+  .text-content-light-3 {
+    color: var(--color-content-light-3);
+  } /* Figma: Content Light 3 */
+  .border-content-light-3 {
+    border-color: var(--color-content-light-3);
+  } /* Figma: Content Light 3 */
+  .bg-content-light-4 {
+    background-color: var(--color-content-light-4);
+  } /* Figma: Content Light 4 */
+  .text-content-light-4 {
+    color: var(--color-content-light-4);
+  } /* Figma: Content Light 4 */
+  .border-content-light-4 {
+    border-color: var(--color-content-light-4);
+  } /* Figma: Content Light 4 */
+
+  /* Action Color Utilities */
+  .bg-action-primary-red-default {
+    background-color: var(--color-action-primary-red-default);
+  } /* Figma: Action Primary-red Default */
+  .text-action-primary-red-default {
+    color: var(--color-action-primary-red-default);
+  } /* Figma: Action Primary-red Default */
+  .border-action-primary-red-default {
+    border-color: var(--color-action-primary-red-default);
+  } /* Figma: Action Primary-red Default */
+  .bg-action-primary-red-hover {
+    background-color: var(--color-action-primary-red-hover);
+  } /* Figma: Action Primary-red Hover */
+  .text-action-primary-red-hover {
+    color: var(--color-action-primary-red-hover);
+  } /* Figma: Action Primary-red Hover */
+  .border-action-primary-red-hover {
+    border-color: var(--color-action-primary-red-hover);
+  } /* Figma: Action Primary-red Hover */
+  .bg-action-primary-red-focus {
+    background-color: var(--color-action-primary-red-focus);
+  } /* Figma: Action Primary-red Focus */
+  .text-action-primary-red-focus {
+    color: var(--color-action-primary-red-focus);
+  } /* Figma: Action Primary-red Focus */
+  .border-action-primary-red-focus {
+    border-color: var(--color-action-primary-red-focus);
+  } /* Figma: Action Primary-red Focus */
+  .bg-action-primary-red-disabled {
+    background-color: var(--color-action-primary-red-disabled);
+  } /* Figma: Action Primary-red Disabled */
+  .text-action-primary-red-disabled {
+    color: var(--color-action-primary-red-disabled);
+  } /* Figma: Action Primary-red Disabled */
+  .border-action-primary-red-disabled {
+    border-color: var(--color-action-primary-red-disabled);
+  } /* Figma: Action Primary-red Disabled */
+  .bg-action-primary-red-activated {
+    background-color: var(--color-action-primary-red-activated);
+  } /* Figma: Action Primary-red Activated */
+  .text-action-primary-red-activated {
+    color: var(--color-action-primary-red-activated);
+  } /* Figma: Action Primary-red Activated */
+  .border-action-primary-red-activated {
+    border-color: var(--color-action-primary-red-activated);
+  } /* Figma: Action Primary-red Activated */
+  .bg-action-secondary-grey-default {
+    background-color: var(--color-action-secondary-grey-default);
+  } /* Figma: Action Secondary-grey Default */
+  .text-action-secondary-grey-default {
+    color: var(--color-action-secondary-grey-default);
+  } /* Figma: Action Secondary-grey Default */
+  .border-action-secondary-grey-default {
+    border-color: var(--color-action-secondary-grey-default);
+  } /* Figma: Action Secondary-grey Default */
+  .bg-action-secondary-grey-hover {
+    background-color: var(--color-action-secondary-grey-hover);
+  } /* Figma: Action Secondary-grey Hover */
+  .text-action-secondary-grey-hover {
+    color: var(--color-action-secondary-grey-hover);
+  } /* Figma: Action Secondary-grey Hover */
+  .border-action-secondary-grey-hover {
+    border-color: var(--color-action-secondary-grey-hover);
+  } /* Figma: Action Secondary-grey Hover */
+  .bg-action-secondary-grey-focus {
+    background-color: var(--color-action-secondary-grey-focus);
+  } /* Figma: Action Secondary-grey Focus */
+  .text-action-secondary-grey-focus {
+    color: var(--color-action-secondary-grey-focus);
+  } /* Figma: Action Secondary-grey Focus */
+  .border-action-secondary-grey-focus {
+    border-color: var(--color-action-secondary-grey-focus);
+  } /* Figma: Action Secondary-grey Focus */
+  .bg-action-secondary-grey-disabled {
+    background-color: var(--color-action-secondary-grey-disabled);
+  } /* Figma: Action Secondary-grey Disabled */
+  .text-action-secondary-grey-disabled {
+    color: var(--color-action-secondary-grey-disabled);
+  } /* Figma: Action Secondary-grey Disabled */
+  .border-action-secondary-grey-disabled {
+    border-color: var(--color-action-secondary-grey-disabled);
+  } /* Figma: Action Secondary-grey Disabled */
+  .bg-action-outline-default {
+    background-color: var(--color-action-outline-default);
+  } /* Figma: Action Outline Default */
+  .text-action-outline-default {
+    color: var(--color-action-outline-default);
+  } /* Figma: Action Outline Default */
+  .border-action-outline-default {
+    border-color: var(--color-action-outline-default);
+  } /* Figma: Action Outline Default */
+  .bg-action-outline-hover {
+    background-color: var(--color-action-outline-hover);
+  } /* Figma: Action Outline Hover */
+  .text-action-outline-hover {
+    color: var(--color-action-outline-hover);
+  } /* Figma: Action Outline Hover */
+  .border-action-outline-hover {
+    border-color: var(--color-action-outline-hover);
+  } /* Figma: Action Outline Hover */
+  .bg-action-outline-focus {
+    background-color: var(--color-action-outline-focus);
+  } /* Figma: Action Outline Focus */
+  .text-action-outline-focus {
+    color: var(--color-action-outline-focus);
+  } /* Figma: Action Outline Focus */
+  .border-action-outline-focus {
+    border-color: var(--color-action-outline-focus);
+  } /* Figma: Action Outline Focus */
+  .bg-action-outline-disabled {
+    background-color: var(--color-action-outline-disabled);
+  } /* Figma: Action Outline Disabled */
+  .text-action-outline-disabled {
+    color: var(--color-action-outline-disabled);
+  } /* Figma: Action Outline Disabled */
+  .border-action-outline-disabled {
+    border-color: var(--color-action-outline-disabled);
+  } /* Figma: Action Outline Disabled */
+  .bg-action-outline-activated {
+    background-color: var(--color-action-outline-activated);
+  } /* Figma: Action Outline Activated */
+  .text-action-outline-activated {
+    color: var(--color-action-outline-activated);
+  } /* Figma: Action Outline Activated */
+  .border-action-outline-activated {
+    border-color: var(--color-action-outline-activated);
+  } /* Figma: Action Outline Activated */
+  .bg-action-outline-state-6 {
+    background-color: var(--color-action-outline-state-6);
+  } /* Figma: Action Outline State-6 */
+  .text-action-outline-state-6 {
+    color: var(--color-action-outline-state-6);
+  } /* Figma: Action Outline State-6 */
+  .border-action-outline-state-6 {
+    border-color: var(--color-action-outline-state-6);
+  } /* Figma: Action Outline State-6 */
+  .bg-action-outline-state-7 {
+    background-color: var(--color-action-outline-state-7);
+  } /* Figma: Action Outline State-7 */
+  .text-action-outline-state-7 {
+    color: var(--color-action-outline-state-7);
+  } /* Figma: Action Outline State-7 */
+  .border-action-outline-state-7 {
+    border-color: var(--color-action-outline-state-7);
+  } /* Figma: Action Outline State-7 */
+  .bg-action-outline-state-8 {
+    background-color: var(--color-action-outline-state-8);
+  } /* Figma: Action Outline State-8 */
+  .text-action-outline-state-8 {
+    color: var(--color-action-outline-state-8);
+  } /* Figma: Action Outline State-8 */
+  .border-action-outline-state-8 {
+    border-color: var(--color-action-outline-state-8);
+  } /* Figma: Action Outline State-8 */
+
+  /* Border Color Utilities */
+  .bg-border-1 {
+    background-color: var(--color-border-1);
+  } /* Figma: Border 1 */
+  .text-border-1 {
+    color: var(--color-border-1);
+  } /* Figma: Border 1 */
+  .border-border-1 {
+    border-color: var(--color-border-1);
+  } /* Figma: Border 1 */
+  .bg-border-2 {
+    background-color: var(--color-border-2);
+  } /* Figma: Border 2 */
+  .text-border-2 {
+    color: var(--color-border-2);
+  } /* Figma: Border 2 */
+  .border-border-2 {
+    border-color: var(--color-border-2);
+  } /* Figma: Border 2 */
+  .bg-border-3 {
+    background-color: var(--color-border-3);
+  } /* Figma: Border 3 */
+  .text-border-3 {
+    color: var(--color-border-3);
+  } /* Figma: Border 3 */
+  .border-border-3 {
+    border-color: var(--color-border-3);
+  } /* Figma: Border 3 */
+
+  /* Background Color Utilities */
+  .bg-background-1 {
+    background-color: var(--color-background-1);
+  } /* Figma: Background 1 */
+  .text-background-1 {
+    color: var(--color-background-1);
+  } /* Figma: Background 1 */
+  .border-background-1 {
+    border-color: var(--color-background-1);
+  } /* Figma: Background 1 */
+  .bg-background-2 {
+    background-color: var(--color-background-2);
+  } /* Figma: Background 2 */
+  .text-background-2 {
+    color: var(--color-background-2);
+  } /* Figma: Background 2 */
+  .border-background-2 {
+    border-color: var(--color-background-2);
+  } /* Figma: Background 2 */
+  .bg-background-3 {
+    background-color: var(--color-background-3);
+  } /* Figma: Background 3 */
+  .text-background-3 {
+    color: var(--color-background-3);
+  } /* Figma: Background 3 */
+  .border-background-3 {
+    border-color: var(--color-background-3);
+  } /* Figma: Background 3 */
+  .bg-background-4 {
+    background-color: var(--color-background-4);
+  } /* Figma: Background 4 */
+  .text-background-4 {
+    color: var(--color-background-4);
+  } /* Figma: Background 4 */
+  .border-background-4 {
+    border-color: var(--color-background-4);
+  } /* Figma: Background 4 */
+  .bg-background-5 {
+    background-color: var(--color-background-5);
+  } /* Figma: Background 5 */
+  .text-background-5 {
+    color: var(--color-background-5);
+  } /* Figma: Background 5 */
+  .border-background-5 {
+    border-color: var(--color-background-5);
+  } /* Figma: Background 5 */
+  .bg-background-6 {
+    background-color: var(--color-background-6);
+  } /* Figma: Background 6 */
+  .text-background-6 {
+    color: var(--color-background-6);
+  } /* Figma: Background 6 */
+  .border-background-6 {
+    border-color: var(--color-background-6);
+  } /* Figma: Background 6 */
+  .bg-background-7 {
+    background-color: var(--color-background-7);
+  } /* Figma: Background 7 */
+  .text-background-7 {
+    color: var(--color-background-7);
+  } /* Figma: Background 7 */
+  .border-background-7 {
+    border-color: var(--color-background-7);
+  } /* Figma: Background 7 */
+  .bg-background-8 {
+    background-color: var(--color-background-8);
+  } /* Figma: Background 8 */
+  .text-background-8 {
+    color: var(--color-background-8);
+  } /* Figma: Background 8 */
+  .border-background-8 {
+    border-color: var(--color-background-8);
+  } /* Figma: Background 8 */
+  .bg-background-9 {
+    background-color: var(--color-background-9);
+  } /* Figma: Background 9 */
+  .text-background-9 {
+    color: var(--color-background-9);
+  } /* Figma: Background 9 */
+  .border-background-9 {
+    border-color: var(--color-background-9);
+  } /* Figma: Background 9 */
+  .bg-background-org-block {
+    background-color: var(--color-background-org-block);
+  } /* Figma: Background Org Block */
+  .text-background-org-block {
+    color: var(--color-background-org-block);
+  } /* Figma: Background Org Block */
+  .border-background-org-block {
+    border-color: var(--color-background-org-block);
+  } /* Figma: Background Org Block */
+  .bg-background-org-department {
+    background-color: var(--color-background-org-department);
+  } /* Figma: Background Org Department */
+  .text-background-org-department {
+    color: var(--color-background-org-department);
+  } /* Figma: Background Org Department */
+  .border-background-org-department {
+    border-color: var(--color-background-org-department);
+  } /* Figma: Background Org Department */
+
+  /* Data Color Utilities */
+  .bg-data-light-grey-default {
+    background-color: var(--color-data-light-grey-default);
+  } /* Figma: Data Light-grey Default */
+  .text-data-light-grey-default {
+    color: var(--color-data-light-grey-default);
+  } /* Figma: Data Light-grey Default */
+  .border-data-light-grey-default {
+    border-color: var(--color-data-light-grey-default);
+  } /* Figma: Data Light-grey Default */
+  .bg-data-light-grey-hover {
+    background-color: var(--color-data-light-grey-hover);
+  } /* Figma: Data Light-grey Hover */
+  .text-data-light-grey-hover {
+    color: var(--color-data-light-grey-hover);
+  } /* Figma: Data Light-grey Hover */
+  .border-data-light-grey-hover {
+    border-color: var(--color-data-light-grey-hover);
+  } /* Figma: Data Light-grey Hover */
+  .bg-data-light-grey-focus {
+    background-color: var(--color-data-light-grey-focus);
+  } /* Figma: Data Light-grey Focus */
+  .text-data-light-grey-focus {
+    color: var(--color-data-light-grey-focus);
+  } /* Figma: Data Light-grey Focus */
+  .border-data-light-grey-focus {
+    border-color: var(--color-data-light-grey-focus);
+  } /* Figma: Data Light-grey Focus */
+  .bg-data-light-grey-disabled {
+    background-color: var(--color-data-light-grey-disabled);
+  } /* Figma: Data Light-grey Disabled */
+  .text-data-light-grey-disabled {
+    color: var(--color-data-light-grey-disabled);
+  } /* Figma: Data Light-grey Disabled */
+  .border-data-light-grey-disabled {
+    border-color: var(--color-data-light-grey-disabled);
+  } /* Figma: Data Light-grey Disabled */
+  .bg-data-red-default {
+    background-color: var(--color-data-red-default);
+  } /* Figma: Data Red Default */
+  .text-data-red-default {
+    color: var(--color-data-red-default);
+  } /* Figma: Data Red Default */
+  .border-data-red-default {
+    border-color: var(--color-data-red-default);
+  } /* Figma: Data Red Default */
+  .bg-data-red-hover {
+    background-color: var(--color-data-red-hover);
+  } /* Figma: Data Red Hover */
+  .text-data-red-hover {
+    color: var(--color-data-red-hover);
+  } /* Figma: Data Red Hover */
+  .border-data-red-hover {
+    border-color: var(--color-data-red-hover);
+  } /* Figma: Data Red Hover */
+  .bg-data-red-focus {
+    background-color: var(--color-data-red-focus);
+  } /* Figma: Data Red Focus */
+  .text-data-red-focus {
+    color: var(--color-data-red-focus);
+  } /* Figma: Data Red Focus */
+  .border-data-red-focus {
+    border-color: var(--color-data-red-focus);
+  } /* Figma: Data Red Focus */
+  .bg-data-red-disabled {
+    background-color: var(--color-data-red-disabled);
+  } /* Figma: Data Red Disabled */
+  .text-data-red-disabled {
+    color: var(--color-data-red-disabled);
+  } /* Figma: Data Red Disabled */
+  .border-data-red-disabled {
+    border-color: var(--color-data-red-disabled);
+  } /* Figma: Data Red Disabled */
+  .bg-data-green-default {
+    background-color: var(--color-data-green-default);
+  } /* Figma: Data Green Default */
+  .text-data-green-default {
+    color: var(--color-data-green-default);
+  } /* Figma: Data Green Default */
+  .border-data-green-default {
+    border-color: var(--color-data-green-default);
+  } /* Figma: Data Green Default */
+  .bg-data-green-hover {
+    background-color: var(--color-data-green-hover);
+  } /* Figma: Data Green Hover */
+  .text-data-green-hover {
+    color: var(--color-data-green-hover);
+  } /* Figma: Data Green Hover */
+  .border-data-green-hover {
+    border-color: var(--color-data-green-hover);
+  } /* Figma: Data Green Hover */
+  .bg-data-green-focus {
+    background-color: var(--color-data-green-focus);
+  } /* Figma: Data Green Focus */
+  .text-data-green-focus {
+    color: var(--color-data-green-focus);
+  } /* Figma: Data Green Focus */
+  .border-data-green-focus {
+    border-color: var(--color-data-green-focus);
+  } /* Figma: Data Green Focus */
+  .bg-data-green-disabled {
+    background-color: var(--color-data-green-disabled);
+  } /* Figma: Data Green Disabled */
+  .text-data-green-disabled {
+    color: var(--color-data-green-disabled);
+  } /* Figma: Data Green Disabled */
+  .border-data-green-disabled {
+    border-color: var(--color-data-green-disabled);
+  } /* Figma: Data Green Disabled */
+  .bg-data-blue-default {
+    background-color: var(--color-data-blue-default);
+  } /* Figma: Data Blue Default */
+  .text-data-blue-default {
+    color: var(--color-data-blue-default);
+  } /* Figma: Data Blue Default */
+  .border-data-blue-default {
+    border-color: var(--color-data-blue-default);
+  } /* Figma: Data Blue Default */
+  .bg-data-blue-hover {
+    background-color: var(--color-data-blue-hover);
+  } /* Figma: Data Blue Hover */
+  .text-data-blue-hover {
+    color: var(--color-data-blue-hover);
+  } /* Figma: Data Blue Hover */
+  .border-data-blue-hover {
+    border-color: var(--color-data-blue-hover);
+  } /* Figma: Data Blue Hover */
+  .bg-data-blue-focus {
+    background-color: var(--color-data-blue-focus);
+  } /* Figma: Data Blue Focus */
+  .text-data-blue-focus {
+    color: var(--color-data-blue-focus);
+  } /* Figma: Data Blue Focus */
+  .border-data-blue-focus {
+    border-color: var(--color-data-blue-focus);
+  } /* Figma: Data Blue Focus */
+  .bg-data-blue-disabled {
+    background-color: var(--color-data-blue-disabled);
+  } /* Figma: Data Blue Disabled */
+  .text-data-blue-disabled {
+    color: var(--color-data-blue-disabled);
+  } /* Figma: Data Blue Disabled */
+  .border-data-blue-disabled {
+    border-color: var(--color-data-blue-disabled);
+  } /* Figma: Data Blue Disabled */
+  .bg-data-yellow-default {
+    background-color: var(--color-data-yellow-default);
+  } /* Figma: Data Yellow Default */
+  .text-data-yellow-default {
+    color: var(--color-data-yellow-default);
+  } /* Figma: Data Yellow Default */
+  .border-data-yellow-default {
+    border-color: var(--color-data-yellow-default);
+  } /* Figma: Data Yellow Default */
+  .bg-data-yellow-hover {
+    background-color: var(--color-data-yellow-hover);
+  } /* Figma: Data Yellow Hover */
+  .text-data-yellow-hover {
+    color: var(--color-data-yellow-hover);
+  } /* Figma: Data Yellow Hover */
+  .border-data-yellow-hover {
+    border-color: var(--color-data-yellow-hover);
+  } /* Figma: Data Yellow Hover */
+  .bg-data-yellow-focus {
+    background-color: var(--color-data-yellow-focus);
+  } /* Figma: Data Yellow Focus */
+  .text-data-yellow-focus {
+    color: var(--color-data-yellow-focus);
+  } /* Figma: Data Yellow Focus */
+  .border-data-yellow-focus {
+    border-color: var(--color-data-yellow-focus);
+  } /* Figma: Data Yellow Focus */
+  .bg-data-yellow-disabled {
+    background-color: var(--color-data-yellow-disabled);
+  } /* Figma: Data Yellow Disabled */
+  .text-data-yellow-disabled {
+    color: var(--color-data-yellow-disabled);
+  } /* Figma: Data Yellow Disabled */
+  .border-data-yellow-disabled {
+    border-color: var(--color-data-yellow-disabled);
+  } /* Figma: Data Yellow Disabled */
+  .bg-data-purple-default {
+    background-color: var(--color-data-purple-default);
+  } /* Figma: Data Purple Default */
+  .text-data-purple-default {
+    color: var(--color-data-purple-default);
+  } /* Figma: Data Purple Default */
+  .border-data-purple-default {
+    border-color: var(--color-data-purple-default);
+  } /* Figma: Data Purple Default */
+  .bg-data-purple-hover {
+    background-color: var(--color-data-purple-hover);
+  } /* Figma: Data Purple Hover */
+  .text-data-purple-hover {
+    color: var(--color-data-purple-hover);
+  } /* Figma: Data Purple Hover */
+  .border-data-purple-hover {
+    border-color: var(--color-data-purple-hover);
+  } /* Figma: Data Purple Hover */
+  .bg-data-purple-focus {
+    background-color: var(--color-data-purple-focus);
+  } /* Figma: Data Purple Focus */
+  .text-data-purple-focus {
+    color: var(--color-data-purple-focus);
+  } /* Figma: Data Purple Focus */
+  .border-data-purple-focus {
+    border-color: var(--color-data-purple-focus);
+  } /* Figma: Data Purple Focus */
+  .bg-data-purple-disabled {
+    background-color: var(--color-data-purple-disabled);
+  } /* Figma: Data Purple Disabled */
+  .text-data-purple-disabled {
+    color: var(--color-data-purple-disabled);
+  } /* Figma: Data Purple Disabled */
+  .border-data-purple-disabled {
+    border-color: var(--color-data-purple-disabled);
+  } /* Figma: Data Purple Disabled */
+  .bg-data-orange-default {
+    background-color: var(--color-data-orange-default);
+  } /* Figma: Data Orange Default */
+  .text-data-orange-default {
+    color: var(--color-data-orange-default);
+  } /* Figma: Data Orange Default */
+  .border-data-orange-default {
+    border-color: var(--color-data-orange-default);
+  } /* Figma: Data Orange Default */
+  .bg-data-orange-hover {
+    background-color: var(--color-data-orange-hover);
+  } /* Figma: Data Orange Hover */
+  .text-data-orange-hover {
+    color: var(--color-data-orange-hover);
+  } /* Figma: Data Orange Hover */
+  .border-data-orange-hover {
+    border-color: var(--color-data-orange-hover);
+  } /* Figma: Data Orange Hover */
+  .bg-data-orange-focus {
+    background-color: var(--color-data-orange-focus);
+  } /* Figma: Data Orange Focus */
+  .text-data-orange-focus {
+    color: var(--color-data-orange-focus);
+  } /* Figma: Data Orange Focus */
+  .border-data-orange-focus {
+    border-color: var(--color-data-orange-focus);
+  } /* Figma: Data Orange Focus */
+  .bg-data-orange-disabled {
+    background-color: var(--color-data-orange-disabled);
+  } /* Figma: Data Orange Disabled */
+  .text-data-orange-disabled {
+    color: var(--color-data-orange-disabled);
+  } /* Figma: Data Orange Disabled */
+  .border-data-orange-disabled {
+    border-color: var(--color-data-orange-disabled);
+  } /* Figma: Data Orange Disabled */
+  .bg-data-irish-default {
+    background-color: var(--color-data-irish-default);
+  } /* Figma: Data Irish Default */
+  .text-data-irish-default {
+    color: var(--color-data-irish-default);
+  } /* Figma: Data Irish Default */
+  .border-data-irish-default {
+    border-color: var(--color-data-irish-default);
+  } /* Figma: Data Irish Default */
+  .bg-data-irish-hover {
+    background-color: var(--color-data-irish-hover);
+  } /* Figma: Data Irish Hover */
+  .text-data-irish-hover {
+    color: var(--color-data-irish-hover);
+  } /* Figma: Data Irish Hover */
+  .border-data-irish-hover {
+    border-color: var(--color-data-irish-hover);
+  } /* Figma: Data Irish Hover */
+  .bg-data-irish-focus {
+    background-color: var(--color-data-irish-focus);
+  } /* Figma: Data Irish Focus */
+  .text-data-irish-focus {
+    color: var(--color-data-irish-focus);
+  } /* Figma: Data Irish Focus */
+  .border-data-irish-focus {
+    border-color: var(--color-data-irish-focus);
+  } /* Figma: Data Irish Focus */
+  .bg-data-irish-disabled {
+    background-color: var(--color-data-irish-disabled);
+  } /* Figma: Data Irish Disabled */
+  .text-data-irish-disabled {
+    color: var(--color-data-irish-disabled);
+  } /* Figma: Data Irish Disabled */
+  .border-data-irish-disabled {
+    border-color: var(--color-data-irish-disabled);
+  } /* Figma: Data Irish Disabled */
+}
+
+/* Usage Examples:
+ * bg-red-20        → background-color: var(--color-red-20)
+ * text-neutral-100 → color: var(--color-neutral-100)
+ * border-action-primary-red-hover → border-color: var(--color-action-primary-red-hover)
+ * 
+ * Figma Name Mapping:
+ * Each utility class includes a comment showing the corresponding Figma color name
+ * Example: .bg-red-20 // Figma: Red 20
+ */

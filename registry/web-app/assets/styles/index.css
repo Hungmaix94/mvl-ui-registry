@@ -1,0 +1,259 @@
+@import 'tailwindcss';
+
+@import '@radix-ui/themes/styles.css';
+@import '@fontsource/inter';
+@import '@fontsource/inter/500.css';
+@import '@fontsource/montserrat';
+
+@import './radix-overide.css';
+@import './tailwind-colors.css';
+@import './tailwind-typography.css';
+@import './dot-loader.css';
+@import './deal-mockup.css';
+@import 'tw-animate-css';
+
+@layer base {
+  /* Base Typography & Body */
+  body {
+    background-color: var(--color-background-1);
+    color: var(--color-content-dark-1);
+    font-feature-settings:
+      'rlig' 1,
+      'calt' 1;
+  }
+
+  /* Headings */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--color-content-dark-1);
+    font-weight: 600;
+  }
+
+  /* Selection */
+  ::selection {
+    background-color: var(--color-action-primary-red-focus) !important;
+    color: var(--color-background-1) !important;
+  }
+
+  /* Scrollbars */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: var(--color-background-2);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--color-content-dark-3);
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color-content-dark-2);
+  }
+
+  :root {
+    /* Spacing Scale */
+    --space-0: 0px;
+    --space-1: 0.25rem;
+    /* 4px */
+    --space-2: 0.5rem;
+    /* 8px */
+    --space-3: 0.75rem;
+    /* 12px */
+    --space-4: 1rem;
+    /* 16px */
+    --space-5: 1.25rem;
+    /* 20px */
+    --space-6: 1.5rem;
+    /* 24px */
+    --space-7: 1.75rem;
+    /* 28px */
+    --space-8: 2rem;
+    /* 32px */
+    --space-9: 2.25rem;
+    /* 36px */
+    --space-10: 2.5rem;
+    /* 40px */
+    --space-11: 2.75rem;
+    /* 44px */
+    --space-12: 3rem;
+    /* 48px */
+    --space-14: 3.5rem;
+    /* 56px */
+    --space-16: 4rem;
+    /* 64px */
+    --space-20: 5rem;
+    /* 80px */
+    --space-24: 6rem;
+    /* 96px */
+    --space-28: 7rem;
+    /* 112px */
+    --space-32: 8rem;
+    /* 128px */
+    --space-36: 9rem;
+    /* 144px */
+    --space-40: 10rem;
+    /* 160px */
+    --space-44: 11rem;
+    /* 176px */
+    --space-48: 12rem;
+    /* 192px */
+    --space-52: 13rem;
+    /* 208px */
+    --space-56: 14rem;
+    /* 224px */
+    --space-60: 15rem;
+    /* 240px */
+    --space-64: 16rem;
+    /* 256px */
+    --space-72: 18rem;
+    /* 288px */
+    --space-80: 20rem;
+    /* 320px */
+    --space-96: 24rem;
+    /* 384px */
+
+    --sidebar: oklch(0.985 0 0);
+    --sidebar-foreground: oklch(0.145 0 0);
+    --sidebar-primary: oklch(0.205 0 0);
+    --sidebar-primary-foreground: oklch(0.985 0 0);
+    --sidebar-accent: oklch(0.97 0 0);
+    --sidebar-accent-foreground: oklch(0.205 0 0);
+    --sidebar-border: oklch(0.922 0 0);
+    --sidebar-ring: oklch(0.708 0 0);
+  }
+
+  /* Aggressive focus style removal */
+  /**:focus,*/
+  /**:focus-visible {*/
+  /*  outline: none !important;*/
+  /*  box-shadow: none !important;*/
+  /*  -webkit-tap-highlight-color: transparent !important;*/
+  /*}*/
+}
+
+@theme inline {
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer utilities {
+  .text-muted-foreground {
+    color: var(--color-content-dark-4);
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none !important;
+    scrollbar-width: none !important;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+  }
+
+  /* Hide only the horizontal native scrollbar (keep vertical) — for containers
+     whose horizontal scrolling is driven by an external HorizontalScrollBar */
+  .scrollbar-hide-x::-webkit-scrollbar:horizontal {
+    display: none !important;
+    height: 0 !important;
+  }
+
+  .table-no-radius {
+    --table-border-radius: 0px !important;
+  }
+}
+
+/* TableTree frozen columns: disable Radix ScrollArea scroll so outer div is scroll container for sticky */
+[data-table-tree-scroll='frozen'] .rt-ScrollAreaRoot,
+[data-table-tree-scroll='frozen'] .rt-ScrollAreaViewport {
+  overflow: visible !important;
+}
+
+[data-table-tree-scroll='frozen'] .rt-ScrollAreaScrollbar[data-orientation='horizontal'] {
+  display: none !important;
+}
+
+/* Marching diagonal stripes for in-progress bars (e.g. payment progress "đang chạy") */
+@keyframes progress-stripe-move {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 16px 0;
+  }
+}
+
+.progress-stripe-animated {
+  background-image: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.3) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.3) 50%,
+    rgba(255, 255, 255, 0.3) 75%,
+    transparent 75%,
+    transparent
+  );
+  background-size: 16px 16px;
+  animation: progress-stripe-move 0.8s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .progress-stripe-animated {
+    animation: none;
+  }
+}
+
+/* Khung xương lúc tải: dải sáng QUÉT NGANG thay vì cả khối cùng mờ đi rồi sáng lại.
+   `animate-pulse` làm mọi thanh nhấp nháy đồng pha, nên màn hình trông như đang lỗi chứ
+   không như đang tải; một dải chạy theo một hướng thì đọc ra "còn đang chạy, chờ chút".
+   Quét bằng `transform` (chỉ chạy trên compositor) chứ không bằng `background-position`. */
+@keyframes skeleton-sweep {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+.skeleton-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.skeleton-shimmer::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.75) 50%,
+    transparent 100%
+  );
+  animation: skeleton-sweep 1.6s ease-in-out infinite;
+}
+
+/* Người bật "giảm chuyển động" chỉ thấy thanh xám tĩnh — vẫn đọc được là đang tải nhờ hình
+   dạng khung xương, không cần chuyển động nào cả. */
+@media (prefers-reduced-motion: reduce) {
+  .skeleton-shimmer::after {
+    content: none;
+  }
+}

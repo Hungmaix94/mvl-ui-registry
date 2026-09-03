@@ -1,0 +1,160 @@
+/* Email Preview Content Isolation */
+.email-preview-content {
+  /* CSS Isolation to prevent style leakage */
+  isolation: isolate;
+  contain: layout style paint;
+
+  /* Create a new stacking context */
+  position: relative;
+  z-index: 0;
+
+  /* Reset all styles that might leak outside */
+  all: initial;
+
+  /* Re-apply base styles */
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--color-content-dark-1);
+
+  /* Prevent overflow outside container */
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  max-width: 100%;
+  box-sizing: border-box;
+
+  /* Ensure content is contained */
+  overflow: visible;
+  width: 100%;
+
+  /* Reset any global styles */
+  float: none !important;
+  clear: both !important;
+  vertical-align: baseline !important;
+}
+
+/* Scope all styles within email preview - prevent style leakage */
+.email-preview-content * {
+  box-sizing: border-box !important;
+  max-width: 100% !important;
+  position: relative !important;
+  z-index: auto !important;
+}
+
+/* Prevent any global styles from affecting email content */
+.email-preview-content *,
+.email-preview-content *::before,
+.email-preview-content *::after {
+  /* Reset styles that might affect layout outside */
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  text-shadow: none;
+  background: transparent;
+  background-image: none;
+}
+
+/* Override any inline styles that might break layout */
+.email-preview-content *[style*='position: absolute'],
+.email-preview-content *[style*='position: fixed'] {
+  position: relative !important;
+  z-index: auto !important;
+}
+
+.email-preview-content *[style*='transform'] {
+  transform: none !important;
+}
+
+/* Allow specific styles for email content elements */
+.email-preview-content p {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+  margin-top: 0;
+  display: block;
+}
+
+.email-preview-content h1,
+.email-preview-content h2,
+.email-preview-content h3,
+.email-preview-content h4,
+.email-preview-content h5,
+.email-preview-content h6 {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  line-height: 1.2;
+  display: block;
+}
+
+.email-preview-content ul,
+.email-preview-content ol {
+  margin-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  display: block;
+}
+
+.email-preview-content li {
+  margin-bottom: 0.25rem;
+  display: list-item;
+}
+
+.email-preview-content a {
+  color: inherit;
+  text-decoration: underline;
+  display: inline;
+}
+
+.email-preview-content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.email-preview-content table {
+  width: 100% !important;
+  max-width: 100% !important;
+  table-layout: auto !important;
+  border-collapse: collapse !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: table;
+}
+
+.email-preview-content table td,
+.email-preview-content table th {
+  padding: 0.5rem;
+  border: 1px solid currentColor;
+  display: table-cell;
+}
+
+/* Ensure all child elements are contained */
+.email-preview-content > * {
+  overflow: visible;
+  display: block;
+}
+
+.email-preview-content > *:first-child {
+  margin-top: 0;
+}
+
+.email-preview-content > *:last-child {
+  margin-bottom: 0;
+}
+
+/* Prevent any form elements from affecting layout */
+.email-preview-content input,
+.email-preview-content textarea,
+.email-preview-content select,
+.email-preview-content button {
+  width: auto !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}

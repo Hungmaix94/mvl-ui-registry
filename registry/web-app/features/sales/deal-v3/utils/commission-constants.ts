@@ -1,0 +1,5 @@
+import { APP_CONSTANT_KEY } from '@/constants/app-constant-key'
+
+const RK = APP_CONSTANT_KEY.SALES.DEAL.RECIPIENT_KIND
+
+export const F2_COLLABORATOR_KINDS = new Set([RK.CTV_WITH_SOURCE, RK.F2_AGENCY, RK.F2_EXCHANGE])

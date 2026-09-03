@@ -1,0 +1,134 @@
+.NavigationMenuContent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation-duration: 250ms;
+  animation-timing-function: ease;
+}
+
+/* Ensure proper positioning for dropdown content */
+.NavigationMenuContent[data-state='open'] {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 50;
+  margin-top: 4px;
+}
+
+/* Position content relative to its trigger */
+.NavigationMenu.Item {
+  position: relative;
+}
+
+/* Force viewport to align with the right edge of the active item */
+.NavigationMenuViewport {
+  position: absolute !important;
+  right: 0 !important;
+  top: 100% !important;
+  margin-top: 4px !important;
+}
+
+/* Override Radix positioning to align with individual items */
+.NavigationMenuContent[data-state='open'] {
+  position: absolute !important;
+  top: 100% !important;
+  right: 0;
+  left: auto !important;
+  transform: translateX(0);
+  z-index: 50 !important;
+  margin-top: 4px !important;
+}
+
+/* Ensure content is positioned relative to its parent item */
+.NavigationMenu.Item {
+  position: relative !important;
+}
+.NavigationMenuContent[data-motion='from-start'] {
+  animation-name: enterFromLeft;
+}
+.NavigationMenuContent[data-motion='from-end'] {
+  animation-name: enterFromRight;
+}
+.NavigationMenuContent[data-motion='to-start'] {
+  animation-name: exitToLeft;
+}
+.NavigationMenuContent[data-motion='to-end'] {
+  animation-name: exitToRight;
+}
+
+/* Scale animations for viewport */
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes scaleOut {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+}
+
+.NavigationMenuViewport {
+  position: relative;
+  width: var(--radix-navigation-menu-viewport-width);
+  height: var(--radix-navigation-menu-viewport-height);
+  transition:
+    width,
+    height,
+    250ms ease;
+}
+
+@keyframes enterFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(200px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes enterFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes exitToRight {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(200px);
+  }
+}
+
+@keyframes exitToLeft {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+}

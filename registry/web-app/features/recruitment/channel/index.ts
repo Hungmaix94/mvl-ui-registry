@@ -1,0 +1,5 @@
+export { default as RecruitmentChannelTable } from './view/RecruitmentChannelTable.tsx'
+export { default as RecruitmentChannelDetailWrapper } from './view-details/RecruitmentChannelDetail.tsx'
+export { default as RecruitmentChannelCreateForm } from './create/RecruitmentChannelCreateForm.tsx'
+export { default as RecruitmentChannelEditForm } from './update/RecruitmentChannelEditForm.tsx'
+export { useRecruitmentChannelDelete } from '@/features/recruitment/channel/_shares/hooks/useRecruitmentChannelDelete.tsx'

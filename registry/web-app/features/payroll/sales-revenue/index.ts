@@ -1,0 +1,1 @@
+export { SalesRevenueTable } from './view'

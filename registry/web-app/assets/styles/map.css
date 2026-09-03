@@ -1,0 +1,5 @@
+/* Hide Mapbox GL JS attribution and logo */
+.mapboxgl-ctrl-attrib-inner,
+.mapboxgl-ctrl-logo {
+  display: none !important;
+}

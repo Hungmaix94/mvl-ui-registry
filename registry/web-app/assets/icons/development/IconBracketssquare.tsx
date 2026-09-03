@@ -1,0 +1,19 @@
+import { TIcon } from '@/types/common.ts'
+
+function IconBracketssquare({ size = 24, color = 'currentColor', title = '', ...props }: TIcon) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill={color}
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      {title && <title>{title}</title>}
+      <path d="M7.5 3C7.91421 3 8.25 3.33579 8.25 3.75C8.25 4.16421 7.91421 4.5 7.5 4.5H4.5V19.5H7.5C7.91421 19.5 8.25 19.8358 8.25 20.25C8.25 20.6642 7.91421 21 7.5 21H3.75C3.33579 21 3 20.6642 3 20.25V3.75C3 3.33579 3.33579 3 3.75 3H7.5ZM20.25 3C20.6642 3 21 3.33579 21 3.75V20.25C21 20.6642 20.6642 21 20.25 21H16.5C16.0858 21 15.75 20.6642 15.75 20.25C15.75 19.8358 16.0858 19.5 16.5 19.5H19.5V4.5H16.5C16.0858 4.5 15.75 4.16421 15.75 3.75C15.75 3.33579 16.0858 3 16.5 3H20.25Z" />
+    </svg>
+  )
+}
+
+export { IconBracketssquare }
